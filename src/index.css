@@ -149,6 +149,149 @@ a {
 }
 
 /* =========================
+   THEME TOGGLE
+========================= */
+
+.theme-toggle {
+  position: absolute;
+
+  top: 110px;
+  left: 58px;
+
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.theme-toggle svg {
+  width: 14px;
+  height: 14px;
+
+  display: block;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.12);
+
+  background: rgba(0, 229, 255, 0.12);
+  border-color: rgba(0, 229, 255, 0.45);
+
+  color: #00e5ff;
+}
+
+
+/* =========================
+   LIGHT MODE TOGGLE
+========================= */
+
+body.light-mode .theme-toggle {
+  background: rgba(22, 22, 22, 0.06);
+  border-color: rgba(22, 22, 22, 0.18);
+  color: #161616;
+}
+
+body.light-mode .theme-toggle:hover {
+  background: rgba(0, 180, 200, 0.12);
+  border-color: rgba(0, 180, 200, 0.4);
+  color: #008c9e;
+}
+
+/* =========================
+   THEME COLORS
+========================= */
+
+body {
+  background: #161616;
+  color: #ffffff;
+
+  transition:
+    background 0.5s ease,
+    color 0.5s ease;
+}
+
+/* DARK MODE */
+
+.hero {
+  background: #161616;
+  transition: background 0.5s ease;
+}
+
+
+/* LIGHT MODE */
+
+body.light-mode {
+  background: #eeeef0;
+  color: #161616;
+}
+
+body.light-mode .hero {
+  background: #eeeef0;
+}
+
+/* =========================
+   HERO LIGHT MODE
+========================= */
+
+.hero-name {
+  color: #ffffff;
+  transition: color 0.5s ease;
+}
+
+body.light-mode .hero-name {
+  color: #161616;
+}
+
+body.light-mode .hero-title {
+  color: rgba(22, 22, 22, 0.38);
+}
+
+body.light-mode .hero-titles:hover .hero-title {
+  color: rgba(22, 22, 22, 0.25);
+}
+
+body.light-mode .hero-title:hover {
+  color: #161616 !important;
+}
+
+body.light-mode .theme-toggle {
+  background: rgba(22, 22, 22, 0.06);
+  border-color: rgba(22, 22, 22, 0.15);
+  color: #161616;
+}
+
+body.light-mode .theme-toggle:hover {
+  background: rgba(0, 180, 200, 0.12);
+  border-color: rgba(0, 180, 200, 0.4);
+  color: #008c9e;
+}
+
+/* =========================
    HERO
 ========================= */
 
@@ -165,12 +308,12 @@ a {
   overflow: hidden;
 
   background:
-    radial-gradient(
-      ellipse at 50% 45%,
-      rgba(0, 217, 255, 0.06),
-      transparent 42%
-    ),
-    #030707;
+  radial-gradient(
+    ellipse at 50% 45%,
+    rgba(0, 217, 255, 0.06),
+    transparent 42%
+  ),
+  #161616;
 }
 
 
@@ -180,13 +323,9 @@ a {
 
 .hero-aurora {
   position: absolute;
-
   inset: 0;
-
   overflow: hidden;
-
   pointer-events: none;
-
   z-index: 0;
 }
 
@@ -195,60 +334,52 @@ a {
 
 .aurora {
   position: absolute;
-
-  width: 650px;
-  height: 650px;
-
   border-radius: 50%;
-
-  filter: blur(120px);
-
-  opacity: 0.25;
-
+  background: rgba(0, 229, 255, 0.22);
+  filter: blur(90px);
+  opacity: 0.65;
   will-change: transform;
-
-  mix-blend-mode: screen;
 }
 
 
 /* First glow */
 
 .aurora-one {
-  top: -15%;
-  left: 10%;
+  width: 650px;
+  height: 400px;
 
-  background: rgba(0, 225, 255, 0.45);
+  top: 12%;
+  left: 50%;
 
-  animation:
-    auroraOne 20s ease-in-out infinite alternate;
+  transform: translateX(-50%);
+
+  animation: auroraFloatOne 5s ease-in-out infinite alternate;
 }
 
 
 .aurora-two {
-  top: 10%;
-  right: -10%;
+  width: 420px;
+  height: 300px;
 
-  width: 600px;
-  height: 600px;
+  top: -8%;
+  left: 20%;
 
-  background: rgba(0, 150, 180, 0.32);
+  opacity: 0.35;
 
-  animation:
-    auroraTwo 25s ease-in-out infinite alternate;
+  animation: auroraFloatTwo 7s ease-in-out infinite alternate;
 }
 
 
 .aurora-three {
-  left: 30%;
-  bottom: -35%;
+  width: 450px;
+  height: 280px;
 
-  width: 700px;
-  height: 700px;
+  top: 18%;
+  right: 8%;
 
-  background: rgba(0, 255, 255, 0.22);
+  opacity: 0.3;
 
-  animation:
-    auroraThree 22s ease-in-out infinite alternate;
+  animation: auroraFloatThree 8s ease-in-out infinite alternate;
 }
 
 
@@ -256,96 +387,46 @@ a {
    AURORA ANIMATIONS
 ========================= */
 
-@keyframes auroraOne {
-
+@keyframes auroraFloatOne {
   0% {
-    transform:
-      translate(-10%, -5%)
-      scale(0.9);
-  }
-
-  25% {
-    transform:
-      translate(20%, 15%)
-      scale(1.1);
+    transform: translateX(-50%) translate(-40px, 10px);
   }
 
   50% {
-    transform:
-      translate(-5%, 30%)
-      scale(1);
-  }
-
-  75% {
-    transform:
-      translate(30%, -5%)
-      scale(1.2);
+    transform: translateX(-50%) translate(30px, -15px);
   }
 
   100% {
-    transform:
-      translate(5%, 20%)
-      scale(0.95);
+    transform: translateX(-50%) translate(-10px, 20px);
   }
-
 }
 
-
-@keyframes auroraTwo {
-
+@keyframes auroraFloatTwo {
   0% {
-    transform:
-      translate(10%, 0)
-      scale(1);
+    transform: translate(0, 0);
   }
 
-  30% {
-    transform:
-      translate(-20%, 20%)
-      scale(1.15);
-  }
-
-  60% {
-    transform:
-      translate(-5%, -15%)
-      scale(0.9);
+  50% {
+    transform: translate(70px, 35px);
   }
 
   100% {
-    transform:
-      translate(20%, 15%)
-      scale(1.1);
+    transform: translate(-30px, 60px);
   }
-
 }
 
-
-@keyframes auroraThree {
-
+@keyframes auroraFloatThree {
   0% {
-    transform:
-      translate(-20%, 10%)
-      scale(1);
+    transform: translate(0, 0);
   }
 
-  30% {
-    transform:
-      translate(15%, -15%)
-      scale(1.15);
-  }
-
-  60% {
-    transform:
-      translate(-5%, -25%)
-      scale(0.9);
+  50% {
+    transform: translate(-60px, 30px);
   }
 
   100% {
-    transform:
-      translate(20%, 5%)
-      scale(1.1);
+    transform: translate(20px, -20px);
   }
-
 }
 
 
@@ -456,153 +537,156 @@ font-size: clamp(
 
 .hero-titles {
   display: flex;
-
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 
-  align-self: center;
-
+  gap: 28px;
   flex-wrap: wrap;
-
-  gap: 30px;
-
   margin-top: 36px;
 
   opacity: 0;
-
-  animation:
-    heroReveal 1s ease 0.4s forwards;
+  animation: heroReveal 0.9s ease 0.4s forwards;
 }
 
 
-/* Individual title */
+/* =========================
+   DEFAULT STATE
+========================= */
 
 .hero-title {
   position: relative;
+  display: inline-block;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  padding: 10px 18px;
 
-  min-height: 52px;
-  padding: 14px 28px;
-
-  color: #ffffff;
-
-  font-size: clamp(14px, 1.5vw, 18px);
+  font-size: 16px;
   font-weight: 500;
 
-  white-space: nowrap;
-  cursor: default;
+  color: rgba(255, 255, 255, 0.38);
+
+  filter: blur(4px);
+  opacity: 0.65;
+
+  transform: scale(1);
+
+  cursor: pointer;
   user-select: none;
 
-  /* Blurred by default */
-  filter: blur(5px);
-  opacity: 0.42;
-
-  /* Very fast response */
   transition:
-    filter 0.06s linear,
-    opacity 0.06s linear,
-    text-shadow 0.06s linear;
+    all 0.28s ease;
 
-  will-change: filter, opacity;
+  will-change: filter, opacity, transform;
 }
 
 
 /* =========================
-   CORNER BRACKETS
+   WHEN GROUP IS HOVERED
 ========================= */
 
-.corner {
+.hero-titles:hover .hero-title {
+  filter: blur(4px);
+  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.28);
+  transform: scale(1);
+}
+
+
+/* =========================
+   ACTIVE / HOVERED TITLE
+========================= */
+
+.hero-titles .hero-title:hover {
+  filter: blur(0);
+  opacity: 1;
+  color: #ffffff;
+  transform: scale(1.05);
+
+  text-shadow:
+    0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+
+/* =========================
+   TOP CORNERS
+========================= */
+
+.hero-title::before {
+  content: "";
+
   position: absolute;
-
-  width: 20px;
-  height: 20px;
-
-  border-color: #00e5ff;
-  border-style: solid;
-  border-width: 0;
+  inset: 0;
 
   opacity: 0;
-
   pointer-events: none;
 
   transition:
-    opacity 0.05s linear,
-    filter 0.05s linear;
+    opacity 0.25s ease,
+    transform 0.25s ease;
 
-  will-change: opacity;
-}
+  background:
+    linear-gradient(rgb(0, 229, 255), rgb(0, 229, 255))
+      left top / 14px 2px no-repeat,
 
+    linear-gradient(rgb(0, 229, 255), rgb(0, 229, 255))
+      left top / 2px 14px no-repeat,
 
-/* TOP LEFT */
+    linear-gradient(rgb(0, 229, 255), rgb(0, 229, 255))
+      right top / 14px 2px no-repeat,
 
-.top-left {
-  top: 0;
-  left: 0;
-
-  border-top-width: 3px;
-  border-left-width: 3px;
-}
-
-
-/* TOP RIGHT */
-
-.top-right {
-  top: 0;
-  right: 0;
-
-  border-top-width: 3px;
-  border-right-width: 3px;
-}
-
-
-/* BOTTOM LEFT */
-
-.bottom-left {
-  bottom: 0;
-  left: 0;
-
-  border-bottom-width: 3px;
-  border-left-width: 3px;
-}
-
-
-/* BOTTOM RIGHT */
-
-.bottom-right {
-  bottom: 0;
-  right: 0;
-
-  border-bottom-width: 3px;
-  border-right-width: 3px;
+    linear-gradient(rgb(0, 229, 255), rgb(0, 229, 255))
+      right top / 2px 14px no-repeat;
 }
 
 
 /* =========================
-   TITLE HOVER
+   BOTTOM CORNERS
 ========================= */
 
-.hero-title:hover {
-  filter: blur(0);
-  opacity: 1;
+.hero-title::after {
+  content: "";
 
-  text-shadow:
-    0 0 12px rgba(0, 217, 255, 0.3);
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+
+  background:
+    linear-gradient(rgb(0, 229, 255), rgb(0, 229, 255))
+      left bottom / 14px 2px no-repeat,
+
+    linear-gradient(rgb(0, 229, 255), rgb(0, 229, 255))
+      left bottom / 2px 14px no-repeat,
+
+    linear-gradient(rgb(0, 229, 255), rgb(0, 229, 255))
+      right bottom / 14px 2px no-repeat,
+
+    linear-gradient(rgb(0, 229, 255), rgb(0, 229, 255))
+      right bottom / 2px 14px no-repeat;
 }
 
 
-/* Brackets expand when hovered */
+/* =========================
+   SHOW CORNERS ONLY ON HOVER
+========================= */
 
-.hero-title:hover .corner {
+.hero-titles .hero-title:hover::before,
+.hero-titles .hero-title:hover::after {
   opacity: 1;
+
+  transform: scale(1.05);
 
   filter:
-    drop-shadow(0 0 4px #00e5ff)
-    drop-shadow(0 0 8px rgba(0, 229, 255, 0.6));
+    drop-shadow(
+      0 0 6px
+      rgba(0, 229, 255, 0.8)
+    );
 }
-
 
 /* =========================
    CV BUTTON
@@ -769,25 +853,6 @@ font-size: clamp(
   height: 21px;
 }
 
-
-/* LinkedIn */
-
-.linkedin-icon {
-  font-size: 18px;
-
-  font-weight: 700;
-}
-
-
-/* Email */
-
-.email-icon {
-  font-size: 20px;
-
-  font-weight: 500;
-}
-
-
 /* =========================
    HERO REVEAL
 ========================= */
@@ -826,6 +891,13 @@ font-size: clamp(
       140px;
   }
 
+  .theme-toggle {
+  top: 100px;
+  left: 24px;
+
+  width: 30px;
+  height: 30px;
+}
 
   .hero-content {
     padding: 0;
@@ -929,6 +1001,13 @@ font-size: clamp(
       160px;
   }
 
+  .theme-toggle {
+  top: 90px;
+  left: 20px;
+
+  width: 30px;
+  height: 30px;
+}
 
   .hero-eyebrow {
 
@@ -1041,12 +1120,323 @@ font-size: clamp(
   }
 
   .hero-title,
-  .corner,
+  .hero-title::before,
+  .hero-title::after,
   .hero-cv,
   .social-button {
 
     transition:
       none;
+  }
+
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 140px 30px;
+
+  background: #161616;
+
+  color: #ffffff;
+}
+
+
+.about-container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   ABOUT LABEL
+========================= */
+
+.about-label {
+  margin-bottom: 70px;
+
+  color: #00d9ff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.4em;
+}
+
+
+/* =========================
+   MAIN GRID
+========================= */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1.1fr;
+
+  gap: 100px;
+
+  align-items: start;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.about-heading h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      52px,
+      6vw,
+      90px
+    );
+
+  line-height: 0.95;
+
+  letter-spacing:
+    -0.05em;
+
+  font-weight: 700;
+}
+
+
+.about-heading h2::first-line {
+  color: #ffffff;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.about-content {
+  max-width: 600px;
+
+  padding-top: 8px;
+}
+
+
+.about-content p {
+  margin-bottom: 24px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.58
+    );
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+.about-content .about-intro {
+  color: #ffffff;
+
+  font-size: 21px;
+
+  line-height: 1.6;
+
+  font-weight: 400;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   FOCUS CARDS
+========================= */
+
+.about-focus {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-top: 120px;
+}
+
+
+.focus-card {
+  position: relative;
+
+  min-height: 230px;
+
+  padding: 30px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.08
+    );
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.025
+    );
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.focus-card:hover {
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(
+      0,
+      217,
+      255,
+      0.45
+    );
+
+  background:
+    rgba(
+      0,
+      217,
+      255,
+      0.035
+    );
+}
+
+
+/* Number */
+
+.focus-number {
+  display: block;
+
+  margin-bottom: 55px;
+
+  color: #00d9ff;
+
+  font-size: 12px;
+
+  letter-spacing:
+    0.15em;
+}
+
+
+/* Card heading */
+
+.focus-card h3 {
+  margin-bottom: 12px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+
+/* Card paragraph */
+
+.focus-card p {
+  margin: 0;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.45
+    );
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   ABOUT MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .about-section {
+    padding:
+      100px
+      24px;
+  }
+
+
+  .about-label {
+    margin-bottom:
+      50px;
+  }
+
+
+  .about-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 50px;
+  }
+
+
+  .about-heading h2 {
+    font-size:
+      clamp(
+        48px,
+        13vw,
+        70px
+      );
+  }
+
+
+  .about-content {
+    max-width:
+      100%;
+  }
+
+
+  .about-content .about-intro {
+    font-size:
+      19px;
+  }
+
+
+  .about-focus {
+    grid-template-columns:
+      1fr;
+
+    margin-top:
+      80px;
+  }
+
+
+  .focus-card {
+    min-height:
+      200px;
   }
 
 }
