@@ -12,20 +12,30 @@ function About() {
         {/* Main content */}
         <div className="about-grid">
 
-          {/* Left */}
-          <div className="about-heading">
+          {/* Left - Portrait */}
+          <div className="about-photo">
 
-            <h2>
-              Building.
-              <br />
-              Designing.
-              <br />
-              Creating.
-            </h2>
+            <div className="about-photo-frame">
+
+              {/* Dark Mode Image */}
+              <img
+                src="/images/about-dark.png"
+                alt="Jhon Carlo Halili"
+                className="about-photo-dark"
+              />
+
+              {/* Light Mode Image */}
+              <img
+                src="/images/about-light.png"
+                alt="Jhon Carlo Halili"
+                className="about-photo-light"
+              />
+
+            </div>
 
           </div>
 
-          {/* Right */}
+          {/* Right - About Content */}
           <div className="about-content">
 
             <p className="about-intro">
@@ -37,7 +47,7 @@ function About() {
 
             <p>
               My work sits at the intersection of
-              frontend development, graphic design,
+              web development, social media management,
               and digital marketing. I enjoy building
               websites, creating visual content, and
               helping brands communicate their ideas
@@ -55,42 +65,44 @@ function About() {
 
         </div>
 
-
         {/* Focus areas */}
         <div className="about-focus">
 
+          {/* Web Development */}
           <div className="focus-card">
             <span className="focus-number">
               01
             </span>
 
             <h3>
-              Frontend Development
+              Web Development
             </h3>
 
             <p>
               Building responsive and interactive
-              websites with modern web technologies.
+              websites through personal projects,
+              experimentation, and continuous learning.
             </p>
           </div>
 
-
+          {/* Social Media Management */}
           <div className="focus-card">
             <span className="focus-number">
               02
             </span>
 
             <h3>
-              Graphic Design
+              Social Media Management
             </h3>
 
             <p>
-              Creating visual content and digital
-              experiences that communicate clearly.
+              Creating visual content, managing social
+              platforms, and helping brands communicate
+              consistently online.
             </p>
           </div>
 
-
+          {/* Digital Marketing */}
           <div className="focus-card">
             <span className="focus-number">
               03
@@ -101,8 +113,9 @@ function About() {
             </h3>
 
             <p>
-              Supporting brands through content,
-              social media, email, funnels, and SEO.
+              Supporting brands through content, email
+              marketing, funnels, SEO, and other digital
+              strategies.
             </p>
           </div>
 
