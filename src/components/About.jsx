@@ -56,7 +56,7 @@ function About() {
 
             <p>
               I'm continuously learning, experimenting,
-              and improving my skills — with a focus on
+              and improving my skills with a focus on
               creating work that is both functional and
               visually engaging.
             </p>
