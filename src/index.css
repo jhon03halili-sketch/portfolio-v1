@@ -2217,3 +2217,648 @@ body.light-mode .additional-tool:hover {
   }
 
 }
+
+/* =========================
+   EXPERIENCE SECTION
+========================= */
+
+.experience-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 140px 30px;
+  background: #161616;
+}
+
+.experience-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   EXPERIENCE INTRO
+========================= */
+
+.experience-label {
+  width: 100%;
+  margin-bottom: 30px;
+
+  text-align: center;
+
+  font-family: Poppins, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+
+  color: #4B0082;
+}
+
+.experience-intro {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 0 auto 130px;
+
+  text-align: center;
+}
+
+.experience-intro h2 {
+  max-width: 850px;
+
+  margin: 0 auto 25px;
+
+  font-family: Poppins, sans-serif;
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.05;
+  font-weight: 600;
+
+  text-align: center;
+
+  color: #E6E6FA;
+}
+
+.experience-intro p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  text-align: center;
+
+  color: rgba(230, 230, 250, 0.55);
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.experience-timeline {
+  position: relative;
+  width: 100%;
+}
+
+
+/* =========================
+   TIMELINE LINE
+========================= */
+
+.experience-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 1px;
+
+  background: rgba(75, 0, 130, 0.85);
+
+  box-shadow:
+    0 0 5px rgba(75, 0, 130, 0.9),
+    0 0 12px rgba(75, 0, 130, 0.55),
+    0 0 24px rgba(75, 0, 130, 0.3);
+
+  z-index: 0;
+}
+
+
+/* =========================
+   STICKY CENTER NODE
+========================= */
+
+.experience-sticky-marker {
+  position: sticky;
+
+  top: 50vh;
+
+  left: 50%;
+
+  width: 18px;
+  height: 18px;
+
+  margin-left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+
+  z-index: 10;
+}
+
+
+/* =========================
+   NODE
+========================= */
+
+.experience-marker-dot {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: #4B0082;
+
+  box-shadow:
+    0 0 0 5px rgba(75, 0, 130, 0.12),
+    0 0 12px rgba(75, 0, 130, 1),
+    0 0 28px rgba(75, 0, 130, 0.8),
+    0 0 48px rgba(75, 0, 130, 0.45);
+
+  animation: experienceNodeGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes experienceNodeGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 5px rgba(75, 0, 130, 0.10),
+      0 0 10px rgba(75, 0, 130, 0.85),
+      0 0 24px rgba(75, 0, 130, 0.65);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 6px rgba(75, 0, 130, 0.16),
+      0 0 16px rgba(75, 0, 130, 1),
+      0 0 34px rgba(75, 0, 130, 0.85),
+      0 0 52px rgba(75, 0, 130, 0.45);
+  }
+}
+
+
+/* =========================
+   EXPERIENCE ITEM
+========================= */
+
+.experience-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 1fr 80px 1fr;
+
+  align-items: center;
+
+  min-height: 420px;
+
+  z-index: 2;
+}
+
+
+/* =========================
+   CENTER
+========================= */
+
+.experience-center {
+  position: relative;
+
+  width: 80px;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  z-index: 5;
+}
+
+
+/* Hide individual nodes */
+
+.experience-center-node {
+  display: none;
+}
+
+
+/* =========================
+   LEFT / RIGHT SIDES
+========================= */
+
+.experience-left-side,
+.experience-right-side {
+  width: 100%;
+}
+
+.experience-left-side {
+  padding-right: 45px;
+}
+
+.experience-right-side {
+  padding-left: 45px;
+}
+
+
+/* =========================
+   OUTSIDE DATES
+========================= */
+
+.experience-date-wrapper {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  min-height: 60px;
+
+  padding-right: 10px;
+}
+
+.experience-right-side .experience-date-wrapper {
+  justify-content: flex-start;
+
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+.experience-date {
+  font-family: Poppins, sans-serif;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: #4B0082;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   EXPERIENCE CARD
+========================= */
+
+.experience-content {
+  position: relative;
+
+  width: 100%;
+
+  padding: 38px;
+
+  border: 1px solid rgba(230, 230, 250, 0.14);
+
+  border-radius: 22px;
+
+  background: rgba(230, 230, 250, 0.025);
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* Hover */
+
+.experience-content:hover {
+  border-color: rgba(75, 0, 130, 0.55);
+
+  background: rgba(75, 0, 130, 0.035);
+
+  transform: translateY(-4px);
+}
+
+
+/* =========================
+   COMPANY
+========================= */
+
+.experience-company {
+  margin: 0 0 8px;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 600;
+
+  color: #E6E6FA;
+}
+
+
+/* =========================
+   ROLE
+========================= */
+
+.experience-role {
+  margin: 0 0 24px;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: rgba(230, 230, 250, 0.6);
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.experience-description {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  color: rgba(230, 230, 250, 0.58);
+}
+
+
+/* =========================
+   LOGO
+   BELOW DESCRIPTION
+========================= */
+
+.experience-logo {
+  width: 58px;
+  height: 58px;
+
+  margin-top: 28px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background: #E6E6FA;
+
+  border: 1px solid rgba(230, 230, 250, 0.12);
+}
+
+.experience-logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  border-radius: 50%;
+}
+
+
+/* =========================
+   LEFT EXPERIENCE CARDS
+   RIGHT-ALIGNED CONTENT
+========================= */
+
+.experience-left-side .experience-content {
+  text-align: right;
+}
+
+.experience-left-side .experience-company,
+.experience-left-side .experience-role,
+.experience-left-side .experience-description {
+  text-align: right;
+}
+
+.experience-left-side .experience-logo {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+
+/* =========================
+   ACTIVE EXPERIENCE
+========================= */
+
+.experience-item.active .experience-content {
+  border-color: rgba(75, 0, 130, 0.5);
+}
+
+
+/* =========================
+   EXPERIENCE ENDING
+========================= */
+
+.experience-history {
+  position: relative;
+
+  width: 100%;
+
+  margin-top: 60px;
+
+  padding-bottom: 40px;
+
+  text-align: center;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  color: #4B0082;
+
+  text-transform: lowercase;
+
+  text-shadow:
+    0 0 8px rgba(75, 0, 130, 0.6),
+    0 0 18px rgba(75, 0, 130, 0.25);
+}
+
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+body.light-mode .experience-section {
+  background: #eeeef0;
+}
+
+body.light-mode .experience-intro h2 {
+  color: #161616;
+}
+
+body.light-mode .experience-intro p {
+  color: rgba(22, 22, 22, 0.55);
+}
+
+body.light-mode .experience-timeline::before {
+  background: rgba(75, 0, 130, 0.5);
+
+  box-shadow:
+    0 0 5px rgba(75, 0, 130, 0.5),
+    0 0 12px rgba(75, 0, 130, 0.3);
+}
+
+body.light-mode .experience-content {
+  background: rgba(22, 22, 22, 0.015);
+
+  border-color: rgba(22, 22, 22, 0.10);
+}
+
+body.light-mode .experience-company {
+  color: #161616;
+}
+
+body.light-mode .experience-role {
+  color: rgba(22, 22, 22, 0.6);
+}
+
+body.light-mode .experience-description {
+  color: rgba(22, 22, 22, 0.58);
+}
+
+body.light-mode .experience-logo {
+  background: #E6E6FA;
+
+  border-color: rgba(22, 22, 22, 0.08);
+}
+
+body.light-mode .experience-marker-dot {
+  background: #4B0082;
+
+  box-shadow:
+    0 0 0 5px rgba(75, 0, 130, 0.10),
+    0 0 12px rgba(75, 0, 130, 0.8),
+    0 0 28px rgba(75, 0, 130, 0.55);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .experience-section {
+    padding: 100px 20px;
+  }
+
+  .experience-intro {
+    margin-bottom: 80px;
+  }
+
+  .experience-intro h2 {
+    font-size: 36px;
+  }
+
+  .experience-intro p {
+    font-size: 14px;
+  }
+
+
+  /* Hide timeline on mobile */
+
+  .experience-timeline::before {
+    display: none;
+  }
+
+  .experience-sticky-marker {
+    display: none;
+  }
+
+
+  /* Stack experiences */
+
+  .experience-item {
+    display: block;
+
+    min-height: auto;
+
+    margin-bottom: 50px;
+  }
+
+
+  .experience-center {
+    display: none;
+  }
+
+
+  .experience-left-side,
+  .experience-right-side {
+    padding: 0;
+  }
+
+
+  /* Dates */
+
+  .experience-date-wrapper {
+    justify-content: flex-start !important;
+
+    min-height: auto;
+
+    padding: 0 !important;
+
+    margin-bottom: 14px;
+  }
+
+
+  /* Cards */
+
+  .experience-content {
+    padding: 26px;
+
+    border-radius: 18px;
+
+    text-align: left;
+  }
+
+
+  /* Reset left-card alignment on mobile */
+
+  .experience-left-side .experience-content {
+    text-align: left;
+  }
+
+  .experience-left-side .experience-company,
+  .experience-left-side .experience-role,
+  .experience-left-side .experience-description {
+    text-align: left;
+  }
+
+  .experience-left-side .experience-logo {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
+  .experience-company {
+    font-size: 21px;
+  }
+
+  .experience-role {
+    font-size: 13px;
+  }
+
+  .experience-description {
+    font-size: 13px;
+  }
+
+
+  /* Logo */
+
+  .experience-logo {
+    width: 52px;
+    height: 52px;
+
+    margin-top: 24px;
+  }
+
+
+  /* History */
+
+  .experience-history {
+    margin-top: 20px;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+  }
+}
