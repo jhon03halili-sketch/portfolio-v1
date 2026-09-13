@@ -175,6 +175,11 @@ function Skills() {
                   <span>Later</span>
                 </div>
 
+                <div className="skill-item">
+                  <SkillIcon name="buffer" alt="Buffer" />
+                  <span>Buffer</span>
+                </div>
+
               </div>
 
             </div>

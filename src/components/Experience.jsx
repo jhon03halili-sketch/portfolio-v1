@@ -6,7 +6,7 @@ const experiences = [
     date: "MARCH 2024",
     company: "ALPHA: Alliance of Leading Programmers through Heuristic Adaptation",
     role: "School Organization - Technical Support",
-    logo: "/icons/alpha.png",
+    logo: "/icons/alpha.jpg",
     description:
       "Provided technical support and assistance in resolving technical issues while helping users navigate systems and services.",
   },
@@ -16,7 +16,7 @@ const experiences = [
     date: "AUGUST 2024 – FEBRUARY 2025",
     company: "Quantrics Enterprise",
     role: "Customer Service Representative – Quadcare",
-    logo: "/icons/quantrics.png",
+    logo: "/icons/quantrics.jpg",
     description:
       "Handled customer concerns, provided support, and assisted customers with residential and mobility services.",
   },
@@ -26,7 +26,7 @@ const experiences = [
     date: "OCTOBER 2025",
     company: "Doneverse",
     role: "Digital Marketing Virtual Assistant",
-    logo: "/icons/doneverse.png",
+    logo: "/icons/doneverse.jpg",
     description:
       "Supported digital marketing activities through content creation, social media management, email marketing, funnels, website support, and other digital tasks.",
   },
@@ -56,7 +56,7 @@ const experiences = [
     date: "JANUARY 2026",
     company: "Aura Longevity",
     role: "E-commerce & Marketing Assistant",
-    logo: "/icons/aura-longevity.png",
+    logo: "/icons/aura-longevity.jpg",
     description:
       "Supported e-commerce and marketing initiatives through content creation, funnel development, landing pages, email marketing, and digital marketing tasks.",
   },

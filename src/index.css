@@ -2505,7 +2505,7 @@ body.light-mode .additional-tool:hover {
 
   padding: 38px;
 
-  border: 1px solid rgba(230, 230, 250, 0.14);
+  border: 3px solid rgba(230, 230, 250, 0.14);
 
   border-radius: 22px;
 
@@ -2598,7 +2598,7 @@ body.light-mode .additional-tool:hover {
 
   background: #E6E6FA;
 
-  border: 1px solid rgba(230, 230, 250, 0.12);
+  border: 2px solid #4b0082;
 }
 
 .experience-logo img {
