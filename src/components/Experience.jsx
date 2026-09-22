@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 const experiences = [
   {
     number: "01",
-    date: "MARCH 2024",
+    date: "2024",
     company: "ALPHA: Alliance of Leading Programmers through Heuristic Adaptation",
     role: "School Organization - Technical Support",
     logo: "/icons/alpha.jpg",
@@ -23,7 +23,7 @@ const experiences = [
 
   {
     number: "03",
-    date: "OCTOBER 2025",
+    date: "2025",
     company: "Doneverse",
     role: "Digital Marketing Virtual Assistant",
     logo: "/icons/doneverse.jpg",
@@ -33,7 +33,7 @@ const experiences = [
 
   {
     number: "04",
-    date: "NOVEMBER 2025",
+    date: "2025",
     company: "Beyond Sea Cabo",
     role: "Social Media Manager",
     logo: "/icons/beyond-sea.png",
@@ -43,7 +43,7 @@ const experiences = [
 
   {
     number: "05",
-    date: "DECEMBER 2025",
+    date: "2025",
     company: "Gallo Pinto",
     role: "Social Media Manager",
     logo: "/icons/gallo-pinto.png",
@@ -53,7 +53,7 @@ const experiences = [
 
   {
     number: "06",
-    date: "JANUARY 2026",
+    date: "2026",
     company: "Aura Longevity",
     role: "E-commerce & Marketing Assistant",
     logo: "/icons/aura-longevity.jpg",
@@ -63,7 +63,7 @@ const experiences = [
 
   {
     number: "07",
-    date: "AUGUST 2026",
+    date: "2026",
     company: "Lead From Within Advisory",
     role: "Digital Marketing & Website Assistant",
     logo: "/icons/lead-from-within.png",

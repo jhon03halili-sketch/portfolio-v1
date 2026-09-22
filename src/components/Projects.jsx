@@ -1,258 +1,212 @@
-import { useState, useEffect } from "react";
-import {
-  FiArrowLeft,
-  FiArrowRight,
-  FiExternalLink,
-  FiX,
-} from "react-icons/fi";
+import { useState } from "react";
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 const projects = [
   {
     number: "01",
     title: "Chicken Things",
-    category: "E-commerce Website",
+    category: "E-Commerce Website",
+
     description:
       "A mock e-commerce website built from scratch to showcase front-end development, interactive functionality, and responsive web design.",
+
     image: "/images/chicken-things.jpg",
-    tags: ["HTML", "CSS", "JavaScript"],
+
+    technologies: [
+      {
+        name: "HTML",
+        icon: "/icons/html.png",
+      },
+      {
+        name: "CSS",
+        icon: "/icons/css.png",
+      },
+      {
+        name: "JavaScript",
+        icon: "/icons/javascript.png",
+      },
+      {
+        name: "GitHub",
+        icon: "/icons/github.png",
+      },
+    ],
+
     link: "https://jhon03halili-sketch.github.io/boneless-chicken-mock-website-/",
+
+    reverse: false,
   },
 
   {
     number: "02",
     title: "Beyond Sea Cabo",
     category: "Social Media Marketing",
+
     description:
       "Created and managed visual content for a luxury vacation rental brand, including social posts, carousels, reels, captions, and SEO-focused alt text.",
+
     image: "/images/beyondsea.png",
-    tags: ["Social Media", "Canva", "Capcut", "SEO"],
 
-    gallery: {
-      carousels: [
-        {
-          title: "Sample 1",
-          images: [
-            "/beyondsea/145.png",
-            "/beyondsea/146.png",
-            "/beyondsea/147.png",
-            "/beyondsea/148.png",
-            "/beyondsea/149.png",
-            "/beyondsea/150.png",
-          ],
-        },
+    technologies: [
+      {
+        name: "Instagram",
+        icon: "/icons/instagram.png",
+      },
+      {
+        name: "Canva",
+        icon: "/icons/canva.png",
+      },
+      {
+        name: "CapCut",
+        icon: "/icons/capcut.png",
+      },
+      {
+        name: "Google",
+        icon: "/icons/google.png",
+      },
+    ],
 
-        {
-          title: "Sample 2",
-          images: [
-            "/beyondsea/172.png",
-            "/beyondsea/173.png",
-            "/beyondsea/174.png",
-            "/beyondsea/175.png",
-            "/beyondsea/176.png",
-            "/beyondsea/177.png",
-          ],
-        },
-
-        {
-          title: "Sample 3",
-          images: [
-            "/beyondsea/179.png",
-            "/beyondsea/180.png",
-            "/beyondsea/182.png",
-            "/beyondsea/183.png"
-          ],
-        },
-      ],
-
-      static: [
-        "/projects/beyond-sea/static-01.jpg",
-        "/projects/beyond-sea/static-02.jpg",
-        "/projects/beyond-sea/static-03.jpg",
-      ],
-
-      clips: [
-        "/projects/beyond-sea/clip-01.mp4",
-        "/projects/beyond-sea/clip-02.mp4",
-      ],
-    },
+    reverse: true,
   },
 
   {
     number: "03",
-    title: "Lead From Within Advisory",
-    category: "Website Redesign",
+    title: "Gallo Pinto",
+    category: "Social Media Management",
+
     description:
-      "Redesigned a coaching and advisory website in Squarespace with a focus on brand alignment, user experience, and SEO.",
-    image: "/projects/lead-from-within.png",
-    tags: ["Squarespace", "SEO", "Web Design"],
-    link: "#",
+      "Created visual content and supported the brand's online presence through social media management, captions, and content development.",
+
+    image: "/projects/gallo-pinto.png",
+
+    technologies: [
+      {
+        name: "Instagram",
+        icon: "/icons/instagram.png",
+      },
+      {
+        name: "Facebook",
+        icon: "/icons/facebook.png",
+      },
+      {
+        name: "Canva",
+        icon: "/icons/canva.png",
+      },
+    ],
+
+    reverse: false,
   },
 
   {
     number: "04",
     title: "Aura Longevity",
-    category: "E-commerce & Marketing",
+    category: "E-Commerce & Marketing",
+
     description:
       "Supported e-commerce and marketing initiatives through landing pages, funnel development, email marketing, content, and digital strategy.",
+
     image: "/projects/aura-longevity.png",
-    tags: ["Shopify", "Funnels", "Email Marketing"],
-    link: "#",
+
+    technologies: [
+      {
+        name: "Shopify",
+        icon: "/icons/shopify.png",
+      },
+      {
+        name: "Mailchimp",
+        icon: "/icons/mailchimp.png",
+      },
+      {
+        name: "GoHighLevel",
+        icon: "/icons/gohighlevel.png",
+      },
+    ],
+
+    reverse: true,
   },
 
   {
     number: "05",
-    title: "Gallo Pinto",
-    category: "Social Media Management",
+    title: "Lead From Within Advisory",
+    category: "Website Redesign",
+
     description:
-      "Created visual content and supported the brand's online presence through social media management, captions, and content development.",
-    image: "/projects/gallo-pinto.png",
-    tags: ["Social Media", "Canva", "Content"],
-    link: "#",
+      "Redesigned a coaching and advisory website in Squarespace with a focus on brand alignment, user experience, and SEO.",
+
+    image: "/projects/lead-from-within.png",
+
+    technologies: [
+      {
+        name: "Squarespace",
+        icon: "/icons/squarespace.png",
+      },
+      {
+        name: "SEO",
+        icon: "/icons/google.png",
+      },
+      {
+        name: "Web Design",
+        icon: "/icons/wordpress.png",
+      },
+    ],
+
+    reverse: false,
   },
 
   {
     number: "06",
     title: "Technical Portfolio",
     category: "Web Development",
+
     description:
       "A personal portfolio built from scratch to showcase technical development, digital marketing, design, and virtual assistance experience.",
+
     image: "/projects/portfolio.png",
-    tags: ["React", "Vite", "CSS"],
-    link: "#",
-  },
 
-  {
-    number: "07",
-    title: "Project Seven",
-    category: "Digital Marketing",
-    description:
-      "Digital marketing project showcasing content, strategy, and creative execution.",
-    image: "/projects/project-07.png",
-    tags: ["Marketing", "Content", "Canva"],
-    link: "#",
-  },
+    technologies: [
+      {
+        name: "React",
+        icon: "/icons/react.png",
+      },
+      {
+        name: "Vite",
+        icon: "/icons/vscode.png",
+      },
+      {
+        name: "CSS",
+        icon: "/icons/css.png",
+      },
+    ],
 
-  {
-    number: "08",
-    title: "Project Eight",
-    category: "Website Design",
-    description:
-      "Website design project focused on creating a clean and engaging digital experience.",
-    image: "/projects/project-08.png",
-    tags: ["Web Design", "SEO"],
-    link: "#",
+    reverse: true,
   },
 ];
 
-const projectsPerPage = 6;
-
 function Projects() {
-  const [currentPage, setCurrentPage] = useState(0);
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [activeCategory, setActiveCategory] = useState("static");
-  const [activeSample, setActiveSample] = useState(0);
+  const [currentProject, setCurrentProject] = useState(0);
 
-  const totalPages = Math.ceil(
-    projects.length / projectsPerPage
-  );
-
-  const visibleProjects = projects.slice(
-    currentPage * projectsPerPage,
-    currentPage * projectsPerPage + projectsPerPage
-  );
-
-  /* =========================
-     PROJECT PAGINATION
-  ========================= */
+  const project = projects[currentProject];
 
   const goToPrevious = () => {
-    setCurrentPage((page) => Math.max(page - 1, 0));
+    setCurrentProject((current) =>
+      current === 0
+        ? projects.length - 1
+        : current - 1
+    );
   };
 
   const goToNext = () => {
-    setCurrentPage((page) =>
-      Math.min(page + 1, totalPages - 1)
+    setCurrentProject((current) =>
+      current === projects.length - 1
+        ? 0
+        : current + 1
     );
   };
-
-
-  /* =========================
-     PROJECT MODAL
-  ========================= */
-
-  const openProject = (project) => {
-    if (project.gallery) {
-      setSelectedProject(project);
-      setActiveCategory("carousels");
-      setActiveSample(0);
-    }
-  };
-
-  const closeProject = () => {
-    setSelectedProject(null);
-  };
-
-
-  /* =========================
-     CAROUSEL SAMPLE NAVIGATION
-  ========================= */
-
-  const goToPreviousSample = () => {
-    setActiveSample((sample) =>
-      Math.max(sample - 1, 0)
-    );
-  };
-
-  const goToNextSample = () => {
-    setActiveSample((sample) => {
-      const samples =
-        selectedProject?.gallery?.carousels || [];
-
-      return Math.min(
-        sample + 1,
-        samples.length - 1
-      );
-    });
-  };
-
-
-  /* =========================
-     ESCAPE KEY
-  ========================= */
-
-  useEffect(() => {
-    const handleEscape = (event) => {
-      if (event.key === "Escape") {
-        closeProject();
-      }
-    };
-
-    if (selectedProject) {
-      document.addEventListener(
-        "keydown",
-        handleEscape
-      );
-
-      document.body.style.overflow = "hidden";
-    }
-
-    return () => {
-      document.removeEventListener(
-        "keydown",
-        handleEscape
-      );
-
-      document.body.style.overflow = "";
-    };
-  }, [selectedProject]);
-
 
   return (
     <section
       id="projects"
       className="projects-section"
     >
-
       <div className="projects-container">
 
         {/* =========================
@@ -285,9 +239,10 @@ function Projects() {
         <div className="projects-navigation">
 
           <span className="projects-page">
-            {String(currentPage + 1).padStart(2, "0")} /{" "}
-            {String(totalPages).padStart(2, "0")}
+            {project.number} /{" "}
+            {String(projects.length).padStart(2, "0")}
           </span>
+
 
           <div className="projects-arrows">
 
@@ -295,8 +250,7 @@ function Projects() {
               type="button"
               className="projects-arrow"
               onClick={goToPrevious}
-              disabled={currentPage === 0}
-              aria-label="Previous projects"
+              aria-label="Previous project"
             >
               <FiArrowLeft />
             </button>
@@ -305,10 +259,7 @@ function Projects() {
               type="button"
               className="projects-arrow"
               onClick={goToNext}
-              disabled={
-                currentPage === totalPages - 1
-              }
-              aria-label="Next projects"
+              aria-label="Next project"
             >
               <FiArrowRight />
             </button>
@@ -319,399 +270,105 @@ function Projects() {
 
 
         {/* =========================
-            PROJECT GRID
+            PROJECT SLIDE
         ========================= */}
 
-        <div className="projects-grid">
+        <article
+          className={`project-slide ${
+            project.reverse
+              ? "project-slide-reverse"
+              : ""
+          }`}
+        >
 
-          {visibleProjects.map((project) => (
+          {/* =========================
+              PROJECT IMAGE
+          ========================= */}
 
-            <article
-              key={project.number}
-              className={`project-card ${
-                project.gallery
-                  ? "project-card-clickable"
-                  : ""
-              }`}
-              onClick={() => openProject(project)}
-            >
+          <div className="project-slide-image">
 
-              {/* =========================
-                  PROJECT IMAGE
-              ========================= */}
+            <img
+              src={project.image}
+              alt={project.title}
+            />
 
-              <div className="project-image-wrapper">
+          </div>
 
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="project-image"
-                />
 
-                {project.gallery ? (
+          {/* =========================
+              PROJECT INFORMATION
+          ========================= */}
 
-                  <button
-                    type="button"
-                    className="project-view"
-                    aria-label={`View ${project.title} projects`}
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      openProject(project);
-                    }}
+          <div className="project-slide-content">
+
+            <span className="project-slide-number">
+              {project.number}
+            </span>
+
+            <h3>
+              {project.title}
+            </h3>
+
+            <span className="project-slide-category">
+              {project.category}
+            </span>
+
+            <p>
+              {project.description}
+            </p>
+
+
+            {/* =========================
+                TECHNOLOGY LOGOS
+            ========================= */}
+
+            <div className="project-slide-technologies">
+
+              {project.technologies.map(
+                (technology) => (
+
+                  <div
+                    key={technology.name}
+                    className="project-slide-technology"
+                    title={technology.name}
                   >
-                    <FiExternalLink />
-                  </button>
 
-                ) : (
-
-                  <a
-                    href={project.link}
-                    className="project-view"
-                    aria-label={`View ${project.title}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(event) =>
-                      event.stopPropagation()
-                    }
-                  >
-                    <FiExternalLink />
-                  </a>
-
-                )}
-
-              </div>
-
-
-              {/* =========================
-                  PROJECT INFORMATION
-              ========================= */}
-
-              <div className="project-content">
-
-                <div className="project-top">
-
-                  <span className="project-number">
-                    {project.number}
-                  </span>
-
-                  <span className="project-category">
-                    {project.category}
-                  </span>
-
-                </div>
-
-                <h3>
-                  {project.title}
-                </h3>
-
-                <p>
-                  {project.description}
-                </p>
-
-
-                {/* =========================
-                    PROJECT TAGS
-                ========================= */}
-
-                <div className="project-tags">
-
-                  {project.tags.map((tag) => (
-
-                    <span
-                      key={tag}
-                      className="project-tag"
-                    >
-                      {tag}
-                    </span>
-
-                  ))}
-
-                </div>
-
-              </div>
-
-            </article>
-
-          ))}
-
-        </div>
-
-
-        {/* =========================
-            PROJECT MODAL
-        ========================= */}
-
-        {selectedProject && (
-
-          <div
-            className="project-modal-overlay"
-            onClick={closeProject}
-          >
-
-            <div
-              className="project-modal"
-              onClick={(event) =>
-                event.stopPropagation()
-              }
-            >
-
-              {/* =========================
-                  MODAL HEADER
-              ========================= */}
-
-              <div className="project-modal-header">
-
-                <div>
-
-                  <span className="project-modal-number">
-                    {selectedProject.number}
-                  </span>
-
-                  <h3>
-                    {selectedProject.title}
-                  </h3>
-
-                  <p>
-                    {selectedProject.category}
-                  </p>
-
-                </div>
-
-
-                <button
-                  type="button"
-                  className="project-modal-close"
-                  onClick={closeProject}
-                  aria-label="Close project"
-                >
-                  <FiX />
-                </button>
-
-              </div>
-
-
-              {/* =========================
-                  MODAL DESCRIPTION
-              ========================= */}
-
-              <div className="project-modal-description">
-                {selectedProject.description}
-              </div>
-
-
-              {/* =========================
-                  CATEGORY TABS
-              ========================= */}
-
-              <div className="project-modal-tabs">
-
-                <button
-                  type="button"
-                  className={
-                    activeCategory === "carousels"
-                      ? "active"
-                      : ""
-                  }
-                  onClick={() => {
-                    setActiveCategory("carousels");
-                    setActiveSample(0);
-                  }}
-                >
-                  Carousels
-                </button>
-
-                <button
-                  type="button"
-                  className={
-                    activeCategory === "static"
-                      ? "active"
-                      : ""
-                  }
-                  onClick={() => {
-                    setActiveCategory("static");
-                    setActiveSample(0);
-                  }}
-                >
-                  Static Posts
-                </button>
-
-                <button
-                  type="button"
-                  className={
-                    activeCategory === "clips"
-                      ? "active"
-                      : ""
-                  }
-                  onClick={() => {
-                    setActiveCategory("clips");
-                    setActiveSample(0);
-                  }}
-                >
-                  Short Clips
-                </button>
-
-              </div>
-
-
-              {/* =========================
-                  CAROUSEL GALLERY
-              ========================= */}
-
-              {activeCategory === "carousels" ? (
-
-                <>
-                  <div className="project-gallery-heading">
-                    {
-                      selectedProject.gallery
-                        .carousels[activeSample]
-                        .title
-                    }
-                  </div>
-
-
-                  <div className="project-gallery-wrapper">
-
-                    {/* PREVIOUS SAMPLE */}
-
-                    <button
-                      type="button"
-                      className="project-gallery-arrow project-gallery-arrow-left"
-                      onClick={
-                        goToPreviousSample
-                      }
-                      disabled={
-                        activeSample === 0
-                      }
-                      aria-label="Previous sample"
-                    >
-                      <FiArrowLeft />
-                    </button>
-
-
-                    {/* CAROUSEL IMAGES */}
-
-                    <div className="project-modal-gallery">
-
-                      {
-                        selectedProject.gallery
-                          .carousels[activeSample]
-                          .images
-                          .map(
-                            (item, index) => (
-
-                              <div
-                                className="project-gallery-item"
-                                key={item}
-                              >
-
-                                <img
-                                  src={item}
-                                  alt={`${selectedProject.title} carousel ${
-                                    index + 1
-                                  }`}
-                                />
-
-                              </div>
-
-                            )
-                          )
-                      }
-
-                    </div>
-
-
-                    {/* NEXT SAMPLE */}
-
-                    <button
-                      type="button"
-                      className="project-gallery-arrow project-gallery-arrow-right"
-                      onClick={
-                        goToNextSample
-                      }
-                      disabled={
-                        activeSample ===
-                        selectedProject
-                          .gallery
-                          .carousels
-                          .length - 1
-                      }
-                      aria-label="Next sample"
-                    >
-                      <FiArrowRight />
-                    </button>
-
-                  </div>
-                </>
-
-              ) : (
-
-                /* =========================
-                   STATIC POSTS / SHORT CLIPS
-                ========================= */
-
-                <>
-
-                  <div className="project-gallery-heading">
-                    {activeCategory === "static"
-                      ? "Static Posts"
-                      : "Short Clips"}
-                  </div>
-
-
-                  <div className="project-modal-gallery">
-
-                    {
-                      selectedProject.gallery?.[
-                        activeCategory
-                      ]?.map(
-                        (item, index) => (
-
-                          <div
-                            className="project-gallery-item"
-                            key={item}
-                          >
-
-                            {activeCategory ===
-                            "clips" ? (
-
-                              <video
-                                src={item}
-                                controls
-                                playsInline
-                                preload="metadata"
-                              />
-
-                            ) : (
-
-                              <img
-                                src={item}
-                                alt={`${selectedProject.title} ${activeCategory} ${
-                                  index + 1
-                                }`}
-                              />
-
-                            )}
-
-                          </div>
-
-                        )
-                      )
-                    }
+                    <img
+                      src={technology.icon}
+                      alt={technology.name}
+                    />
 
                   </div>
 
-                </>
-
+                )
               )}
 
             </div>
 
+
+            {/* =========================
+                PROJECT LINK
+            ========================= */}
+
+            {project.link && (
+
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-slide-link"
+              >
+                Visit Project
+                <FiArrowRight />
+              </a>
+
+            )}
+
           </div>
 
-        )}
+        </article>
 
       </div>
-
     </section>
   );
 }
