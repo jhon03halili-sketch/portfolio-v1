@@ -1,5 +1,9 @@
-import { useState } from "react";
-import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import { useState, useEffect } from "react";
+import {
+  FiArrowLeft,
+  FiArrowRight,
+  FiX,
+} from "react-icons/fi";
 
 const projects = [
   {
@@ -15,15 +19,15 @@ const projects = [
     technologies: [
       {
         name: "HTML",
-        icon: "/icons/html.png",
+        icon: "/icons/project-html.png",
       },
       {
         name: "CSS",
-        icon: "/icons/css.png",
+        icon: "/icons/project-css.png",
       },
       {
-        name: "JavaScript",
-        icon: "/icons/javascript.png",
+        name: "JS",
+        icon: "/icons/js.png",
       },
       {
         name: "GitHub",
@@ -31,10 +35,15 @@ const projects = [
       },
     ],
 
-    link: "https://jhon03halili-sketch.github.io/boneless-chicken-mock-website-/",
+    link:
+      "https://jhon03halili-sketch.github.io/boneless-chicken-mock-website-/",
 
     reverse: false,
   },
+
+  /* =========================
+     BEYOND SEA CABO
+  ========================= */
 
   {
     number: "02",
@@ -44,29 +53,146 @@ const projects = [
     description:
       "Created and managed visual content for a luxury vacation rental brand, including social posts, carousels, reels, captions, and SEO-focused alt text.",
 
-    image: "/images/beyondsea.png",
-
     technologies: [
       {
         name: "Instagram",
-        icon: "/icons/instagram.png",
+        icon: "/icons/ig.png",
       },
       {
         name: "Canva",
-        icon: "/icons/canva.png",
+        icon: "/icons/canva1.png",
       },
       {
         name: "CapCut",
-        icon: "/icons/capcut.png",
+        icon: "/icons/capcut1.png",
       },
       {
-        name: "Google",
-        icon: "/icons/google.png",
+        name: "Later",
+        icon: "/icons/later2.png",
       },
     ],
 
     reverse: true,
+
+    gallery: [
+      {
+        title: "CAROUSEL1",
+        cover: "/beyondsea/159.png",
+        images: [
+          "/beyondsea/159.png",
+          "/beyondsea/160.png",
+          "/beyondsea/161.png",
+          "/beyondsea/162.png",
+          "/beyondsea/163.png",
+          "/beyondsea/164.png",
+          "/beyondsea/165.png"
+        ],
+      },
+
+      {
+        title: "STATIC POST",
+        cover: "/beyondsea/static-post1.png",
+        images: [
+          "/beyondsea/static-post1.png",
+        ],
+      },
+
+      {
+        title: "CAROUSEL 2",
+        cover: "/beyondsea/27.png",
+        images: [
+          "/beyondsea/27.png",
+          "/beyondsea/28.png",
+          "/beyondsea/29.png",
+          "/beyondsea/30.png",
+          "/beyondsea/31.png",
+          "/beyondsea/32.png",
+          "/beyondsea/33.png",
+        ],
+      },
+
+      {
+        title: "Sample 3",
+        cover: "/beyondsea/129.png",
+        images: [
+          "/beyondsea/129.png",
+          "/beyondsea/130.png",
+          "/beyondsea/131.png",
+          "/beyondsea/132.png",
+          "/beyondsea/133.png",
+          "/beyondsea/134.png",
+          "/beyondsea/135.png",
+        ],
+      },
+
+      {
+        title: "TESTIMONIALS",
+        cover: "/beyondsea/hailey.png",
+        images: [
+          "/beyondsea/hailey.png",
+          "/beyondsea/michael.png",
+          "/beyondsea/max.png",
+          "/beyondsea/yuri.png",
+          "/beyondsea/javier.png",
+          "/beyondsea/mark.png",
+          "/beyondsea/tosha.png",
+        ],
+      },
+
+      {
+        title: "Sample 4",
+        cover: "/beyondsea/1.png",
+        images: [
+          "/beyondsea/1.png",
+          "/beyondsea/2.png",
+          "/beyondsea/3.png",
+          "/beyondsea/4.png",
+          "/beyondsea/5.png",
+          "/beyondsea/6.png",
+        ],
+      },
+
+      {
+        title: "Sample 5",
+        cover: "/beyondsea/168.png",
+        images: [
+          "/beyondsea/168.png",
+          "/beyondsea/169.png",
+          "/beyondsea/170.png",
+          "/beyondsea/171.png",
+        ],
+      },
+
+      {
+        title: "STATIC POST 2",
+        cover: "/beyondsea/static.png",
+        images: [
+          "/beyondsea/static.png",
+        ],
+      },
+
+      /* =========================
+         SPACE FOR SAMPLE 9
+      ========================= */
+
+      {
+        title: "SAMPLE 6",
+        cover: "/beyondsea/172.png",
+        images: [
+          "/beyondsea/172.png",
+          "/beyondsea/173.png",
+          "/beyondsea/174.png",
+          "/beyondsea/175.png",
+          "/beyondsea/176.png",
+          "/beyondsea/177.png",
+        ],
+      },
+    ],
   },
+
+  /* =========================
+     GALLO PINTO
+  ========================= */
 
   {
     number: "03",
@@ -96,6 +222,10 @@ const projects = [
     reverse: false,
   },
 
+  /* =========================
+     AURA LONGEVITY
+  ========================= */
+
   {
     number: "04",
     title: "Aura Longevity",
@@ -124,6 +254,10 @@ const projects = [
     reverse: true,
   },
 
+  /* =========================
+     LEAD FROM WITHIN
+  ========================= */
+
   {
     number: "05",
     title: "Lead From Within Advisory",
@@ -151,6 +285,10 @@ const projects = [
 
     reverse: false,
   },
+
+  /* =========================
+     TECHNICAL PORTFOLIO
+  ========================= */
 
   {
     number: "06",
@@ -184,7 +322,17 @@ const projects = [
 function Projects() {
   const [currentProject, setCurrentProject] = useState(0);
 
+  const [selectedGallery, setSelectedGallery] =
+    useState(null);
+
+  const [currentGallerySlide, setCurrentGallerySlide] =
+    useState(0);
+
   const project = projects[currentProject];
+
+  /* =========================
+     PROJECT NAVIGATION
+  ========================= */
 
   const goToPrevious = () => {
     setCurrentProject((current) =>
@@ -201,6 +349,75 @@ function Projects() {
         : current + 1
     );
   };
+
+  /* =========================
+     OPEN GALLERY
+  ========================= */
+
+  const openGallery = (gallery) => {
+    setSelectedGallery(gallery);
+    setCurrentGallerySlide(0);
+  };
+
+  /* =========================
+     CLOSE GALLERY
+  ========================= */
+
+  const closeGallery = () => {
+    setSelectedGallery(null);
+    setCurrentGallerySlide(0);
+  };
+
+  /* =========================
+     GALLERY NAVIGATION
+  ========================= */
+
+  const goToPreviousGallerySlide = () => {
+    setCurrentGallerySlide((current) =>
+      current === 0
+        ? selectedGallery.images.length - 1
+        : current - 1
+    );
+  };
+
+  const goToNextGallerySlide = () => {
+    setCurrentGallerySlide((current) =>
+      current ===
+      selectedGallery.images.length - 1
+        ? 0
+        : current + 1
+    );
+  };
+
+  /* =========================
+     ESCAPE KEY
+  ========================= */
+
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === "Escape") {
+        closeGallery();
+      }
+    };
+
+    if (selectedGallery) {
+      document.addEventListener(
+        "keydown",
+        handleEscape
+      );
+
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      document.removeEventListener(
+        "keydown",
+        handleEscape
+      );
+
+      document.body.style.overflow = "";
+    };
+  }, [selectedGallery]);
 
   return (
     <section
@@ -243,7 +460,6 @@ function Projects() {
             {String(projects.length).padStart(2, "0")}
           </span>
 
-
           <div className="projects-arrows">
 
             <button
@@ -282,15 +498,69 @@ function Projects() {
         >
 
           {/* =========================
-              PROJECT IMAGE
+              PROJECT VISUAL
           ========================= */}
 
-          <div className="project-slide-image">
+          <div
+            className={`project-slide-visual ${
+              project.gallery
+                ? "project-slide-gallery"
+                : ""
+            }`}
+          >
 
-            <img
-              src={project.image}
-              alt={project.title}
-            />
+            {project.gallery ? (
+
+              /* =========================
+                 BEYOND SEA 3x3 GRID
+              ========================= */
+
+              <div className="project-gallery-grid">
+
+                {project.gallery.map(
+                  (gallery, index) => (
+
+                    <button
+                      type="button"
+                      key={gallery.title}
+                      className="project-gallery-thumbnail"
+                      onClick={() =>
+                        openGallery(gallery)
+                      }
+                      aria-label={`Open ${gallery.title}`}
+                    >
+
+                      <img
+                        src={gallery.cover}
+                        alt={gallery.title}
+                      />
+
+                      <span className="project-gallery-number">
+                        {String(index + 1).padStart(
+                          2,
+                          "0"
+                        )}
+                      </span>
+
+                    </button>
+
+                  )
+                )}
+
+              </div>
+
+            ) : (
+
+              <div className="project-slide-image">
+
+                <img
+                  src={project.image}
+                  alt={project.title}
+                />
+
+              </div>
+
+            )}
 
           </div>
 
@@ -367,6 +637,116 @@ function Projects() {
           </div>
 
         </article>
+
+
+        {/* =========================
+            GALLERY MODAL
+        ========================= */}
+
+        {selectedGallery && (
+
+          <div
+            className="project-gallery-modal-overlay"
+            onClick={closeGallery}
+          >
+
+            <div
+              className="project-gallery-modal"
+              onClick={(event) =>
+                event.stopPropagation()
+              }
+            >
+
+              {/* CLOSE */}
+
+              <button
+                type="button"
+                className="project-gallery-modal-close"
+                onClick={closeGallery}
+                aria-label="Close gallery"
+              >
+                <FiX />
+              </button>
+
+
+              {/* TITLE */}
+
+              <div className="project-gallery-modal-header">
+
+                <span>
+                  BEYOND SEA CABO
+                </span>
+
+                <h3>
+                  {selectedGallery.title}
+                </h3>
+
+              </div>
+
+
+              {/* IMAGE */}
+
+              <div className="project-gallery-modal-image">
+
+                <img
+                  src={
+                    selectedGallery.images[
+                      currentGallerySlide
+                    ]
+                  }
+                  alt={`${selectedGallery.title} slide ${
+                    currentGallerySlide + 1
+                  }`}
+                />
+
+              </div>
+
+
+              {/* NAVIGATION */}
+
+              <div className="project-gallery-modal-navigation">
+
+                <button
+                  type="button"
+                  className="project-gallery-modal-arrow"
+                  onClick={
+                    goToPreviousGallerySlide
+                  }
+                  aria-label="Previous slide"
+                >
+                  <FiArrowLeft />
+                </button>
+
+
+                <span>
+                  {String(
+                    currentGallerySlide + 1
+                  ).padStart(2, "0")}{" "}
+                  /{" "}
+                  {String(
+                    selectedGallery.images.length
+                  ).padStart(2, "0")}
+                </span>
+
+
+                <button
+                  type="button"
+                  className="project-gallery-modal-arrow"
+                  onClick={
+                    goToNextGallerySlide
+                  }
+                  aria-label="Next slide"
+                >
+                  <FiArrowRight />
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        )}
 
       </div>
     </section>
