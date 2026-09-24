@@ -85,7 +85,7 @@ const projects = [
           "/beyondsea/162.png",
           "/beyondsea/163.png",
           "/beyondsea/164.png",
-          "/beyondsea/165.png"
+          "/beyondsea/165.png",
         ],
       },
 
@@ -171,10 +171,6 @@ const projects = [
         ],
       },
 
-      /* =========================
-         SPACE FOR SAMPLE 9
-      ========================= */
-
       {
         title: "SAMPLE 6",
         cover: "/beyondsea/172.png",
@@ -188,6 +184,93 @@ const projects = [
         ],
       },
     ],
+
+    additionalGallery: [
+      {
+        title: "REEL 01",
+        cover: "/beyondsea/reel-01.png",
+        images: [
+          "/beyondsea/reel-01.png",
+        ],
+      },
+
+      {
+        title: "REEL 02",
+        cover: "/beyondsea/reel-02.png",
+        images: [
+          "/beyondsea/reel-02.png",
+        ],
+      },
+
+      {
+        title: "REEL 03",
+        cover: "/beyondsea/reel-03.png",
+        images: [
+          "/beyondsea/reel-03.png",
+        ],
+      },
+
+      {
+        title: "CAROUSEL 03",
+        cover: "/beyondsea/carousel-03.png",
+        images: [
+          "/beyondsea/carousel-03-01.png",
+          "/beyondsea/carousel-03-02.png",
+          "/beyondsea/carousel-03-03.png",
+          "/beyondsea/carousel-03-04.png",
+          "/beyondsea/carousel-03-05.png",
+        ],
+      },
+
+      {
+        title: "CAROUSEL 04",
+        cover: "/beyondsea/carousel-04.png",
+        images: [
+          "/beyondsea/carousel-04-01.png",
+          "/beyondsea/carousel-04-02.png",
+          "/beyondsea/carousel-04-03.png",
+          "/beyondsea/carousel-04-04.png",
+          "/beyondsea/carousel-04-05.png",
+        ],
+      },
+
+      {
+        title: "CAROUSEL 05",
+        cover: "/beyondsea/carousel-05.png",
+        images: [
+          "/beyondsea/carousel-05-01.png",
+          "/beyondsea/carousel-05-02.png",
+          "/beyondsea/carousel-05-03.png",
+          "/beyondsea/carousel-05-04.png",
+          "/beyondsea/carousel-05-05.png",
+        ],
+      },
+
+      {
+        title: "REEL 04",
+        cover: "/beyondsea/reel-04.png",
+        images: [
+          "/beyondsea/reel-04.png",
+        ],
+      },
+
+      {
+        title: "REEL 05",
+        cover: "/beyondsea/reel-05.png",
+        images: [
+          "/beyondsea/reel-05.png",
+        ],
+      },
+
+      {
+        title: "REEL 06",
+        cover: "/beyondsea/reel-06.png",
+        images: [
+          "/beyondsea/reel-06.png",
+        ],
+      },
+    ],
+    
   },
 
   /* =========================
@@ -207,19 +290,166 @@ const projects = [
     technologies: [
       {
         name: "Instagram",
-        icon: "/icons/instagram.png",
-      },
-      {
-        name: "Facebook",
-        icon: "/icons/facebook.png",
+        icon: "/icons/ig.png",
       },
       {
         name: "Canva",
-        icon: "/icons/canva.png",
+        icon: "/icons/canva1.png",
+      },
+      {
+        name: "CapCut",
+        icon: "/icons/capcut1.png",
+      },
+      {
+        name: "Later",
+        icon: "/icons/later2.png",
       },
     ],
 
     reverse: false,
+
+    gallery: [
+      {
+        title: "STATIC 1",
+        cover: "/GP/1.png",
+        images: [
+          "/GP/1.png",
+        ],
+      },
+      {
+        title: "STATIC 2",
+        cover: "/GP/STATIC 5.png",
+        images: [
+          "/GP/STATIC 5.png",
+        ]
+      },
+      {
+        title: "CAROUSEL 1",
+        cover: "/GP/40.png",
+        images: [
+          "/GP/40.png",
+          "/GP/41.png",
+          "/GP/42.png",
+          "/GP/43.png",
+        ]
+      },
+      {
+        title: "STATIC 3",
+        cover: "/GP/STATIC 1.png",
+        images: [
+          "/GP/STATIC 1.png",
+        ]
+      },
+      {
+        title: "STATIC 4",
+        cover: "/GP/2.png",
+        images: [
+          "/GP/2.png",
+        ]
+      },
+      {
+        title: "CAROUSEL 2",
+        cover: "/GP/56.png",
+        images: [
+          "/GP/56.png",
+          "/GP/57.png",
+          "/GP/58.png",
+          "/GP/59.png",
+        ]
+      },
+      {
+        title: "STATIC 5",
+        cover: "/GP/STATIC 2.png",
+        images: [
+          "/GP/STATIC 2.png",
+        ]
+      },
+      {
+        title: "STATIC 6",
+        cover: "/GP/STATIC 4.png",
+        images: [
+          "/GP/STATIC 4.png",
+        ]
+      },
+      {
+        title: "CAROUSEL 3",
+        cover: "/GP/50.png",
+        images: [
+          "/GP/50.png",
+          "/GP/51.png",
+          "/GP/52.png",
+          "/GP/53.png",
+          "/GP/54.png",
+        ]
+      }
+    ],
+
+additionalGallery: [
+  {
+    title: "SAMPLE 2",
+    cover: "/GP/2.png",
+    images: [
+      "/GP/2.png",
+    ],
+  },
+  {
+    title: "SAMPLE 3",
+    cover: "/GP/3.png",
+    images: [
+      "/GP/3.png",
+    ],
+  },
+  {
+    title: "SAMPLE 4",
+    cover: "/GP/4.png",
+    images: [
+      "/GP/4.png",
+    ],
+  },
+  {
+    title: "SAMPLE 5",
+    cover: "/GP/5.png",
+    images: [
+      "/GP/5.png",
+    ],
+  },
+  {
+    title: "SAMPLE 6",
+    cover: "/GP/6.png",
+    images: [
+      "/GP/6.png",
+    ],
+  },
+  {
+    title: "SAMPLE 7",
+    cover: "/GP/7.png",
+    images: [
+      "/GP/7.png",
+    ],
+  },
+  {
+    title: "SAMPLE 8",
+    cover: "/GP/8.png",
+    images: [
+      "/GP/8.png",
+    ],
+  },
+  {
+    title: "SAMPLE 9",
+    cover: "/GP/9.png",
+    images: [
+      "/GP/9.png",
+    ],
+  },
+  {
+    title: "SAMPLE 10",
+    cover: "/GP/10.png",
+    images: [
+      "/GP/10.png",
+    ],
+  },
+],
+
   },
 
   /* =========================
@@ -328,27 +558,34 @@ function Projects() {
   const [currentGallerySlide, setCurrentGallerySlide] =
     useState(0);
 
+  const [showAdditionalWork, setShowAdditionalWork] =
+  useState(false);
+
   const project = projects[currentProject];
 
   /* =========================
      PROJECT NAVIGATION
   ========================= */
 
-  const goToPrevious = () => {
-    setCurrentProject((current) =>
-      current === 0
-        ? projects.length - 1
-        : current - 1
-    );
-  };
+const goToPrevious = () => {
+  setShowAdditionalWork(false);
 
-  const goToNext = () => {
-    setCurrentProject((current) =>
-      current === projects.length - 1
-        ? 0
-        : current + 1
-    );
-  };
+  setCurrentProject((current) =>
+    current === 0
+      ? projects.length - 1
+      : current - 1
+  );
+};
+
+const goToNext = () => {
+  setShowAdditionalWork(false);
+
+  setCurrentProject((current) =>
+    current === projects.length - 1
+      ? 0
+      : current + 1
+  );
+};
 
   /* =========================
      OPEN GALLERY
@@ -490,12 +727,14 @@ function Projects() {
         ========================= */}
 
         <article
-          className={`project-slide ${
-            project.reverse
-              ? "project-slide-reverse"
-              : ""
-          }`}
-        >
+  className={`project-slide ${
+    project.reverse ? "project-slide-reverse" : ""
+  } ${
+    project.title === "Beyond Sea Cabo"
+      ? "beyond-sea-project"
+      : ""
+  }`}
+>
 
           {/* =========================
               PROJECT VISUAL
@@ -511,45 +750,110 @@ function Projects() {
 
             {project.gallery ? (
 
-              /* =========================
-                 BEYOND SEA 3x3 GRID
-              ========================= */
+  <div
+    className={`project-gallery-flip ${
+      project.title === "Gallo Pinto" ? "gallo-pinto-gallery" : ""
+    }`}
+  >
 
-              <div className="project-gallery-grid">
+    {/* =========================
+        FRONT — CURRENT WORK
+    ========================= */}
 
-                {project.gallery.map(
-                  (gallery, index) => (
+    <div
+      className={`project-gallery-face project-gallery-front ${
+        showAdditionalWork
+          ? "project-gallery-hidden"
+          : ""
+      }`}
+    >
 
-                    <button
-                      type="button"
-                      key={gallery.title}
-                      className="project-gallery-thumbnail"
-                      onClick={() =>
-                        openGallery(gallery)
-                      }
-                      aria-label={`Open ${gallery.title}`}
-                    >
+      <div className="project-gallery-grid">
 
-                      <img
-                        src={gallery.cover}
-                        alt={gallery.title}
-                      />
+        {project.gallery.map(
+          (gallery, index) => (
 
-                      <span className="project-gallery-number">
-                        {String(index + 1).padStart(
-                          2,
-                          "0"
-                        )}
-                      </span>
+            <button
+              type="button"
+              key={gallery.title}
+              className="project-gallery-thumbnail"
+              onClick={() =>
+                openGallery(gallery)
+              }
+              aria-label={`Open ${gallery.title}`}
+            >
 
-                    </button>
+              <img
+                src={gallery.cover}
+                alt={gallery.title}
+              />
 
-                  )
-                )}
+              <span className="project-gallery-number">
+                {String(index + 1).padStart(2, "0")}
+              </span>
 
-              </div>
+            </button>
 
-            ) : (
+          )
+        )}
+
+      </div>
+
+    </div>
+
+
+    {/* =========================
+        BACK — ADDITIONAL WORK
+    ========================= */}
+
+    {project.additionalGallery && (
+
+      <div
+        className={`project-gallery-face project-gallery-back ${
+          showAdditionalWork
+            ? "project-gallery-visible"
+            : ""
+        }`}
+      >
+
+        <div className="project-gallery-grid">
+
+          {project.additionalGallery.map(
+            (gallery, index) => (
+
+              <button
+                type="button"
+                key={gallery.title}
+                className="project-gallery-thumbnail"
+                onClick={() =>
+                  openGallery(gallery)
+                }
+                aria-label={`Open ${gallery.title}`}
+              >
+
+                <img
+                  src={gallery.cover}
+                  alt={gallery.title}
+                />
+
+                <span className="project-gallery-number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+              </button>
+
+            )
+          )}
+
+        </div>
+
+      </div>
+
+    )}
+
+  </div>
+
+) : (
 
               <div className="project-slide-image">
 
@@ -614,6 +918,30 @@ function Projects() {
               )}
 
             </div>
+
+            {project.additionalGallery && (
+  <button
+    type="button"
+    className="project-work-toggle"
+    onClick={() =>
+      setShowAdditionalWork(
+        !showAdditionalWork
+      )
+    }
+  >
+    {showAdditionalWork
+      ? "View Featured Work"
+      : "View More Work"}
+
+    <FiArrowRight
+      className={
+        showAdditionalWork
+          ? "project-work-toggle-icon flipped"
+          : "project-work-toggle-icon"
+      }
+    />
+  </button>
+)}
 
 
             {/* =========================

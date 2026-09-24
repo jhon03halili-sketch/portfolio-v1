@@ -3116,6 +3116,354 @@ body.light-mode .experience-marker-dot {
    BEYOND SEA GALLERY
 ========================= */
 
+/* =========================
+   BEYOND SEA — LEFT ALIGN
+========================= */
+
+.beyond-sea-project .project-slide-content {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.beyond-sea-project .project-slide-number,
+.beyond-sea-project .project-slide-content h3,
+.beyond-sea-project .project-slide-category,
+.beyond-sea-project .project-slide-content p {
+  text-align: left;
+}
+
+.beyond-sea-project .project-slide-technologies {
+  justify-content: flex-start;
+}
+
+/* =========================
+   FLIPPABLE GALLERY
+========================= */
+
+.project-gallery-flip {
+  position: relative;
+
+  width: 100%;
+  max-width: 470px;
+
+  aspect-ratio: 1 / 1;
+
+  perspective: 1400px;
+}
+
+.project-gallery-face {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.8s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+.project-gallery-front {
+  transform: rotateY(0deg);
+}
+
+.project-gallery-back {
+  transform: rotateY(180deg);
+}
+
+.project-gallery-front.project-gallery-hidden {
+  transform: rotateY(-180deg);
+}
+
+.project-gallery-back.project-gallery-visible {
+  transform: rotateY(0deg);
+}
+
+.project-gallery-face .project-gallery-grid {
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  grid-template-rows:
+    repeat(3, 1fr);
+
+  gap: 8px;
+
+  aspect-ratio: auto;
+}
+
+
+/* =========================
+   MORE WORK BUTTON
+========================= */
+
+.project-work-toggle {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  margin-top: 2px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #E6E6FA;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.project-work-toggle:hover {
+  color: #4B0082;
+
+  gap: 13px;
+}
+
+.project-work-toggle-icon {
+  width: 15px;
+  height: 15px;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.project-work-toggle-icon.flipped {
+  transform: rotate(180deg);
+}
+
+/* =========================
+   FLIPPABLE GALLERY
+========================= */
+
+.project-gallery-flip {
+  position: relative;
+
+  width: 100%;
+  max-width: 470px;
+
+  aspect-ratio: 1 / 1;
+
+  perspective: 1400px;
+}
+
+
+/* =========================
+   GALLERY FACES
+========================= */
+
+.project-gallery-face {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.8s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+/* =========================
+   GALLO PINTO — 4:5 GALLERY
+========================= */
+
+.gallo-pinto-gallery {
+  aspect-ratio: 4 / 5;
+}
+
+.gallo-pinto-gallery .project-gallery-face .project-gallery-grid {
+  aspect-ratio: 4 / 5;
+}
+
+.gallo-pinto-gallery .project-gallery-thumbnail {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.gallo-pinto-gallery .project-gallery-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   PROJECT CONTENT — RIGHT ALIGN
+========================= */
+
+.project-slide-content {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.project-slide-content h3,
+.project-slide-content p,
+.project-slide-category,
+.project-slide-number {
+  text-align: right;
+}
+
+.project-slide-technologies {
+  justify-content: flex-end;
+}
+
+/* =========================
+   FRONT
+========================= */
+
+.project-gallery-front {
+  transform: rotateY(0deg);
+}
+
+
+/* =========================
+   BACK
+========================= */
+
+.project-gallery-back {
+  transform: rotateY(180deg);
+}
+
+
+/* =========================
+   FLIPPED STATE
+========================= */
+
+.project-gallery-front.project-gallery-hidden {
+  transform: rotateY(-180deg);
+}
+
+.project-gallery-back.project-gallery-visible {
+  transform: rotateY(0deg);
+}
+
+
+/* =========================
+   GRID INSIDE FLIP
+========================= */
+
+.project-gallery-face .project-gallery-grid {
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  grid-template-rows:
+    repeat(3, 1fr);
+
+  gap: 8px;
+
+  aspect-ratio: auto;
+}
+
+/* =========================
+   MORE WORK BUTTON
+========================= */
+
+.project-work-toggle {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  margin-top: 2px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #E6E6FA;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.project-work-toggle:hover {
+  color: #4B0082;
+
+  gap: 13px;
+}
+
+.project-work-toggle-icon {
+  width: 15px;
+  height: 15px;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.project-work-toggle-icon.flipped {
+  transform: rotate(180deg);
+}
+
 .project-slide-gallery {
   padding: 24px;
 
