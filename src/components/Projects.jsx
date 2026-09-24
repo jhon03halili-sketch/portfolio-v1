@@ -481,6 +481,142 @@ additionalGallery: [
       },
     ],
 
+    gallery: [
+      {
+        title: "STATIC 1",
+        cover: "/aura/POST 9.png",
+        images: [
+          "/aura/POST 9.png",
+        ],
+      },
+      {
+        title: "CAROUSEL 2",
+        cover: "/aura/POST 6.png",
+        images: [
+          "/aura/POST 6.png",
+        ]
+      },
+      {
+        title: "REEL 1",
+        cover: "/aura/reel-frame1.jpg",
+        images: [
+          "/aura/POST 10.mp4",
+        ]
+      },
+      {
+        title: "STATIC 2",
+        cover: "/aura/POST 4.png",
+        images: [
+          "/aura/POST 4.png",
+        ]
+      },
+      {
+        title: "STATIC 3",
+        cover: "/aura/POST 17.png",
+        images: [
+          "/aura/POST 17.png",
+        ]
+      },
+      {
+        title: "STATIC 4",
+        cover: "/aura/POST 12 (1).png",
+        images: [
+          "/aura/POST 12 (1).png",
+        ]
+      },
+      {
+        title: "REEL 2",
+        cover: "/aura/reel-frame.jpg",
+        images: [
+          "/aura/AURA - REEL 3.mp4",
+        ]
+      },
+      {
+        title: "CAROUSEL 1",
+        cover: "/aura/3.png",
+        images: [
+          "/aura/3.png",
+          "/aura/4.png",
+          "/aura/5.png",
+          "/aura/6.png",
+          "/aura/7.png",
+        ]
+      },
+      {
+        title: "REEL 3",
+        cover: "/aura/reel-frame2.jpg",
+        images: [
+          "/aura/reel3.mp4",
+        ]
+      }
+    ],
+
+additionalGallery: [
+  {
+    title: "SAMPLE 2",
+    cover: "/GP/2.png",
+    images: [
+      "/GP/2.png",
+    ],
+  },
+  {
+    title: "SAMPLE 3",
+    cover: "/GP/3.png",
+    images: [
+      "/GP/3.png",
+    ],
+  },
+  {
+    title: "SAMPLE 4",
+    cover: "/GP/4.png",
+    images: [
+      "/GP/4.png",
+    ],
+  },
+  {
+    title: "SAMPLE 5",
+    cover: "/GP/5.png",
+    images: [
+      "/GP/5.png",
+    ],
+  },
+  {
+    title: "SAMPLE 6",
+    cover: "/GP/6.png",
+    images: [
+      "/GP/6.png",
+    ],
+  },
+  {
+    title: "SAMPLE 7",
+    cover: "/GP/7.png",
+    images: [
+      "/GP/7.png",
+    ],
+  },
+  {
+    title: "SAMPLE 8",
+    cover: "/GP/8.png",
+    images: [
+      "/GP/8.png",
+    ],
+  },
+  {
+    title: "SAMPLE 9",
+    cover: "/GP/9.png",
+    images: [
+      "/GP/9.png",
+    ],
+  },
+  {
+    title: "SAMPLE 10",
+    cover: "/GP/10.png",
+    images: [
+      "/GP/10.png",
+    ],
+  },
+],
+
     reverse: true,
   },
 
@@ -726,12 +862,16 @@ const goToNext = () => {
             PROJECT SLIDE
         ========================= */}
 
-        <article
+<article
   className={`project-slide ${
     project.reverse ? "project-slide-reverse" : ""
   } ${
     project.title === "Beyond Sea Cabo"
       ? "beyond-sea-project"
+      : ""
+  } ${
+    project.title === "Aura Longevity"
+      ? "aura-longevity-project"
       : ""
   }`}
 >
@@ -750,11 +890,17 @@ const goToNext = () => {
 
             {project.gallery ? (
 
-  <div
-    className={`project-gallery-flip ${
-      project.title === "Gallo Pinto" ? "gallo-pinto-gallery" : ""
-    }`}
-  >
+<div
+  className={`project-gallery-flip ${
+    project.title === "Gallo Pinto"
+      ? "gallo-pinto-gallery"
+      : ""
+  } ${
+    project.title === "Aura Longevity"
+      ? "aura-longevity-gallery"
+      : ""
+  }`}
+>
 
     {/* =========================
         FRONT — CURRENT WORK

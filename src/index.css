@@ -3333,6 +3333,70 @@ body.light-mode .experience-marker-dot {
 }
 
 /* =========================
+   AURA LONGEVITY — 4:5 GALLERY
+========================= */
+
+.aura-longevity-gallery {
+  aspect-ratio: 4 / 5;
+}
+
+.aura-longevity-gallery .project-gallery-face {
+  width: 100%;
+  height: 100%;
+}
+
+.aura-longevity-gallery .project-gallery-face .project-gallery-grid {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  gap: 8px;
+}
+
+.aura-longevity-gallery .project-gallery-thumbnail {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.aura-longevity-gallery .project-gallery-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   AURA LONGEVITY — LEFT ALIGN
+========================= */
+
+.aura-longevity-project .project-slide-content {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.aura-longevity-project .project-slide-number,
+.aura-longevity-project .project-slide-content h3,
+.aura-longevity-project .project-slide-category,
+.aura-longevity-project .project-slide-content p {
+  text-align: left;
+}
+
+.aura-longevity-project .project-slide-technologies {
+  justify-content: flex-start;
+}
+
+.aura-longevity-project .project-work-toggle,
+.aura-longevity-project .project-slide-link {
+  align-self: flex-start;
+}
+
+/* =========================
    PROJECT CONTENT — RIGHT ALIGN
 ========================= */
 
