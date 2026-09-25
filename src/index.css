@@ -3137,6 +3137,57 @@ body.light-mode .experience-marker-dot {
 }
 
 /* =========================
+   BEYOND SEA — FLIPPED GALLERY
+   3 × 2 / 4:5 PORTRAIT
+========================= */
+
+.beyond-sea-project .project-gallery-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.beyond-sea-project .project-gallery-back
+.project-gallery-grid {
+  width: 100%;
+  height: auto;
+  max-width: none;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+
+  gap: 8px;
+
+  aspect-ratio: auto;
+}
+
+/* Portrait cards */
+.beyond-sea-project .project-gallery-back
+.project-gallery-thumbnail {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+/* Images + videos */
+.beyond-sea-project .project-gallery-back
+.project-gallery-thumbnail img,
+.beyond-sea-project .project-gallery-back
+.project-gallery-thumbnail video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* =========================
    FLIPPABLE GALLERY
 ========================= */
 
@@ -3333,6 +3384,35 @@ body.light-mode .experience-marker-dot {
 }
 
 /* =========================
+   GALLO PINTO — CENTER FLIPPED GRID
+========================= */
+
+.gallo-pinto-gallery .project-gallery-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallo-pinto-gallery .project-gallery-back
+.project-gallery-grid {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+
+  gap: 8px;
+}
+
+.gallo-pinto-gallery .project-gallery-back
+.project-gallery-thumbnail {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+}
+
+/* =========================
    AURA LONGEVITY — 4:5 GALLERY
 ========================= */
 
@@ -3394,6 +3474,14 @@ body.light-mode .experience-marker-dot {
 .aura-longevity-project .project-work-toggle,
 .aura-longevity-project .project-slide-link {
   align-self: flex-start;
+}
+
+.project-gallery-thumbnail img,
+.project-gallery-thumbnail video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 /* =========================
@@ -4038,6 +4126,14 @@ body.light-mode .experience-marker-dot {
   display: block;
 
   object-fit: contain;
+}
+
+.project-gallery-modal-image img,
+.project-gallery-modal-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 

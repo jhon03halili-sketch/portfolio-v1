@@ -188,61 +188,49 @@ const projects = [
     additionalGallery: [
       {
         title: "REEL 01",
-        cover: "/beyondsea/reel-01.png",
+        cover: "/beyondsea/reel1-frame.jpg",
         images: [
-          "/beyondsea/reel-01.png",
+          "/beyondsea/BSC - REEL.mp4",
         ],
       },
 
       {
         title: "REEL 02",
-        cover: "/beyondsea/reel-02.png",
+        cover: "/beyondsea/reel2-frame.jpg",
         images: [
-          "/beyondsea/reel-02.png",
+          "/beyondsea/BSC-REEL.mp4",
         ],
       },
 
       {
         title: "REEL 03",
-        cover: "/beyondsea/reel-03.png",
+        cover: "/beyondsea/reel3-frame.jpg",
         images: [
-          "/beyondsea/reel-03.png",
+          "/beyondsea/BSC-REEL4.mp4",
         ],
       },
 
       {
-        title: "CAROUSEL 03",
-        cover: "/beyondsea/carousel-03.png",
+        title: "REEL 04",
+        cover: "/beyondsea/reel4-frame.jpg",
         images: [
-          "/beyondsea/carousel-03-01.png",
-          "/beyondsea/carousel-03-02.png",
-          "/beyondsea/carousel-03-03.png",
-          "/beyondsea/carousel-03-04.png",
-          "/beyondsea/carousel-03-05.png",
+          "/beyondsea/BSC-REEL5.mp4",
         ],
       },
 
       {
-        title: "CAROUSEL 04",
-        cover: "/beyondsea/carousel-04.png",
+        title: "REEL 05",
+        cover: "/beyondsea/reel5-frame.jpg",
         images: [
-          "/beyondsea/carousel-04-01.png",
-          "/beyondsea/carousel-04-02.png",
-          "/beyondsea/carousel-04-03.png",
-          "/beyondsea/carousel-04-04.png",
-          "/beyondsea/carousel-04-05.png",
+          "/beyondsea/BSC-REEL6.mp4",
         ],
       },
 
       {
-        title: "CAROUSEL 05",
-        cover: "/beyondsea/carousel-05.png",
+        title: "REEL 06",
+        cover: "",
         images: [
-          "/beyondsea/carousel-05-01.png",
-          "/beyondsea/carousel-05-02.png",
-          "/beyondsea/carousel-05-03.png",
-          "/beyondsea/carousel-05-04.png",
-          "/beyondsea/carousel-05-05.png",
+          "/beyondsea/BSC - REEL 4.mp4",
         ],
       },
 
@@ -385,67 +373,46 @@ const projects = [
     ],
 
 additionalGallery: [
-  {
-    title: "SAMPLE 2",
-    cover: "/GP/2.png",
+    {
+    title: "REEL 01",
+    cover: "",
     images: [
-      "/GP/2.png",
+      "/GP/GALLO PINTO - REEL 3.mp4",
     ],
   },
   {
-    title: "SAMPLE 3",
-    cover: "/GP/3.png",
+    title: "REEL 02",
+    cover: "",
     images: [
-      "/GP/3.png",
+      "/GP/GALLO PINTO - REEL.mp4",
     ],
   },
   {
-    title: "SAMPLE 4",
-    cover: "/GP/4.png",
+    title: "REEL 03",
+    cover: "",
     images: [
-      "/GP/4.png",
+      "/GP/GP - REEL 2.mp4",
+    ],
+  },
+    {
+    title: "REEL 04",
+    cover: "",
+    images: [
+      "/GP/GP - REEL.mp4",
     ],
   },
   {
-    title: "SAMPLE 5",
-    cover: "/GP/5.png",
+    title: "REEL 05",
+    cover: "",
     images: [
-      "/GP/5.png",
+      "/GP/GP - REEL 3.mp4",
     ],
   },
   {
-    title: "SAMPLE 6",
-    cover: "/GP/6.png",
+    title: "REEL 06",
+    cover: "",
     images: [
-      "/GP/6.png",
-    ],
-  },
-  {
-    title: "SAMPLE 7",
-    cover: "/GP/7.png",
-    images: [
-      "/GP/7.png",
-    ],
-  },
-  {
-    title: "SAMPLE 8",
-    cover: "/GP/8.png",
-    images: [
-      "/GP/8.png",
-    ],
-  },
-  {
-    title: "SAMPLE 9",
-    cover: "/GP/9.png",
-    images: [
-      "/GP/9.png",
-    ],
-  },
-  {
-    title: "SAMPLE 10",
-    cover: "/GP/10.png",
-    images: [
-      "/GP/10.png",
+      "/GP/GP  - REEL 6.mp4",
     ],
   },
 ],
@@ -468,17 +435,25 @@ additionalGallery: [
 
     technologies: [
       {
+        name: "Instagram",
+        icon: "/icons/ig.png",
+      },
+      {
+        name: "Canva",
+        icon: "/icons/canva1.png",
+      },
+      {
+        name: "CapCut",
+        icon: "/icons/capcut1.png",
+      },
+      {
+        name: "Later",
+        icon: "/icons/later2.png",
+      },
+      {
         name: "Shopify",
-        icon: "/icons/shopify.png",
-      },
-      {
-        name: "Mailchimp",
-        icon: "/icons/mailchimp.png",
-      },
-      {
-        name: "GoHighLevel",
-        icon: "/icons/gohighlevel.png",
-      },
+        icon: "/icons/project-shopify.png",
+      }
     ],
 
     gallery: [
@@ -500,7 +475,7 @@ additionalGallery: [
         title: "REEL 1",
         cover: "/aura/reel-frame1.jpg",
         images: [
-          "/aura/POST 10.mp4",
+          "/aura/AURA - REEL 3.mp4",
         ]
       },
       {
@@ -528,7 +503,7 @@ additionalGallery: [
         title: "REEL 2",
         cover: "/aura/reel-frame.jpg",
         images: [
-          "/aura/AURA - REEL 3.mp4",
+          "/aura/AURA - REEL 2.mp4",
         ]
       },
       {
@@ -914,36 +889,51 @@ const goToNext = () => {
       }`}
     >
 
-      <div className="project-gallery-grid">
+<div className="project-gallery-grid">
 
-        {project.gallery.map(
-          (gallery, index) => (
+  {project.gallery.map(
+    (gallery, index) => (
 
-            <button
-              type="button"
-              key={gallery.title}
-              className="project-gallery-thumbnail"
-              onClick={() =>
-                openGallery(gallery)
-              }
-              aria-label={`Open ${gallery.title}`}
-            >
+      <button
+        type="button"
+        key={gallery.title}
+        className="project-gallery-thumbnail"
+        onClick={() =>
+          openGallery(gallery)
+        }
+        aria-label={`Open ${gallery.title}`}
+      >
 
-              <img
-                src={gallery.cover}
-                alt={gallery.title}
-              />
-
-              <span className="project-gallery-number">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-
-            </button>
-
-          )
+        {gallery.images?.[0]
+          ?.toLowerCase()
+          .endsWith(".mp4") ? (
+          <video
+            src={gallery.images[0]}
+            poster={gallery.cover}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label={gallery.title}
+          />
+        ) : (
+          <img
+            src={gallery.cover}
+            alt={gallery.title}
+          />
         )}
 
-      </div>
+        <span className="project-gallery-number">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+
+      </button>
+
+    )
+  )}
+
+</div>
 
     </div>
 
@@ -962,36 +952,51 @@ const goToNext = () => {
         }`}
       >
 
-        <div className="project-gallery-grid">
+<div className="project-gallery-grid">
 
-          {project.additionalGallery.map(
-            (gallery, index) => (
+  {project.additionalGallery
+    .slice(0, 6)
+    .map((gallery, index) => (
 
-              <button
-                type="button"
-                key={gallery.title}
-                className="project-gallery-thumbnail"
-                onClick={() =>
-                  openGallery(gallery)
-                }
-                aria-label={`Open ${gallery.title}`}
-              >
+      <button
+        type="button"
+        key={gallery.title}
+        className="project-gallery-thumbnail"
+        onClick={() =>
+          openGallery(gallery)
+        }
+        aria-label={`Open ${gallery.title}`}
+      >
 
-                <img
-                  src={gallery.cover}
-                  alt={gallery.title}
-                />
+        {gallery.images?.[0]
+          ?.toLowerCase()
+          .endsWith(".mp4") ? (
+          <video
+            src={gallery.images[0]}
+            poster={gallery.cover}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label={gallery.title}
+          />
+        ) : (
+          <img
+            src={gallery.cover}
+            alt={gallery.title}
+          />
+        )}
 
-                <span className="project-gallery-number">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
+        <span className="project-gallery-number">
+          {String(index + 1).padStart(2, "0")}
+        </span>
 
-              </button>
+      </button>
 
-            )
-          )}
+    ))}
 
-        </div>
+</div>
 
       </div>
 
@@ -1160,20 +1165,37 @@ const goToNext = () => {
 
               {/* IMAGE */}
 
-              <div className="project-gallery-modal-image">
+<div className="project-gallery-modal-image">
 
-                <img
-                  src={
-                    selectedGallery.images[
-                      currentGallerySlide
-                    ]
-                  }
-                  alt={`${selectedGallery.title} slide ${
-                    currentGallerySlide + 1
-                  }`}
-                />
+  {selectedGallery.images[
+    currentGallerySlide
+  ].toLowerCase().endsWith(".mp4") ? (
+    <video
+      src={
+        selectedGallery.images[
+          currentGallerySlide
+        ]
+      }
+      controls
+      autoPlay
+      muted
+      loop
+      playsInline
+    />
+  ) : (
+    <img
+      src={
+        selectedGallery.images[
+          currentGallerySlide
+        ]
+      }
+      alt={`${selectedGallery.title} slide ${
+        currentGallerySlide + 1
+      }`}
+    />
+  )}
 
-              </div>
+</div>
 
 
               {/* NAVIGATION */}
