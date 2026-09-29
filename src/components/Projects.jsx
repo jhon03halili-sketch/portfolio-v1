@@ -412,7 +412,7 @@ additionalGallery: [
     title: "REEL 06",
     cover: "",
     images: [
-      "/GP/GP  - REEL 6.mp4",
+      "/GP/GP-REEL 6.mp4",
     ],
   },
 ],
@@ -612,17 +612,203 @@ additionalGallery: [
     technologies: [
       {
         name: "Squarespace",
-        icon: "/icons/squarespace.png",
+        icon: "/icons/squarespace (1).png",
       },
       {
-        name: "SEO",
-        icon: "/icons/google.png",
+        name: "Mailchimp",
+        icon: "/icons/project-mailchimp.png",
       },
       {
         name: "Web Design",
         icon: "/icons/wordpress.png",
       },
     ],
+
+    gallery: [
+      {
+        title: "STATIC 1",
+        cover: "/lfw/STATIC 5.png",
+        images: [
+          "/lfw/STATIC 5.png",
+        ],
+      },
+      {
+        title: "CAROUSEL 1",
+        cover: "/lfw/1.png",
+        images: [
+          "/lfw/1.png",
+          "/lfw/1 - 2.png",
+          "/lfw/1 - 3.png",
+          "/lfw/1- 4.png",
+          "/lfw/1 - 5.png",
+          "/lfw/1 - 6.png",
+          "/lfw/1 - 7.png",
+        ]
+      },
+      {
+        title: "STATIC 2",
+        cover: "/lfw/STATIC 4.png",
+        images: [
+          "/lfw/STATIC 4.png",
+        ]
+      },
+      {
+        title: "CAROUSEL 2",
+        cover: "/lfw/2.png",
+        images: [
+          "/lfw/2.png",
+          "/lfw/2-2.png",
+          "/lfw/2-3.png",
+          "/lfw/2-4.png",
+          "/lfw/2-5.png",
+          "/lfw/2-6.png",
+          "/lfw/2-7.png",
+          "/lfw/2-8.png",
+        ]
+      },
+      {
+        title: "STATIC 3",
+        cover: "/lfw/STATIC 3.png",
+        images: [
+          "/lfw/STATIC 3.png",
+        ]
+      },
+      {
+        title: "CAROUSEL 3",
+        cover: "/lfw/3.png",
+        images: [
+          "/lfw/3.png",
+          "/lfw/3-2.png",
+          "/lfw/3-3.png",
+          "/lfw/3-4.png",
+          "/lfw/3-5.png",
+          "/lfw/3-6.png",
+          "/lfw/3-7.png",
+          "/lfw/3-8.png",
+        ]
+      },
+      {
+        title: "STATIC 4",
+        cover: "/lfw/STATIC 2.png",
+        images: [
+          "",
+        ]
+      },
+      {
+        title: "CAROUSEL 4",
+        cover: "/lfw/4.png",
+        images: [
+          "/lfw/4.png",
+          "/lfw/4-2.png",
+          "/lfw/4-3.png",
+          "/lfw/4-4.png",
+          "/lfw/4-5.png",
+          "/lfw/4-6.png",
+          "/lfw/4-7.png",
+        ]
+      },
+      {
+        title: "STATIC 5",
+        cover: "/lfw/STATIC 1.png",
+        images: [
+          "/lfw/STATIC 1.png",
+        ]
+      }
+    ],
+
+additionalGallery: [
+  {
+    title: "CAROUSEL 5",
+    cover: "/lfw/5.png",
+    images: [
+      "/lfw/5.png",
+      "/lfw/5-2.png",
+      "/lfw/5-3.png",
+      "/lfw/5-4.png",
+      "/lfw/5-5.png",
+      "/lfw/5-6.png",
+      "/lfw/5-7.png",
+      "/lfw/5-8.png",
+    ],
+  },
+  {
+    title: "STATIC 6",
+    cover: "/lfw/STATIC 8.png",
+    images: [
+      "/lfw/STATIC 8.png",
+    ],
+  },
+  {
+    title: "STATIC 7",
+    cover: "/lfw/STATIC01.png",
+    images: [
+      "/lfw/STATIC01.png",
+    ],
+  },
+  {
+    title: "CAROUSEL 6",
+    cover: "/lfw/6.png",
+    images: [
+      "/lfw/6.png",
+      "/lfw/6-2.png",
+      "/lfw/6-3.png",
+      "/lfw/6-4.png",
+      "/lfw/6-5.png",
+      "/lfw/6-6.png",
+      "/lfw/6-7.png",
+      "/lfw/6-8.png",
+    ],
+  },
+  {
+    title: "STATIC 8",
+    cover: "/lfw/STATIC 7.png",
+    images: [
+      "/lfw/STATIC 7.png",
+    ],
+  },
+  {
+    title: "CAROUSEL 7",
+    cover: "/lfw/7.png",
+    images: [
+      "/lfw/7.png",
+      "/lfw/7-2.png",
+      "/lfw/7-3.png",
+      "/lfw/7-4.png",
+      "/lfw/7-5.png",
+      "/lfw/7-6.png",
+      "/lfw/7-7.png",
+      "/lfw/7-8.png",
+    ],
+  },
+  {
+    title: "CAROUSEL 8",
+    cover: "/lfw/8.png",
+    images: [
+      "/lfw/8.png",
+      "/lfw/8-2.png",
+      "/lfw/8-3.png",
+      "/lfw/8-4.png",
+      "/lfw/8-5.png",
+      "/lfw/8-6.png",
+      "/lfw/8-7.png",
+      "/lfw/8-8.png",
+    ],
+  },
+  {
+    title: "STATIC 9",
+    cover: "/lfw/STATIC 6.png",
+    images: [
+      "/lfw/STATIC 6.png",
+    ],
+  },
+  {
+    title: "STATIC 10",
+    cover: "/lfw/STATIC02.png",
+    images: [
+      "/lfw/STATIC02.png",
+    ],
+  },
+],
 
     reverse: false,
   },
@@ -874,6 +1060,10 @@ const goToNext = () => {
     project.title === "Aura Longevity"
       ? "aura-longevity-gallery"
       : ""
+  } ${
+    project.title === "Lead From Within Advisory"
+      ? "lead-from-within-gallery"
+      : ""
   }`}
 >
 
@@ -954,9 +1144,11 @@ const goToNext = () => {
 
 <div className="project-gallery-grid">
 
-  {project.additionalGallery
-    .slice(0, 6)
-    .map((gallery, index) => (
+{(
+  project.title === "Lead From Within Advisory"
+    ? project.additionalGallery
+    : project.additionalGallery.slice(0, 6)
+).map((gallery, index) => (
 
       <button
         type="button"
