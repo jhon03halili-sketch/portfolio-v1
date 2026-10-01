@@ -691,7 +691,7 @@ additionalGallery: [
         title: "STATIC 4",
         cover: "/lfw/STATIC 2.png",
         images: [
-          "",
+          "/lfw/STATIC 2.png",
         ]
       },
       {
@@ -848,18 +848,24 @@ additionalGallery: [
 
 function Projects() {
   const [currentProject, setCurrentProject] = useState(0);
-
-  const [selectedGallery, setSelectedGallery] =
-    useState(null);
-
-  const [currentGallerySlide, setCurrentGallerySlide] =
-    useState(0);
-
-  const [showAdditionalWork, setShowAdditionalWork] =
-  useState(false);
-
   const project = projects[currentProject];
+  const [showAdditionalWork, setShowAdditionalWork] = useState(false);
 
+  const [selectedGallery, setSelectedGallery] = useState(null);
+  const [currentGallerySlide, setCurrentGallerySlide] = useState(0);
+  const [galleryTouchStart, setGalleryTouchStart] = useState(null);
+  const galleryImages = selectedGallery?.images || [];
+  const visibleGallerySlides = galleryImages.length
+    ? [0, -1, 1, -2, 2]
+        .map((offset) => ({
+          index: (currentGallerySlide + offset + galleryImages.length) % galleryImages.length,
+          offset,
+        }))
+        .filter((slide, index, slides) =>
+          slides.findIndex((item) => item.index === slide.index) === index
+        )
+        .sort((a, b) => a.offset - b.offset)
+    : [];
   /* =========================
      PROJECT NAVIGATION
   ========================= */
@@ -889,7 +895,10 @@ const goToNext = () => {
   ========================= */
 
   const openGallery = (gallery) => {
-    setSelectedGallery(gallery);
+    setSelectedGallery({
+      ...gallery,
+      projectTitle: project.title,
+    });
     setCurrentGallerySlide(0);
   };
 
@@ -931,6 +940,10 @@ const goToNext = () => {
     const handleEscape = (event) => {
       if (event.key === "Escape") {
         closeGallery();
+      } else if (event.key === "ArrowLeft" && selectedGallery) {
+        goToPreviousGallerySlide();
+      } else if (event.key === "ArrowRight" && selectedGallery) {
+        goToNextGallerySlide();
       }
     };
 
@@ -1024,6 +1037,7 @@ const goToNext = () => {
         ========================= */}
 
 <article
+  key={project.number}
   className={`project-slide ${
     project.reverse ? "project-slide-reverse" : ""
   } ${
@@ -1323,6 +1337,7 @@ const goToNext = () => {
 
             <div
               className="project-gallery-modal"
+              style={{ display: "contents" }}
               onClick={(event) =>
                 event.stopPropagation()
               }
@@ -1345,7 +1360,7 @@ const goToNext = () => {
               <div className="project-gallery-modal-header">
 
                 <span>
-                  BEYOND SEA CABO
+                  {selectedGallery.projectTitle}
                 </span>
 
                 <h3>
@@ -1357,41 +1372,56 @@ const goToNext = () => {
 
               {/* IMAGE */}
 
-<div className="project-gallery-modal-image">
+<div
+                className="project-gallery-coverflow"
+                onTouchStart={(event) =>
+                  setGalleryTouchStart(event.touches[0].clientX)
+                }
+                onTouchEnd={(event) => {
+                  if (galleryTouchStart === null) return;
+                  const delta = event.changedTouches[0].clientX - galleryTouchStart;
+                  if (Math.abs(delta) > 45) {
+                    delta < 0 ? goToNextGallerySlide() : goToPreviousGallerySlide();
+                  }
+                  setGalleryTouchStart(null);
+                }}
+              >
+                <div className="project-coverflow-stage">
+                  {visibleGallerySlides.map(({ index, offset }) => {
+                    const source = galleryImages[index] || "";
+                    const isVideo = source.toLowerCase().endsWith(".mp4");
+                    const positionClass =
+                      offset === 0 ? "active" : offset < 0
+                        ? `prev-${Math.abs(offset)}`
+                        : `next-${offset}`;
 
-  {selectedGallery.images[
-    currentGallerySlide
-  ].toLowerCase().endsWith(".mp4") ? (
-    <video
-      src={
-        selectedGallery.images[
-          currentGallerySlide
-        ]
-      }
-      controls
-      autoPlay
-      muted
-      loop
-      playsInline
-    />
-  ) : (
-    <img
-      src={
-        selectedGallery.images[
-          currentGallerySlide
-        ]
-      }
-      alt={`${selectedGallery.title} slide ${
-        currentGallerySlide + 1
-      }`}
-    />
-  )}
-
-</div>
+                    return (
+                      <button
+                        type="button"
+                        key={`${index}-${offset}`}
+                        className={`project-coverflow-card ${positionClass} ${galleryImages.length === 1 ? "solo" : ""}`}
+                        onClick={() => setCurrentGallerySlide(index)}
+                        aria-label={`Show slide ${index + 1}`}
+                        aria-current={offset === 0 ? "true" : undefined}
+                      >
+                        {isVideo ? (
+                          <video src={source} muted playsInline preload="metadata"
+                            aria-label={`${selectedGallery.title} slide ${index + 1}`} />
+                        ) : (
+                          <img src={source}
+                            alt={`${selectedGallery.title} slide ${index + 1}`}
+                            draggable="false" />
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
 
 
               {/* NAVIGATION */}
 
+              {galleryImages.length > 1 && (
               <div className="project-gallery-modal-navigation">
 
                 <button
@@ -1429,6 +1459,7 @@ const goToNext = () => {
                 </button>
 
               </div>
+              )}
 
             </div>
 
