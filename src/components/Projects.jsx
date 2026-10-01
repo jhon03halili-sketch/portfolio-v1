@@ -206,7 +206,7 @@ const projects = [
         title: "REEL 03",
         cover: "/beyondsea/reel3-frame.jpg",
         images: [
-          "/beyondsea/BSC-REEL4.mp4",
+          "/beyondsea/compressed-reel.mp4",
         ],
       },
 
