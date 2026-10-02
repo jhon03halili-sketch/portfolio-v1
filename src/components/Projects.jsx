@@ -48,10 +48,10 @@ const projects = [
   {
     number: "02",
     title: "Beyond Sea Cabo",
-    category: "Social Media Marketing",
+    category: "Social Media Content & Marketing",
 
     description:
-      "Created and managed visual content for a luxury vacation rental brand, including social posts, carousels, reels, captions, and SEO-focused alt text.",
+      "Created and scheduled engaging, on-brand social media content for Beyond Sea Cabo, a luxury vacation rental brand in Los Cabos. From property showcases and destination-inspired posts to carousels, reels, captions, and SEO-focused alt text, each piece was designed to highlight the guest experience and strengthen the brand’s online presence.",
 
     technologies: [
       {
@@ -268,10 +268,10 @@ const projects = [
   {
     number: "03",
     title: "Gallo Pinto",
-    category: "Social Media Management",
+    category: "Social Media Management & Content Creation",
 
     description:
-      "Created visual content and supported the brand's online presence through social media management, captions, and content development.",
+      "Supported Gallo Pinto’s social media presence by creating and developing food-focused content, promotional posts, and captions. From showcasing signature dishes to highlighting the brand’s offerings, each piece was crafted to make the menu more engaging and strengthen the brand’s visual identity online.",
 
     image: "/projects/gallo-pinto.png",
 
@@ -426,10 +426,10 @@ additionalGallery: [
   {
     number: "04",
     title: "Aura Longevity",
-    category: "E-Commerce & Marketing",
+    category: "E-Commerce & Digital Marketing",
 
     description:
-      "Supported e-commerce and marketing initiatives through landing pages, funnel development, email marketing, content, and digital strategy.",
+      "Supported Aura Longevity’s e-commerce and digital marketing efforts by helping redesign its Shopify storefront, developing email marketing campaigns in Klaviyo, and creating Instagram content to showcase the brand and its products. The work focused on creating a cohesive customer experience across the website, email, and social media.",
 
     image: "/projects/aura-longevity.png",
 
@@ -601,11 +601,11 @@ additionalGallery: [
 
   {
     number: "05",
-    title: "Lead From Within Advisory",
-    category: "Website Redesign",
+    title: "Lead From Within",
+    category: "Digital Marketing & Online Business Support",
 
     description:
-      "Redesigned a coaching and advisory website in Squarespace with a focus on brand alignment, user experience, and SEO.",
+      "Redesigned a coaching and advisory website in Squarespace, built and managed a Circle community for group coaching, created and scheduled social media content across platforms, and set up Mailchimp email sequence automations to support audience engagement and enrollment.",
 
     image: "/projects/lead-from-within.png",
 
@@ -818,32 +818,19 @@ additionalGallery: [
   ========================= */
 
   {
-    number: "06",
-    title: "Technical Portfolio",
-    category: "Web Development",
+  number: "06",
+  title: "Upcoming Project",
+  category: "Coming Soon",
 
-    description:
-      "A personal portfolio built from scratch to showcase technical development, digital marketing, design, and virtual assistance experience.",
+  description:
+    "Something new is in the works. I'm currently developing and exploring new projects in web development, digital marketing, and creative design. Check back soon to see what's next.",
 
-    image: "/projects/portfolio.png",
+  image: "/projects/upcoming-project.png",
 
-    technologies: [
-      {
-        name: "React",
-        icon: "/icons/react.png",
-      },
-      {
-        name: "Vite",
-        icon: "/icons/vscode.png",
-      },
-      {
-        name: "CSS",
-        icon: "/icons/css.png",
-      },
-    ],
+  technologies: [],
 
-    reverse: true,
-  },
+  reverse: true,
+},
 ];
 
 function Projects() {
@@ -1075,7 +1062,7 @@ const goToNext = () => {
       ? "aura-longevity-gallery"
       : ""
   } ${
-    project.title === "Lead From Within Advisory"
+    project.title === "Lead From Within"
       ? "lead-from-within-gallery"
       : ""
   }`}
@@ -1159,7 +1146,7 @@ const goToNext = () => {
 <div className="project-gallery-grid">
 
 {(
-  project.title === "Lead From Within Advisory"
+  project.title === "Lead From Within"
     ? project.additionalGallery
     : project.additionalGallery.slice(0, 6)
 ).map((gallery, index) => (
@@ -1387,35 +1374,60 @@ const goToNext = () => {
                 }}
               >
                 <div className="project-coverflow-stage">
-                  {visibleGallerySlides.map(({ index, offset }) => {
-                    const source = galleryImages[index] || "";
-                    const isVideo = source.toLowerCase().endsWith(".mp4");
-                    const positionClass =
-                      offset === 0 ? "active" : offset < 0
-                        ? `prev-${Math.abs(offset)}`
-                        : `next-${offset}`;
+  {visibleGallerySlides.map(({ index, offset }) => {
+    const source = galleryImages[index] || "";
+    const isVideo = source.toLowerCase().endsWith(".mp4");
 
-                    return (
-                      <button
-                        type="button"
-                        key={`${index}-${offset}`}
-                        className={`project-coverflow-card ${positionClass} ${galleryImages.length === 1 ? "solo" : ""}`}
-                        onClick={() => setCurrentGallerySlide(index)}
-                        aria-label={`Show slide ${index + 1}`}
-                        aria-current={offset === 0 ? "true" : undefined}
-                      >
-                        {isVideo ? (
-                          <video src={source} muted playsInline preload="metadata"
-                            aria-label={`${selectedGallery.title} slide ${index + 1}`} />
-                        ) : (
-                          <img src={source}
-                            alt={`${selectedGallery.title} slide ${index + 1}`}
-                            draggable="false" />
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
+    const positionClass =
+      offset === 0
+        ? "active"
+        : offset < 0
+          ? `prev-${Math.abs(offset)}`
+          : `next-${offset}`;
+
+    const cardClass = `project-coverflow-card ${positionClass} ${
+      galleryImages.length === 1 ? "solo" : ""
+    }`;
+
+    // VIDEO CARD
+    if (isVideo) {
+      return (
+        <div
+          key={`${index}-${offset}`}
+          className={cardClass}
+          aria-label={`${selectedGallery.title} slide ${index + 1}`}
+        >
+          <video
+            src={source}
+            controls
+            playsInline
+            preload="metadata"
+            muted={false}
+            onClick={(event) => event.stopPropagation()}
+          />
+        </div>
+      );
+    }
+
+    // IMAGE CARD
+    return (
+      <button
+        type="button"
+        key={`${index}-${offset}`}
+        className={cardClass}
+        onClick={() => setCurrentGallerySlide(index)}
+        aria-label={`Show slide ${index + 1}`}
+        aria-current={offset === 0 ? "true" : undefined}
+      >
+        <img
+          src={source}
+          alt={`${selectedGallery.title} slide ${index + 1}`}
+          draggable="false"
+        />
+      </button>
+    );
+  })}
+</div>
               </div>
 
 

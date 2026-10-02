@@ -35,7 +35,7 @@ const experiences = [
     number: "04",
     date: "2025",
     company: "Beyond Sea Cabo",
-    role: "Social Media Manager",
+    role: "Social Media Content & Marketing",
     logo: "/icons/beyond-sea.png",
     description:
       "Created and scheduled social media content for a vacation rental brand, including static posts, carousels, reels, captions, content calendars, and SEO-focused alt text.",
@@ -45,7 +45,7 @@ const experiences = [
     number: "05",
     date: "2025",
     company: "Gallo Pinto",
-    role: "Social Media Manager",
+    role: "Social Media Management & Content Creation",
     logo: "/icons/gallo-pinto.png",
     description:
       "Created social media content and supported the brand's online presence through visual content, captions, and social media management.",
@@ -55,7 +55,7 @@ const experiences = [
     number: "06",
     date: "2026",
     company: "Aura Longevity",
-    role: "E-commerce & Marketing Assistant",
+    role: "E-Commerce & Digital Marketing",
     logo: "/icons/aura-longevity.jpg",
     description:
       "Supported e-commerce and marketing initiatives through content creation, funnel development, landing pages, email marketing, and digital marketing tasks.",
@@ -65,7 +65,7 @@ const experiences = [
     number: "07",
     date: "2026",
     company: "Lead From Within Advisory",
-    role: "Digital Marketing & Website Assistant",
+    role: "Digital Marketing & Online Business Support",
     logo: "/icons/lead-from-within.png",
     description:
       "Supported digital marketing initiatives through social media content creation and scheduling, email sequence development, and Squarespace website redesign.",
