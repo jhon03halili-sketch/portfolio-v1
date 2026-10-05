@@ -14,7 +14,7 @@ const projects = [
     description:
       "A mock e-commerce website built from scratch to showcase front-end development, interactive functionality, and responsive web design.",
 
-    image: "/images/chicken-things.jpg",
+    image: "/images/chicken-things-cover.png",
 
     technologies: [
       {
