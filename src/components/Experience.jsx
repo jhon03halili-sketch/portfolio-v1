@@ -64,7 +64,7 @@ const experiences = [
   {
     number: "07",
     date: "2026",
-    company: "Lead From Within Advisory",
+    company: "Lead From Within",
     role: "Digital Marketing & Online Business Support",
     logo: "/icons/lead-from-within.png",
     description:
