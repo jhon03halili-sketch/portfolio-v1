@@ -1,0 +1,50 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+
+  background: #161616;
+  color: #e6e6fa;
+
+  overflow-x: hidden;
+
+  transition:
+    background 0.5s ease,
+    color 0.5s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-logo,
+.navbar-links a,
+.hero-cv,
+.hero-title {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}

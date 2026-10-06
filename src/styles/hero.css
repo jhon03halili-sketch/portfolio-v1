@@ -1,0 +1,1035 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+  min-height: 100svh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+    background:
+    radial-gradient(
+      ellipse at 50% 45%,
+      rgba(75, 0, 130, 0.06),
+      transparent 42%
+    ),
+    #161616;
+}
+
+/* =========================
+   AURORA BACKGROUND
+========================= */
+
+.hero-aurora {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Individual glowing shapes */
+
+.aurora {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(75, 0, 130, 0.22);
+  filter: blur(90px);
+  opacity: 0.65;
+  will-change: transform;
+}
+
+/* First glow */
+
+.aurora-one {
+  width: 650px;
+  height: 400px;
+
+  top: 12%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  animation: auroraFloatOne 5s ease-in-out infinite alternate;
+}
+
+.aurora-two {
+  width: 420px;
+  height: 300px;
+
+  top: -8%;
+  left: 20%;
+
+  opacity: 0.35;
+
+  animation: auroraFloatTwo 7s ease-in-out infinite alternate;
+}
+
+.aurora-three {
+  width: 450px;
+  height: 280px;
+
+  top: 18%;
+  right: 8%;
+
+  opacity: 0.3;
+
+  animation: auroraFloatThree 8s ease-in-out infinite alternate;
+}
+
+/* =========================
+   AURORA ANIMATIONS
+========================= */
+
+@keyframes auroraFloatOne {
+  0% {
+    transform: translateX(-50%) translate(-40px, 10px);
+  }
+
+  50% {
+    transform: translateX(-50%) translate(30px, -15px);
+  }
+
+  100% {
+    transform: translateX(-50%) translate(-10px, 20px);
+  }
+}
+
+@keyframes auroraFloatTwo {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(70px, 35px);
+  }
+
+  100% {
+    transform: translate(-30px, 60px);
+  }
+}
+
+@keyframes auroraFloatThree {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-60px, 30px);
+  }
+
+  100% {
+    transform: translate(20px, -20px);
+  }
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  text-align: left;
+
+  padding: 40px 30px;
+}
+
+/* =========================
+   EYEBROW
+========================= */
+
+.hero-eyebrow {
+  margin-bottom: 12px;
+
+  margin-left: 10px;
+
+  color: #4b0082;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.38em;
+
+  opacity: 0;
+
+  animation:
+    heroReveal 0.9s ease 0.1s forwards;
+}
+
+/* =========================
+   NAME
+========================= */
+
+.hero-name {
+  margin: 0;
+
+  color: #e6e6fa;
+
+font-size: clamp(
+  52px,
+  7vw,
+  108px
+);
+
+  line-height: 0.95;
+
+  font-weight: 800;
+
+  letter-spacing: -0.055em;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 0 30px rgba(75, 0, 130, 0.06),
+    0 0 80px rgba(75, 0, 130, 0.04);
+
+  opacity: 0;
+
+  animation:
+    heroReveal 1s ease 0.2s forwards,
+    nameGlow 6s ease-in-out 1.2s infinite;
+}
+
+/* Subtle breathing glow */
+
+@keyframes nameGlow {
+
+  0%,
+  100% {
+    text-shadow:
+      0 0 30px rgba(75, 0, 130, 0.05),
+      0 0 80px rgba(75, 0, 130, 0.03);
+  }
+
+  50% {
+    text-shadow:
+      0 0 40px rgba(75, 0, 130, 0.12),
+      0 0 100px rgba(75, 0, 130, 0.06);
+  }
+
+}
+
+/* =========================
+   INTERACTIVE TITLES
+========================= */
+
+.hero-titles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+
+  opacity: 0;
+  animation: heroReveal 0.9s ease 0.4s forwards;
+}
+
+/* =========================
+   DEFAULT STATE
+========================= */
+
+.hero-title {
+  position: relative;
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  color: rgba(230, 230, 250, 0.38);
+
+  filter: blur(4px);
+  opacity: 0.65;
+
+  transform: scale(1);
+
+  cursor: pointer;
+  user-select: none;
+
+  transition:
+    all 0.28s ease;
+
+  will-change: filter, opacity, transform;
+}
+
+/* =========================
+   WHEN GROUP IS HOVERED
+========================= */
+
+.hero-titles:hover .hero-title {
+  filter: blur(4px);
+  opacity: 0.3;
+  color: rgba(230, 230, 250, 0.28);
+  transform: scale(1);
+}
+
+/* =========================
+   ACTIVE / HOVERED TITLE
+========================= */
+
+.hero-titles .hero-title:hover {
+  filter: blur(0);
+  opacity: 1;
+  color: #e6e6fa;
+  transform: scale(1.05);
+
+  text-shadow:
+    0 0 15px rgba(75, 0, 130, 0.2);;
+}
+
+/* =========================
+   TOP CORNERS
+========================= */
+
+.hero-title::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+
+  background:
+    linear-gradient(rgb(75, 0, 130), rgb(75, 0, 130))
+      left top / 14px 2px no-repeat,
+
+    linear-gradient(rgb(75, 0, 130), rgb(75, 0, 130))
+      left top / 2px 14px no-repeat,
+
+    linear-gradient(rgb(75, 0, 130), rgb(75, 0, 130))
+      right top / 14px 2px no-repeat,
+
+    linear-gradient(rgb(75, 0, 130), rgb(75, 0, 130))
+      right top / 2px 14px no-repeat;
+}
+
+/* =========================
+   BOTTOM CORNERS
+========================= */
+
+.hero-title::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+
+  background:
+    linear-gradient(rgb(75, 0, 130), rgb(75, 0, 130))
+      left bottom / 14px 2px no-repeat,
+
+    linear-gradient(rgb(75, 0, 130), rgb(75, 0, 130))
+      left bottom / 2px 14px no-repeat,
+
+    linear-gradient(rgb(75, 0, 130), rgb(75, 0, 130))
+      right bottom / 14px 2px no-repeat,
+
+    linear-gradient(rgb(75, 0, 130), rgb(75, 0, 130))
+      right bottom / 2px 14px no-repeat;
+}
+
+/* =========================
+   SHOW CORNERS ONLY ON HOVER
+========================= */
+
+.hero-titles .hero-title:hover::before,
+.hero-titles .hero-title:hover::after {
+  opacity: 1;
+
+  transform: scale(1.05);
+
+  filter:
+    drop-shadow(
+      0 0 6px
+      rgba(75, 0, 130, 0.8)
+    );
+}
+
+/* =========================
+   CV BUTTON
+========================= */
+
+.hero-cv {
+  position: absolute;
+
+  left: 64px;
+  bottom: 58px;
+
+  z-index: 5;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 128px;
+
+  padding: 15px 26px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.18
+    );
+
+  border-radius: 999px;
+
+  background:
+    rgba(
+      10,
+      10,
+      10,
+      0.45
+    );
+
+  backdrop-filter: blur(10px);
+
+  color: #e6e6fa;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.hero-cv:hover {
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    #4b0082;
+
+  color:
+    #4b0082;
+
+  background:
+    rgba(
+      0,
+      217,
+      255,
+      0.05
+    );
+}
+
+/* =========================
+   SOCIAL BUTTONS
+========================= */
+
+.hero-socials {
+  position: absolute;
+
+  right: 42px;
+  bottom: 40px;
+
+  z-index: 5;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.social-button {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.13
+    );
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      10,
+      10,
+      10,
+      0.55
+    );
+
+  backdrop-filter: blur(12px);
+
+  color: #e6e6fa;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.social-button:hover {
+
+  transform:
+    translateY(-5px);
+
+  border-color:
+    #4b0082;
+
+  color:
+    #4b0082;
+
+  background:
+    rgba(
+      0,
+      217,
+      255,
+      0.06
+    );
+}
+
+/* GitHub */
+
+.social-button svg {
+  width: 21px;
+  height: 21px;
+}
+
+/* =========================
+   HERO REVEAL
+========================= */
+
+@keyframes heroReveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  /* =========================
+     HERO
+  ========================= */
+
+  .hero {
+    min-height: 100svh;
+    padding: 100px 24px 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* =========================
+     HERO CONTENT
+  ========================= */
+
+.hero-content {
+  width: 100%;
+  max-width: 100%;
+
+  padding: 0;
+
+  align-items: center;
+  text-align: center;
+
+  transform: translateY(-20px);
+}
+
+  /* =========================
+     EYEBROW
+  ========================= */
+
+.hero-eyebrow {
+  margin-bottom: 12px;
+  margin-left: 0;
+
+  font-size: 11px;
+  letter-spacing: 0.28em;
+}
+
+  /* =========================
+     NAME
+  ========================= */
+
+  .hero-name {
+    width: 100%;
+
+    font-size: clamp(
+      48px,
+      13vw,
+      72px
+    );
+
+    line-height: 0.94;
+
+    letter-spacing: -0.055em;
+
+    white-space: normal;
+  }
+
+  /* =========================
+     TITLES
+  ========================= */
+
+.hero-titles {
+  width: 100%;
+  max-width: 100%;
+
+  margin-top: 28px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.hero-title {
+  font-size: 13px;
+
+  padding: 9px 14px;
+
+  min-height: auto;
+
+  filter: blur(2px);
+  opacity: 0.60;
+
+  text-align: center;
+}
+
+  /* Keep titles readable on mobile */
+
+  .hero-titles:hover .hero-title {
+    filter: blur(0);
+    opacity: 0.45;
+    transform: scale(1);
+  }
+
+  .hero-title:hover {
+    filter: blur(0) !important;
+    opacity: 1 !important;
+    transform: scale(1.02);
+  }
+
+  /* =========================
+     THEME TOGGLE
+  ========================= */
+
+  .theme-toggle {
+    top: 100px;
+    left: 24px;
+
+    width: 30px;
+    height: 30px;
+  }
+
+  .theme-toggle svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  /* =========================
+     CV BUTTON
+  ========================= */
+
+  .hero-cv {
+    left: 24px;
+    bottom: 28px;
+
+    min-width: 108px;
+
+    padding: 13px 20px;
+
+    font-size: 13px;
+  }
+
+  /* =========================
+     SOCIAL BUTTONS
+  ========================= */
+
+  .hero-socials {
+    right: 24px;
+    bottom: 28px;
+
+    flex-direction: row;
+
+    gap: 8px;
+  }
+
+  .social-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .social-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* =========================
+     AURORA
+  ========================= */
+
+  .aurora {
+    width: 500px;
+    height: 500px;
+
+    filter: blur(100px);
+
+    opacity: 0.18;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .hero {
+    padding: 90px 20px 120px;
+  }
+
+  .hero-content {
+    transform: translateY(-15px);
+  }
+
+  .hero-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.25em;
+
+    margin-left: 2px;
+  }
+
+  .hero-name {
+    font-size: clamp(
+      44px,
+      14vw,
+      62px
+    );
+
+    line-height: 0.95;
+  }
+
+  .hero-titles {
+    margin-top: 26px;
+    gap: 6px;
+  }
+
+  .hero-title {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .theme-toggle {
+    top: 90px;
+    left: 20px;
+
+    width: 30px;
+    height: 30px;
+  }
+
+  .hero-cv {
+    left: 20px;
+    bottom: 22px;
+
+    min-width: 105px;
+
+    padding: 12px 18px;
+  }
+
+  .hero-socials {
+    right: 20px;
+    bottom: 22px;
+
+    gap: 6px;
+  }
+
+  .social-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .social-button svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .aurora,
+  .hero-name,
+  .hero-eyebrow,
+  .hero-titles {
+
+    animation:
+      none;
+  }
+
+  .hero-title,
+  .hero-title::before,
+  .hero-title::after,
+  .hero-cv,
+  .social-button {
+
+    transition:
+      none;
+  }
+
+}
+
+/* =========================
+   THEME TOGGLE
+========================= */
+
+.theme-toggle {
+  position: absolute;
+
+  top: 110px;
+  left: 58px;
+
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(230, 230, 250, 0.18);
+  border-radius: 50%;
+
+  background: rgba(230, 230, 250, 0.06);
+  color: #e6e6fa;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.theme-toggle svg {
+  width: 14px;
+  height: 14px;
+
+  display: block;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.12);
+
+  background: rgba(75, 0, 130, 0.12);
+  border-color: rgba(75, 0, 130, 0.45);
+  color: #4b0082;
+}
+
+/* =========================
+   MOBILE NAV LIGHT MODE
+========================= */
+
+body.light-mode .navbar-toggle {
+  background: rgba(22, 22, 22, 0.05);
+  border-color: rgba(22, 22, 22, 0.12);
+  color: #161616;
+}
+
+body.light-mode .navbar-toggle:hover {
+  background: rgba(75, 0, 130, 0.1);
+  border-color: rgba(75, 0, 130, 0.35);
+  color: #4b0082;
+}
+
+body.light-mode .mobile-menu {
+  background: rgba(238, 238, 240, 0.88);
+
+  border-color: rgba(22, 22, 22, 0.08);
+}
+
+body.light-mode .mobile-menu a {
+  color: rgba(22, 22, 22, 0.7);
+}
+
+.mobile-menu a:hover {
+  background: rgba(75, 0, 130, 0.08);
+  color: #4b0082;
+}
+
+/* =========================
+   LIGHT MODE TOGGLE
+========================= */
+
+body.light-mode .theme-toggle {
+  background: rgba(22, 22, 22, 0.06);
+  border-color: rgba(22, 22, 22, 0.18);
+  color: #161616;
+}
+
+body.light-mode .theme-toggle:hover {
+  background: rgba(75, 0, 130, 0.12);
+  border-color: rgba(75, 0, 130, 0.4);
+  color: #4b0082;
+}
+
+/* =========================
+   THEME COLORS
+========================= */
+
+body {
+  background: #161616;
+  color: #e6e6fa;
+
+  transition:
+    background 0.5s ease,
+    color 0.5s ease;
+}
+
+body.light-mode .navbar {
+  background: rgba(238, 238, 240, 0.55);
+
+  border-bottom:
+    1px solid rgba(22, 22, 22, 0.08);
+}
+
+body.light-mode .navbar-logo {
+  color: #4b0082;
+}
+
+body.light-mode .navbar-links a {
+  color: rgba(22, 22, 22, 0.7);
+}
+
+body.light-mode .navbar-links a:hover {
+  color: #161616;
+}
+
+/* DARK MODE */
+
+.hero {
+  background: #161616;
+  transition: background 0.5s ease;
+}
+
+/* LIGHT MODE */
+
+body.light-mode {
+  background: #eeeef0;
+  color: #161616;
+}
+
+body.light-mode .hero {
+  background: #eeeef0;
+}
+
+/* =========================
+   HERO LIGHT MODE
+========================= */
+
+.hero-name {
+  color: #e6e6fa;
+  transition: color 0.5s ease;
+}
+
+body.light-mode .hero-name {
+  color: #4b0082;
+}
+
+body.light-mode .hero-title {
+  color: rgba(22, 22, 22, 0.38);
+}
+
+body.light-mode .hero-titles:hover .hero-title {
+  color: rgba(22, 22, 22, 0.25);
+}
+
+body.light-mode .hero-title:hover {
+  color: #161616 !important;
+}
+
+body.light-mode .theme-toggle {
+  background: rgba(22, 22, 22, 0.06);
+  border-color: rgba(22, 22, 22, 0.15);
+  color: #161616;
+}
+
+body.light-mode .theme-toggle:hover {
+  background: rgba(75, 0, 130, 0.12);
+  border-color: rgba(75, 0, 130, 0.4);
+  color: #4b0082;
+}

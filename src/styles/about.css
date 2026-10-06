@@ -1,0 +1,418 @@
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 140px 30px;
+
+  background: #161616;
+  color: #e6e6fa;
+
+  transition:
+    background 0.5s ease,
+    color 0.5s ease;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+/* =========================
+   ABOUT LABEL
+========================= */
+
+.about-label {
+  margin-bottom: 70px;
+
+  color: #4b0082;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.4em;
+}
+
+/* =========================
+   MAIN GRID
+========================= */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 90px;
+  align-items: center;
+}
+
+/* =========================
+   ABOUT PHOTO
+========================= */
+
+.about-photo {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.about-photo-frame {
+  position: relative;
+
+  width: min(400px, 100%);
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background: #161616;
+
+  border: 1px solid rgba(230, 230, 250, 0.12);
+
+  box-shadow:
+    0 0 80px rgba(75, 0, 130, 0.14);
+
+  transition:
+    background 0.5s ease,
+    border-color 0.5s ease,
+    box-shadow 0.5s ease,
+    transform 0.4s ease;
+}
+
+.about-photo-frame img {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center 42%;
+
+  border-radius: 50%;
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.6s ease;
+}
+
+/* Dark mode image */
+.about-photo-dark {
+  opacity: 1;
+}
+
+/* Light mode image */
+.about-photo-light {
+  opacity: 0;
+}
+
+/* Photo hover */
+
+.about-photo-frame:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 0 60px rgba(75, 0, 130, 0.08);
+}
+
+.about-photo-frame:hover img {
+  transform: scale(1.03);
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.about-heading h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      52px,
+      6vw,
+      90px
+    );
+
+  line-height: 0.95;
+
+  letter-spacing:
+    -0.05em;
+
+  font-weight: 700;
+}
+
+.about-heading h2::first-line {
+  color: #e6e6fa;
+}
+
+/* =========================
+   ABOUT CONTENT
+========================= */
+
+.about-content {
+  max-width: 600px;
+
+  padding-top: 8px;
+}
+
+.about-content p {
+  max-width: 620px;
+  margin-bottom: 24px;
+  color: rgba(230, 230, 250, 0.58);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-content .about-intro {
+  max-width: 620px;
+  color: #e6e6fa;
+  font-size: 23px;
+  line-height: 1.55;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   FOCUS CARDS
+========================= */
+
+.about-focus {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-top: 120px;
+}
+
+.focus-card {
+  position: relative;
+
+  min-height: 230px;
+
+  padding: 30px;
+  border-radius: 16px;
+  border:
+    2px solid
+    rgba(230, 230, 250, 0.08);
+
+  background:
+    rgba(230, 230, 250, 0.025);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.focus-card:hover {
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(75, 0, 130, 0.45);
+
+  background:
+    rgba(75, 0, 130, 0.035);
+}
+
+/* Number */
+
+.focus-number {
+  display: block;
+
+  margin-bottom: 55px;
+
+  color: #4b0082;
+
+  font-size: 12px;
+
+  letter-spacing: 0.15em;
+}
+
+/* Card heading */
+
+.focus-card h3 {
+  margin-bottom: 12px;
+
+  color: #e6e6fa;
+
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+/* Card paragraph */
+
+.focus-card p {
+  margin: 0;
+
+  color:
+    rgba(230, 230, 250, 0.45);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* =========================
+   ABOUT LIGHT MODE
+========================= */
+
+body.light-mode .about-section {
+  background: #eeeef0;
+  color: #161616;
+}
+
+body.light-mode .about-photo-frame {
+  background: #eeeef0;
+
+  border-color:
+    rgba(22, 22, 22, 0.12);
+
+  box-shadow:
+    0 0 60px rgba(75, 0, 130, 0.08);
+}
+
+/* Switch portrait */
+
+body.light-mode .about-photo-dark {
+  opacity: 0;
+}
+
+body.light-mode .about-photo-light {
+  opacity: 1;
+}
+
+/* Light mode text */
+
+body.light-mode .about-content .about-intro {
+  color: #161616;
+}
+
+body.light-mode .about-content p {
+  color:
+    rgba(22, 22, 22, 0.58);
+}
+
+/* Light mode cards */
+
+body.light-mode .focus-card {
+  border-color:
+    rgba(22, 22, 22, 0.08);
+
+  background:
+    rgba(22, 22, 22, 0.025);
+}
+
+body.light-mode .focus-card:hover {
+  border-color:
+    rgba(75, 0, 130, 0.45);
+
+  background:
+    rgba(75, 0, 130, 0.035);
+}
+
+body.light-mode .focus-card h3 {
+  color: #161616;
+}
+
+body.light-mode .focus-card p {
+  color:
+    rgba(22, 22, 22, 0.5);
+}
+
+/* =========================
+   ABOUT MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .about-section {
+    padding: 100px 24px;
+  }
+
+  .about-label {
+    margin-bottom: 50px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+  }
+
+  /* Portrait */
+
+  .about-photo-frame {
+    width: 280px;
+  }
+
+  /* Content */
+
+  .about-content {
+    max-width: 100%;
+  }
+
+  .about-content .about-intro {
+    font-size: 19px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+  }
+
+  /* Focus cards */
+
+  .about-focus {
+    grid-template-columns: 1fr;
+
+    margin-top: 80px;
+  }
+
+  .focus-card {
+    min-height: 200px;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .about-section {
+    padding:
+      90px
+      20px;
+  }
+
+
+  .about-photo-frame {
+    width: 240px;
+  }
+
+
+  .about-content .about-intro {
+    font-size: 18px;
+  }
+
+
+  .focus-card {
+    padding: 24px;
+  }
+
+}

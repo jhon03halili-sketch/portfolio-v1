@@ -1,0 +1,625 @@
+/* =========================================================
+   CONTACT PAGE
+========================================================= */
+
+.contact-section {
+  min-height: calc(100vh - 77px);
+
+  padding: 100px 30px 80px;
+
+  background: #161616;
+  color: #e6e6fa;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1200px;
+
+  min-height: 650px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.contact-info-panel {
+  position: relative;
+}
+
+.contact-label {
+  display: block;
+
+  margin-bottom: 28px;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.4em;
+
+  color: #4b0082;
+}
+
+.contact-info-panel h1 {
+  margin: 0;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: clamp(64px, 7vw, 100px);
+
+  line-height: 0.88;
+
+  font-weight: 600;
+
+  letter-spacing: -5px;
+
+  color: #e6e6fa;
+}
+
+.contact-intro {
+  max-width: 430px;
+
+  margin: 35px 0 50px;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  color: rgba(230, 230, 250, 0.5);
+}
+
+
+/* =========================================================
+   CONTACT LINKS
+========================================================= */
+
+.contact-links {
+  width: 100%;
+  max-width: 500px;
+
+  border-top:
+    1px solid rgba(230, 230, 250, 0.1);
+}
+
+.contact-link {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  min-height: 72px;
+
+  border-bottom:
+    1px solid rgba(230, 230, 250, 0.1);
+
+  color: #e6e6fa;
+
+  text-decoration: none;
+
+  transition:
+    padding 0.3s ease,
+    background 0.3s ease;
+}
+
+.contact-link:hover {
+  padding-left: 10px;
+}
+
+.contact-link-icon {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid rgba(230, 230, 250, 0.12);
+
+  border-radius: 50%;
+
+  color:
+    rgba(230, 230, 250, 0.7);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.contact-link-icon svg {
+  width: 13px;
+  height: 13px;
+}
+
+.contact-link:hover .contact-link-icon {
+  background: #4b0082;
+
+  border-color: #4b0082;
+}
+
+.contact-link-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.contact-link-content small {
+  font-family: Poppins, sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color:
+    rgba(230, 230, 250, 0.35);
+}
+
+.contact-link-content strong {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  color:
+    rgba(230, 230, 250, 0.75);
+}
+
+.contact-link-arrow {
+  width: 12px;
+  height: 12px;
+
+  margin-left: auto;
+
+  opacity: 0;
+
+  transform: translateX(-5px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.contact-link:hover .contact-link-arrow {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   RIGHT SIDE / FORM
+========================================================= */
+
+.contact-form-panel {
+  position: relative;
+
+  padding: 45px;
+
+  border:
+    1px solid rgba(230, 230, 250, 0.1);
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(75, 0, 130, 0.13),
+      rgba(230, 230, 250, 0.025)
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+.contact-form-heading {
+  margin-bottom: 35px;
+}
+
+.contact-form-heading span {
+  display: block;
+
+  margin-bottom: 14px;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+
+  color: #4b0082;
+}
+
+.contact-form-heading h2 {
+  margin: 0;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: clamp(30px, 3.5vw, 48px);
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  letter-spacing: -2px;
+
+  color: #e6e6fa;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.contact-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+.contact-form-row {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+.contact-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.contact-field label {
+  font-family: Poppins, sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color:
+    rgba(230, 230, 250, 0.35);
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid rgba(230, 230, 250, 0.1);
+
+  border-radius: 8px;
+
+  background:
+    rgba(230, 230, 250, 0.035);
+
+  color: #e6e6fa;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.contact-field input {
+  height: 52px;
+
+  padding: 0 16px;
+}
+
+.contact-field textarea {
+  min-height: 150px;
+
+  padding: 15px 16px;
+
+  resize: vertical;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color:
+    rgba(230, 230, 250, 0.25);
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  border-color:
+    rgba(75, 0, 130, 0.8);
+
+  background:
+    rgba(75, 0, 130, 0.06);
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.contact-submit {
+  width: fit-content;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 5px;
+
+  padding: 15px 20px;
+
+  border:
+    1px solid #4b0082;
+
+  border-radius: 999px;
+
+  background: #4b0082;
+
+  color: #e6e6fa;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+
+  transition:
+    gap 0.3s ease,
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.contact-submit svg {
+  width: 12px;
+  height: 12px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.contact-submit:hover {
+  gap: 19px;
+
+  transform: translateY(-2px);
+
+  background: #5b0a96;
+}
+
+.contact-submit:hover svg {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   LIGHT MODE
+========================================================= */
+
+body.light-mode .contact-section {
+  background: #eeeef0;
+
+  color: #161616;
+}
+
+body.light-mode .contact-info-panel h1 {
+  color: #161616;
+}
+
+body.light-mode .contact-intro {
+  color:
+    rgba(22, 22, 22, 0.55);
+}
+
+body.light-mode .contact-links {
+  border-color:
+    rgba(22, 22, 22, 0.1);
+}
+
+body.light-mode .contact-link {
+  border-color:
+    rgba(22, 22, 22, 0.1);
+
+  color: #161616;
+}
+
+body.light-mode .contact-link-icon {
+  border-color:
+    rgba(22, 22, 22, 0.12);
+
+  color:
+    rgba(22, 22, 22, 0.65);
+}
+
+body.light-mode .contact-link-content small {
+  color:
+    rgba(22, 22, 22, 0.35);
+}
+
+body.light-mode .contact-link-content strong {
+  color:
+    rgba(22, 22, 22, 0.7);
+}
+
+body.light-mode .contact-form-panel {
+  border-color:
+    rgba(22, 22, 22, 0.1);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(75, 0, 130, 0.08),
+      rgba(22, 22, 22, 0.025)
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .contact-form-heading h2 {
+  color: #161616;
+}
+
+body.light-mode .contact-field label {
+  color:
+    rgba(22, 22, 22, 0.35);
+}
+
+body.light-mode .contact-field input,
+body.light-mode .contact-field textarea {
+  border-color:
+    rgba(22, 22, 22, 0.1);
+
+  background:
+    rgba(22, 22, 22, 0.025);
+
+  color: #161616;
+}
+
+body.light-mode .contact-field input::placeholder,
+body.light-mode .contact-field textarea::placeholder {
+  color:
+    rgba(22, 22, 22, 0.3);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .contact-container {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+  .contact-info-panel h1 {
+    font-size: clamp(
+      60px,
+      10vw,
+      90px
+    );
+  }
+
+  .contact-form-panel {
+    max-width: 700px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .contact-section {
+    min-height: auto;
+
+    padding:
+      110px
+      22px
+      70px;
+  }
+
+  .contact-container {
+    gap: 55px;
+  }
+
+  .contact-info-panel h1 {
+    font-size:
+      clamp(58px, 17vw, 82px);
+
+    letter-spacing: -4px;
+  }
+
+  .contact-intro {
+    font-size: 14px;
+
+    margin:
+      28px 0 40px;
+  }
+
+  .contact-form-panel {
+    padding: 28px 22px;
+
+    border-radius: 14px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-heading h2 {
+    font-size: 34px;
+  }
+
+  .contact-field textarea {
+    min-height: 140px;
+  }
+
+  .contact-submit {
+    width: 100%;
+
+    justify-content: center;
+  }
+}

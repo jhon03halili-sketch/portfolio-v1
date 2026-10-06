@@ -1,0 +1,2391 @@
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+.projects-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 140px 30px;
+
+  background: #161616;
+}
+
+.projects-container {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   PROJECTS HEADER
+========================= */
+
+.projects-header {
+  max-width: 750px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.projects-label {
+  margin-bottom: 25px;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: #4B0082;
+}
+
+.projects-header h2 {
+  margin: 0 0 25px;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: clamp(38px, 5vw, 60px);
+
+  line-height: 1.05;
+
+  font-weight: 600;
+
+  color: #E6E6FA;
+}
+
+.projects-header p {
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  color: rgba(230, 230, 250, 0.55);
+}
+
+
+/* =========================
+   PROJECT NAVIGATION
+========================= */
+
+.projects-navigation {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.projects-page {
+  font-family: Poppins, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: rgba(230, 230, 250, 0.4);
+}
+
+.projects-arrows {
+  display: flex;
+
+  gap: 10px;
+}
+
+.projects-arrow {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(230, 230, 250, 0.12);
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #E6E6FA;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.projects-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.projects-arrow:hover {
+  background: #4B0082;
+
+  border-color: #4B0082;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   PROJECT SLIDE
+========================= */
+
+.project-slide {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 470px;
+
+  border: 1px solid rgba(230, 230, 250, 0.12);
+
+  background: #0f0f0f;
+
+  overflow: hidden;
+
+  animation: projectSlideIn 0.45s ease;
+}
+
+
+/* =========================
+   REVERSE SLIDE
+========================= */
+
+.project-slide-reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.project-slide-reverse .project-slide-visual {
+  order: 2;
+}
+
+.project-slide-reverse .project-slide-content {
+  order: 1;
+}
+
+
+/* =========================
+   SLIDE ANIMATION
+========================= */
+
+@keyframes projectSlideIn {
+
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+
+/* =========================
+   PROJECT VISUAL
+========================= */
+
+.project-slide-visual {
+  width: 100%;
+  height: 100%;
+
+  min-height: 470px;
+
+  overflow: hidden;
+
+  background: #0f0f0f;
+}
+
+
+/* =========================
+   NORMAL PROJECT IMAGE
+========================= */
+
+.project-slide-image {
+  width: 100%;
+  height: 100%;
+
+  min-height: 470px;
+
+  overflow: hidden;
+
+  background: #0f0f0f;
+}
+
+.project-slide-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: filter 0.4s ease;
+}
+
+.project-slide-image:hover img {
+  filter: brightness(0.88);
+}
+
+
+/* =========================
+   BEYOND SEA GALLERY
+========================= */
+
+/* =========================
+   BEYOND SEA — LEFT ALIGN
+========================= */
+
+.beyond-sea-project .project-slide-content {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.beyond-sea-project .project-slide-number,
+.beyond-sea-project .project-slide-content h3,
+.beyond-sea-project .project-slide-category,
+.beyond-sea-project .project-slide-content p {
+  text-align: left;
+}
+
+.beyond-sea-project .project-slide-technologies {
+  justify-content: flex-start;
+}
+
+/* =========================
+   BEYOND SEA — FLIPPED GALLERY
+   3 × 2 / 4:5 PORTRAIT
+========================= */
+
+.beyond-sea-project .project-gallery-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.beyond-sea-project .project-gallery-back
+.project-gallery-grid {
+  width: 100%;
+  height: auto;
+  max-width: none;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+
+  gap: 8px;
+
+  aspect-ratio: auto;
+}
+
+/* Portrait cards */
+.beyond-sea-project .project-gallery-back
+.project-gallery-thumbnail {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+/* Images + videos */
+.beyond-sea-project .project-gallery-back
+.project-gallery-thumbnail img,
+.beyond-sea-project .project-gallery-back
+.project-gallery-thumbnail video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* =========================
+   FLIPPABLE GALLERY
+========================= */
+
+.project-gallery-flip {
+  position: relative;
+
+  width: 100%;
+  max-width: 470px;
+
+  aspect-ratio: 1 / 1;
+
+  perspective: 1400px;
+}
+
+.project-gallery-face {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.8s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+.project-gallery-front {
+  transform: rotateY(0deg);
+}
+
+.project-gallery-back {
+  transform: rotateY(180deg);
+}
+
+.project-gallery-front.project-gallery-hidden {
+  transform: rotateY(-180deg);
+}
+
+.project-gallery-back.project-gallery-visible {
+  transform: rotateY(0deg);
+}
+
+.project-gallery-face .project-gallery-grid {
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  grid-template-rows:
+    repeat(3, 1fr);
+
+  gap: 8px;
+
+  aspect-ratio: auto;
+}
+
+
+/* =========================
+   MORE WORK BUTTON
+========================= */
+
+.project-work-toggle {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  margin-top: 2px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #E6E6FA;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.project-work-toggle:hover {
+  color: #4B0082;
+
+  gap: 13px;
+}
+
+.project-work-toggle-icon {
+  width: 15px;
+  height: 15px;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.project-work-toggle-icon.flipped {
+  transform: rotate(180deg);
+}
+
+/* =========================
+   FLIPPABLE GALLERY
+========================= */
+
+.project-gallery-flip {
+  position: relative;
+
+  width: 100%;
+  max-width: 470px;
+
+  aspect-ratio: 1 / 1;
+
+  perspective: 1400px;
+}
+
+
+/* =========================
+   GALLERY FACES
+========================= */
+
+.project-gallery-face {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.8s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+/* =========================
+   GALLO PINTO — 4:5 GALLERY
+========================= */
+
+.gallo-pinto-gallery {
+  aspect-ratio: 4 / 5;
+}
+
+.gallo-pinto-gallery .project-gallery-face .project-gallery-grid {
+  aspect-ratio: 4 / 5;
+}
+
+.gallo-pinto-gallery .project-gallery-thumbnail {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.gallo-pinto-gallery .project-gallery-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   GALLO PINTO — CENTER FLIPPED GRID
+========================= */
+
+.gallo-pinto-gallery .project-gallery-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallo-pinto-gallery .project-gallery-back
+.project-gallery-grid {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+
+  gap: 8px;
+}
+
+.gallo-pinto-gallery .project-gallery-back
+.project-gallery-thumbnail {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+}
+
+/* =========================
+   AURA LONGEVITY — 4:5 GALLERY
+========================= */
+
+.aura-longevity-gallery {
+  aspect-ratio: 4 / 5;
+}
+
+.aura-longevity-gallery .project-gallery-face {
+  width: 100%;
+  height: 100%;
+}
+
+.aura-longevity-gallery .project-gallery-face .project-gallery-grid {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  gap: 8px;
+}
+
+.aura-longevity-gallery .project-gallery-thumbnail {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.aura-longevity-gallery .project-gallery-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   AURA LONGEVITY — LEFT ALIGN
+========================= */
+
+.aura-longevity-project .project-slide-content {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.aura-longevity-project .project-slide-number,
+.aura-longevity-project .project-slide-content h3,
+.aura-longevity-project .project-slide-category,
+.aura-longevity-project .project-slide-content p {
+  text-align: left;
+}
+
+.aura-longevity-project .project-slide-technologies {
+  justify-content: flex-start;
+}
+
+.aura-longevity-project .project-work-toggle,
+.aura-longevity-project .project-slide-link {
+  align-self: flex-start;
+}
+
+.project-gallery-thumbnail img,
+.project-gallery-thumbnail video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Keep the gallery at a 4:5 portrait ratio */
+.lead-from-within-gallery {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 470px;
+  aspect-ratio: 4 / 5;
+  height: auto;
+  min-height: 0;
+  flex: 0 0 auto;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+/* Ensure the flip container preserves 3D positioning */
+.lead-from-within-gallery .project-gallery-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+/* Fit both faces to the gallery */
+.lead-from-within-gallery .project-gallery-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Grid must fill the entire face */
+.lead-from-within-gallery .project-gallery-grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+/* Prevent thumbnails from overflowing their cells */
+.lead-from-within-gallery .project-gallery-thumbnail {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.lead-from-within-gallery .project-gallery-thumbnail img,
+.lead-from-within-gallery .project-gallery-thumbnail video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   PROJECT CONTENT — RIGHT ALIGN
+========================= */
+
+.project-slide-content {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.project-slide-content h3,
+.project-slide-content p,
+.project-slide-category,
+.project-slide-number {
+  text-align: right;
+}
+
+.project-slide-technologies {
+  justify-content: flex-end;
+}
+
+/* =========================
+   FRONT
+========================= */
+
+.project-gallery-front {
+  transform: rotateY(0deg);
+}
+
+
+/* =========================
+   BACK
+========================= */
+
+.project-gallery-back {
+  transform: rotateY(180deg);
+}
+
+
+/* =========================
+   FLIPPED STATE
+========================= */
+
+.project-gallery-front.project-gallery-hidden {
+  transform: rotateY(-180deg);
+}
+
+.project-gallery-back.project-gallery-visible {
+  transform: rotateY(0deg);
+}
+
+
+/* =========================
+   GRID INSIDE FLIP
+========================= */
+
+.project-gallery-face .project-gallery-grid {
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  grid-template-rows:
+    repeat(3, 1fr);
+
+  gap: 8px;
+
+  aspect-ratio: auto;
+}
+
+/* =========================
+   MORE WORK BUTTON
+========================= */
+
+.project-work-toggle {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  margin-top: 2px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #E6E6FA;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.project-work-toggle:hover {
+  color: #4B0082;
+
+  gap: 13px;
+}
+
+.project-work-toggle-icon {
+  width: 15px;
+  height: 15px;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.project-work-toggle-icon.flipped {
+  transform: rotate(180deg);
+}
+
+.project-slide-gallery {
+  padding: 24px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #161616;
+}
+
+
+/* =========================
+   3 x 3 GRID
+========================= */
+
+.project-gallery-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  grid-template-rows:
+    repeat(3, 1fr);
+
+  gap: 8px;
+
+  aspect-ratio: 1 / 1;
+
+  max-width: 470px;
+}
+
+
+/* =========================
+   GALLERY THUMBNAIL
+========================= */
+
+.project-gallery-thumbnail {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+
+  border: 0;
+
+  overflow: hidden;
+
+  background: #0f0f0f;
+
+  cursor: pointer;
+
+  appearance: none;
+}
+
+.project-gallery-thumbnail img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.project-gallery-thumbnail::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.55),
+      transparent 65%
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.project-gallery-thumbnail:hover img {
+  transform: scale(1.06);
+
+  filter: brightness(0.75);
+}
+
+.project-gallery-thumbnail:hover::after {
+  opacity: 1;
+}
+
+
+/* =========================
+   GALLERY NUMBER
+========================= */
+
+.project-gallery-number {
+  position: absolute;
+
+  left: 10px;
+  bottom: 8px;
+
+  z-index: 2;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color: #E6E6FA;
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+.project-gallery-thumbnail:hover
+.project-gallery-number {
+  opacity: 1;
+}
+
+
+/* =========================
+   PROJECT CONTENT
+========================= */
+
+.project-slide-content {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 60px;
+
+  background: #161616;
+}
+
+
+/* =========================
+   PROJECT NUMBER
+========================= */
+
+.project-slide-number {
+  margin-bottom: 25px;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 48px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color: #E6E6FA;
+}
+
+
+/* =========================
+   PROJECT TITLE
+========================= */
+
+.project-slide-content h3 {
+  max-width: 450px;
+
+  margin: 0 0 12px;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: clamp(30px, 4vw, 48px);
+
+  line-height: 1.1;
+
+  font-weight: 600;
+
+  color: #E6E6FA;
+}
+
+
+/* =========================
+   CATEGORY
+========================= */
+
+.project-slide-category {
+  display: block;
+
+  margin-bottom: 25px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: #4B0082;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.project-slide-content p {
+  max-width: 470px;
+
+  margin: 0 0 28px;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: rgba(230, 230, 250, 0.55);
+}
+
+
+/* =========================
+   TECHNOLOGIES
+========================= */
+
+.project-slide-technologies {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 30px;
+}
+
+.project-slide-technology {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.project-slide-technology img {
+  width: 27px;
+  height: 27px;
+
+  object-fit: contain;
+
+  opacity: 0.8;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-slide-technology:hover img {
+  opacity: 1;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   PROJECT LINK
+========================= */
+
+.project-slide-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  font-family: Poppins, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  color: #E6E6FA;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.project-slide-link svg {
+  width: 15px;
+  height: 15px;
+}
+
+.project-slide-link:hover {
+  color: #4B0082;
+
+  gap: 13px;
+}
+
+
+/* =========================
+   GALLERY MODAL
+========================= */
+
+.project-gallery-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(0, 0, 0, 0.82);
+
+  backdrop-filter: blur(12px);
+
+  animation: galleryOverlayIn 0.25s ease;
+}
+
+@keyframes galleryOverlayIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+/* =========================
+   FULLSCREEN CAROUSEL SLIDESHOW
+   No outer modal box or 3D side cards
+========================= */
+
+.project-gallery-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(0, 0, 0, 0.96);
+  backdrop-filter: blur(8px);
+
+  animation: galleryOverlayIn 0.25s ease;
+}
+
+@keyframes galleryOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Remove the visible modal container */
+.project-gallery-modal {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1200px;
+  max-height: 100vh;
+
+  padding: 20px 0;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  animation: galleryModalIn 0.3s ease;
+}
+
+@keyframes galleryModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header */
+.project-gallery-modal-header {
+  align-self: flex-start;
+  width: 100%;
+
+  margin-bottom: 20px;
+  padding-right: 60px;
+}
+
+.project-gallery-modal-header span {
+  display: block;
+  margin-bottom: 8px;
+
+  font-family: Poppins, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+
+  color: #4B0082;
+}
+
+.project-gallery-modal-header h3 {
+  margin: 0;
+
+  font-family: Poppins, sans-serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 600;
+
+  color: #E6E6FA;
+}
+
+/* Close button */
+.project-gallery-modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  z-index: 10;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(230, 230, 250, 0.2);
+  border-radius: 50%;
+
+  background: rgba(22, 22, 22, 0.5);
+  color: #E6E6FA;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-gallery-modal-close:hover {
+  background: #4B0082;
+  transform: rotate(90deg);
+}
+
+.project-gallery-modal-close svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* =========================
+   SIMPLE SLIDESHOW
+========================= */
+
+/* Remove the 3D perspective and dark image box */
+.project-gallery-coverflow {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: min(70vh, 750px);
+  min-height: 300px;
+
+  overflow: hidden;
+
+  perspective: none;
+  background: transparent;
+}
+
+/* Stage */
+.project-coverflow-stage {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  transform: none;
+  transform-style: flat;
+}
+
+/* Show only the active slide */
+.project-coverflow-card {
+  display: none !important;
+}
+
+.project-coverflow-card.active {
+  position: relative !important;
+  inset: auto !important;
+
+  display: block !important;
+
+  width: auto !important;
+  max-width: 100%;
+  height: 100% !important;
+  max-height: 100%;
+
+  margin: 0 !important;
+  padding: 0;
+
+  border: none;
+  border-radius: 0;
+
+  overflow: hidden;
+
+  background: transparent;
+
+  opacity: 1 !important;
+  filter: none !important;
+
+  transform: none !important;
+  transition: opacity 0.35s ease;
+
+  cursor: default;
+}
+
+/* Display the full carousel image */
+.project-coverflow-card.active img {
+  display: block;
+
+  width: auto;
+  height: 100%;
+
+  max-width: 100%;
+  max-height: 70vh;
+
+  object-fit: contain;
+
+  background: transparent;
+  pointer-events: none;
+}
+
+/* Slideshow navigation */
+.project-gallery-modal-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.project-gallery-modal-navigation span {
+  min-width: 65px;
+
+  text-align: center;
+
+  font-family: Poppins, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  color: rgba(230, 230, 250, 0.65);
+}
+
+.project-gallery-modal-arrow {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(230, 230, 250, 0.2);
+  border-radius: 50%;
+
+  background: transparent;
+  color: #E6E6FA;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.project-gallery-modal-arrow:hover {
+  background: #4B0082;
+  border-color: #4B0082;
+}
+
+.project-gallery-modal-arrow svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+body.light-mode .project-slide-gallery {
+  background: #eeeef0;
+}
+
+body.light-mode .project-gallery-modal-header h3 {
+  color: #E6E6FA;
+}
+
+body.light-mode .project-gallery-modal-close,
+body.light-mode .project-gallery-modal-arrow {
+  color: #E6E6FA;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+  .project-gallery-modal-overlay {
+    padding: 18px;
+  }
+
+  .project-gallery-modal {
+    padding: 15px 0;
+  }
+
+  .project-gallery-modal-header {
+    margin-bottom: 15px;
+  }
+
+  .project-gallery-modal-header h3 {
+    font-size: 22px;
+  }
+
+  .project-gallery-coverflow {
+    height: 65vh;
+    min-height: 260px;
+  }
+
+  .project-coverflow-card.active img {
+    max-height: 65vh;
+  }
+
+  .project-gallery-modal-navigation {
+    gap: 18px;
+    margin-top: 15px;
+  }
+
+  .project-gallery-modal-close {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+body.light-mode .projects-section {
+  background: #eeeef0;
+}
+
+body.light-mode .projects-header h2 {
+  color: #161616;
+}
+
+body.light-mode .projects-header p {
+  color: rgba(22, 22, 22, 0.55);
+}
+
+body.light-mode .projects-page {
+  color: rgba(22, 22, 22, 0.4);
+}
+
+body.light-mode .projects-arrow {
+  border-color: rgba(22, 22, 22, 0.12);
+
+  color: #161616;
+}
+
+body.light-mode .projects-arrow:hover {
+  background: #4B0082;
+
+  border-color: #4B0082;
+
+  color: #E6E6FA;
+}
+
+body.light-mode .project-slide {
+  border-color: rgba(22, 22, 22, 0.12);
+
+  background: #e5e5e7;
+}
+
+body.light-mode .project-slide-content {
+  background: #eeeef0;
+}
+
+body.light-mode .project-slide-number {
+  color: #161616;
+}
+
+body.light-mode .project-slide-content h3 {
+  color: #161616;
+}
+
+body.light-mode .project-slide-content p {
+  color: rgba(22, 22, 22, 0.58);
+}
+
+body.light-mode .project-slide-link {
+  color: #161616;
+}
+
+body.light-mode .project-slide-link:hover {
+  color: #4B0082;
+}
+
+body.light-mode .project-gallery-modal {
+  background: #eeeef0;
+
+  border-color: rgba(22, 22, 22, 0.12);
+}
+
+body.light-mode .project-gallery-modal-header h3 {
+  color: #161616;
+}
+
+body.light-mode .project-gallery-modal-close,
+body.light-mode .project-gallery-modal-arrow {
+  color: #161616;
+
+  border-color: rgba(22, 22, 22, 0.12);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+  .project-slide-content {
+    padding: 40px;
+  }
+
+  .project-slide-number {
+    font-size: 40px;
+  }
+
+  .project-slide-content h3 {
+    font-size: 32px;
+  }
+
+  .project-slide-gallery {
+    padding: 18px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .projects-section {
+    padding: 100px 20px;
+  }
+
+  .projects-header {
+    margin-bottom: 50px;
+  }
+
+  .projects-header h2 {
+    font-size: 36px;
+  }
+
+  .projects-header p {
+    font-size: 14px;
+  }
+
+  .project-slide,
+  .project-slide-reverse {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: auto;
+  }
+
+  .project-slide-visual,
+  .project-slide-reverse .project-slide-visual {
+    order: 1;
+
+    min-height: auto;
+
+    height: auto;
+  }
+
+  .project-slide-image,
+  .project-slide-reverse .project-slide-image {
+    order: 1;
+
+    height: 300px;
+
+    min-height: 300px;
+  }
+
+  .project-slide-gallery {
+    padding: 15px;
+  }
+
+  .project-gallery-grid {
+    width: 100%;
+
+    max-width: none;
+
+    gap: 5px;
+  }
+
+  .project-slide-content,
+  .project-slide-reverse .project-slide-content {
+    order: 2;
+
+    padding: 35px 25px;
+  }
+
+  .project-slide-number {
+    font-size: 36px;
+
+    margin-bottom: 18px;
+  }
+
+  .project-slide-content h3 {
+    font-size: 28px;
+  }
+
+  .project-slide-content p {
+    font-size: 13px;
+  }
+
+  .project-gallery-modal-overlay {
+    padding: 15px;
+  }
+
+  .project-gallery-modal {
+    padding: 20px;
+  }
+
+  .project-gallery-modal-image {
+    height: 60vh;
+  }
+
+  .project-gallery-modal-header h3 {
+    font-size: 22px;
+  }
+
+}
+
+/* =========================
+   RESPONSIVE / LAYOUT SAFETY FIXES
+   ========================= */
+.project-slide,
+.project-slide-visual,
+.project-slide-content,
+.project-slide-gallery {
+  min-width: 0;
+}
+
+.project-gallery-modal-image img,
+.project-gallery-modal-image video {
+  display: block;
+  max-width: 100%;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 90px 18px;
+  }
+
+  .project-slide {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-slide-visual {
+    min-height: 0;
+  }
+
+  .project-slide-image,
+  .project-slide-image img {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .project-slide-content {
+    padding: 32px 24px;
+  }
+
+  .project-gallery-flip {
+    max-width: 100%;
+  }
+
+  .project-slide-gallery {
+    padding: 16px;
+  }
+
+  .project-gallery-modal-overlay {
+    padding: 16px;
+  }
+
+  .project-gallery-modal {
+    max-height: 100%;
+  }
+
+  .project-gallery-coverflow {
+    height: 65vh;
+    min-height: 220px;
+  }
+}
+
+
+/* 3D COVERFLOW GALLERY */
+.project-gallery-modal-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 28px 5vw 24px; overflow: hidden;
+  background: rgba(0,0,0,.94); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+}
+.project-gallery-modal { display: contents !important; }
+.project-gallery-modal-header {
+  position: absolute; top: 34px; left: 4vw; z-index: 20;
+  margin: 0; padding: 0; pointer-events: none;
+}
+.project-gallery-modal-header span {
+  display: block; margin-bottom: 8px; color: #8d56db;
+  font: 600 10px/1.4 Poppins,sans-serif; letter-spacing: 4px; text-transform: uppercase;
+}
+.project-gallery-modal-header h3 {
+  margin: 0; color: #e6e6fa; font: 600 clamp(20px,2.5vw,32px)/1.2 Poppins,sans-serif;
+}
+.project-gallery-modal-close {
+  position: absolute; top: 24px; right: 26px; z-index: 30;
+  width: 48px; height: 48px; display: grid; place-items: center;
+  border: 1px solid rgba(230,230,250,.22); border-radius: 50%;
+  background: rgba(18,18,22,.7); color: #e6e6fa; cursor: pointer;
+}
+.project-gallery-coverflow {
+  position: relative; display: block; width: min(100%,1500px);
+  height: min(74vh,760px); min-height: 340px; margin: 30px auto 0;
+  overflow: visible; perspective: 1500px; perspective-origin: 50% 50%;
+  touch-action: pan-y; background: transparent;
+}
+.project-coverflow-stage { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; }
+.project-coverflow-card {
+  position: absolute; top: 50%; left: 50%; display: block;
+  width: clamp(220px,31vw,430px); height: min(68vh,680px);
+  margin: 0; padding: 0; overflow: hidden;
+  border: 1px solid rgba(230,230,250,.16); border-radius: 3px;
+  background: #101014; box-shadow: 0 22px 70px rgba(0,0,0,.48);
+  cursor: pointer; transform-style: preserve-3d;
+  transition: transform 650ms cubic-bezier(.22,.75,.2,1), opacity 500ms ease, filter 500ms ease, box-shadow 500ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.project-coverflow-card img,.project-coverflow-card video {
+  display: block; width: 100%; height: 100%; object-fit: contain;
+  background: #08080a; pointer-events: none; user-select: none;
+}
+.project-coverflow-card.active {
+  z-index: 10; opacity: 1; filter: none; cursor: default;
+  transform: translate(-50%,-50%) translateZ(90px) scale(1);
+  box-shadow: 0 28px 90px rgba(0,0,0,.62);
+}
+.project-coverflow-card.prev-1 {
+  z-index: 8; opacity: .88; filter: brightness(.78);
+  transform: translate(-50%,-50%) translateX(-78%) rotateY(38deg) scale(.82);
+}
+.project-coverflow-card.next-1 {
+  z-index: 8; opacity: .88; filter: brightness(.78);
+  transform: translate(-50%,-50%) translateX(78%) rotateY(-38deg) scale(.82);
+}
+.project-coverflow-card.prev-2 {
+  z-index: 5; opacity: .55; filter: brightness(.55) blur(.2px);
+  transform: translate(-50%,-50%) translateX(-142%) rotateY(48deg) scale(.66);
+}
+.project-coverflow-card.next-2 {
+  z-index: 5; opacity: .55; filter: brightness(.55) blur(.2px);
+  transform: translate(-50%,-50%) translateX(142%) rotateY(-48deg) scale(.66);
+}
+.project-gallery-modal-navigation {
+  position: relative; z-index: 20; display: flex; align-items: center;
+  justify-content: center; gap: 22px; margin-top: 16px;
+}
+.project-gallery-modal-navigation span {
+  min-width: 72px; color: rgba(230,230,250,.72); text-align: center;
+  font: 600 11px/1.2 Poppins,sans-serif; letter-spacing: 2px;
+}
+.project-gallery-modal-arrow {
+  width: 42px; height: 42px; display: grid; place-items: center;
+  border: 1px solid rgba(230,230,250,.2); border-radius: 50%;
+  background: rgba(18,18,22,.55); color: #e6e6fa; cursor: pointer;
+  transition: background 200ms ease,border-color 200ms ease,transform 200ms ease;
+}
+.project-gallery-modal-arrow:hover { background: #4b0082; border-color: #4b0082; transform: scale(1.06); }
+.project-gallery-modal-arrow:focus-visible,.project-gallery-modal-close:focus-visible,
+.project-coverflow-card:focus-visible { outline: 2px solid #b68d40; outline-offset: 4px; }
+@media (max-width: 768px) {
+  .project-gallery-modal-overlay { padding: 72px 12px 22px; }
+  .project-gallery-modal-header { top: 22px; left: 18px; right: 68px; }
+  .project-gallery-modal-header h3 { font-size: 20px; }
+  .project-gallery-modal-close { top: 16px; right: 16px; width: 40px; height: 40px; }
+  .project-gallery-coverflow { width: 100%; height: min(68vh,620px); min-height: 260px; margin-top: 0; perspective: 1000px; }
+  .project-coverflow-card { width: min(68vw,330px); height: min(58vh,560px); }
+  .project-coverflow-card.prev-1 { transform: translate(-50%,-50%) translateX(-69%) rotateY(32deg) scale(.76); }
+  .project-coverflow-card.next-1 { transform: translate(-50%,-50%) translateX(69%) rotateY(-32deg) scale(.76); }
+  .project-coverflow-card.prev-2,.project-coverflow-card.next-2 { opacity: 0; pointer-events: none; }
+  .project-gallery-modal-navigation { margin-top: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-coverflow-card,.project-gallery-modal-arrow { transition: none !important; }
+}
+
+
+/* Override legacy single-slide declarations */
+.project-coverflow-card,
+.project-coverflow-card.active,
+.project-coverflow-card.prev-1,
+.project-coverflow-card.next-1,
+.project-coverflow-card.prev-2,
+.project-coverflow-card.next-2 {
+  display: block !important;
+  position: absolute !important;
+  inset: auto !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: clamp(220px, 31vw, 430px) !important;
+  height: min(68vh, 680px) !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.project-coverflow-card.active {
+  transform: translate(-50%, -50%) translateZ(90px) scale(1) !important;
+}
+.project-coverflow-card.prev-1 {
+  transform: translate(-50%, -50%) translateX(-78%) rotateY(38deg) scale(.82) !important;
+}
+.project-coverflow-card.next-1 {
+  transform: translate(-50%, -50%) translateX(78%) rotateY(-38deg) scale(.82) !important;
+}
+.project-coverflow-card.prev-2 {
+  transform: translate(-50%, -50%) translateX(-142%) rotateY(48deg) scale(.66) !important;
+}
+.project-coverflow-card.next-2 {
+  transform: translate(-50%, -50%) translateX(142%) rotateY(-48deg) scale(.66) !important;
+}
+@media (max-width: 768px) {
+  .project-coverflow-card,
+  .project-coverflow-card.active,
+  .project-coverflow-card.prev-1,
+  .project-coverflow-card.next-1,
+  .project-coverflow-card.prev-2,
+  .project-coverflow-card.next-2 {
+    width: min(68vw, 330px) !important;
+    height: min(58vh, 560px) !important;
+  }
+  .project-coverflow-card.prev-1 {
+    transform: translate(-50%, -50%) translateX(-69%) rotateY(32deg) scale(.76) !important;
+  }
+  .project-coverflow-card.next-1 {
+    transform: translate(-50%, -50%) translateX(69%) rotateY(-32deg) scale(.76) !important;
+  }
+}
+
+
+/* Single-item gallery: keep the image/reel centered, with no side-card offset. */
+.project-coverflow-card.solo,
+.project-coverflow-card.solo.active {
+  left: 50% !important;
+  top: 50% !important;
+  z-index: 12 !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: translate(-50%, -50%) translateZ(0) scale(1) !important;
+  cursor: default;
+}
+
+/* Static images can use a broad portrait/square frame while remaining uncropped. */
+.project-coverflow-card.solo:not(:has(video)) {
+  width: min(78vw, 680px) !important;
+  height: min(72vh, 760px) !important;
+}
+
+/* Reels are portrait: constrain the frame to a 9:16-like width and center it. */
+.project-coverflow-card.solo:has(video) {
+  width: min(42vh, 78vw, 460px) !important;
+  height: min(74vh, 760px) !important;
+}
+
+@media (max-width: 768px) {
+  .project-coverflow-card.solo:not(:has(video)) {
+    width: min(88vw, 620px) !important;
+    height: min(68vh, 650px) !important;
+  }
+  .project-coverflow-card.solo:has(video) {
+    width: min(42vh, 82vw, 360px) !important;
+    height: min(72vh, 620px) !important;
+  }
+}
+/* =========================================
+   FIX: CENTER SINGLE IMAGE / REEL IN VIEWPORT
+========================================= */
+
+/* Use the full viewport as the slideshow's positioning area */
+.project-gallery-coverflow {
+  position: fixed !important;
+  inset: 0 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  min-height: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: block !important;
+  overflow: hidden !important;
+
+  perspective: none !important;
+  background: transparent !important;
+}
+
+/* Make the stage cover the entire viewport */
+.project-coverflow-stage {
+  position: absolute !important;
+  inset: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Center the single image/reel exactly */
+.project-coverflow-card.solo,
+.project-coverflow-card.solo.active {
+  position: absolute !important;
+
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+
+  display: block !important;
+
+  margin: 0 !important;
+  transform: translate(-50%, -50%) !important;
+
+  opacity: 1 !important;
+  filter: none !important;
+  z-index: 12 !important;
+}
+
+/* Single static image */
+.project-coverflow-card.solo:not(:has(video)) {
+  width: min(78vw, 680px) !important;
+  height: min(72vh, 760px) !important;
+}
+
+/* Single reel / video */
+.project-coverflow-card.solo:has(video) {
+  width: min(42vh, 78vw, 460px) !important;
+  height: min(74vh, 760px) !important;
+}
+
+/* Keep media contained without cropping */
+.project-coverflow-card.solo img,
+.project-coverflow-card.solo video {
+  display: block !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  background: transparent !important;
+}
+
+/* Keep navigation centered near the bottom */
+.project-gallery-modal-navigation {
+  position: fixed !important;
+
+  left: 50% !important;
+  bottom: 24px !important;
+  top: auto !important;
+
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+
+  z-index: 30 !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .project-coverflow-card.solo:not(:has(video)) {
+    width: 88vw !important;
+    height: 68vh !important;
+  }
+
+  .project-coverflow-card.solo:has(video) {
+    width: min(82vw, 360px) !important;
+    height: 72vh !important;
+  }
+
+  .project-gallery-modal-navigation {
+    bottom: 18px !important;
+  }
+}
+
+/* =========================================
+   COVERFLOW — SPACING & OVERLAP FIX
+========================================= */
+
+/* Keep the carousel centered in the viewport */
+.project-gallery-coverflow {
+  width: 100%;
+  overflow: hidden;
+  perspective: 1500px;
+  perspective-origin: center center;
+}
+
+.project-coverflow-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Base card positioning */
+.project-coverflow-card {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+
+  width: clamp(220px, 31vw, 430px) !important;
+  height: min(68vh, 680px) !important;
+
+  margin: 0 !important;
+  border-radius: 3px;
+  overflow: hidden;
+
+  transform-style: preserve-3d;
+  transition:
+    transform 650ms cubic-bezier(.22,.75,.2,1),
+    opacity 500ms ease,
+    filter 500ms ease;
+}
+
+/* Main active slide */
+.project-coverflow-card.active {
+  z-index: 10 !important;
+  opacity: 1 !important;
+  filter: none !important;
+  pointer-events: auto;
+
+  transform:
+    translate(-50%, -50%)
+    translateZ(90px)
+    scale(1) !important;
+}
+
+/* Left and right previews — spaced farther apart */
+.project-coverflow-card.prev-1 {
+  z-index: 8 !important;
+  opacity: 0.55 !important;
+  filter: brightness(0.65) !important;
+  pointer-events: auto;
+
+  transform:
+    translate(-50%, -50%)
+    translateX(-112%)
+    rotateY(30deg)
+    scale(0.72) !important;
+}
+
+.project-coverflow-card.next-1 {
+  z-index: 8 !important;
+  opacity: 0.55 !important;
+  filter: brightness(0.65) !important;
+  pointer-events: auto;
+
+  transform:
+    translate(-50%, -50%)
+    translateX(112%)
+    rotateY(-30deg)
+    scale(0.72) !important;
+}
+
+/* Hide the extra cards so they don't get clipped at the edges */
+.project-coverflow-card.prev-2,
+.project-coverflow-card.next-2 {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translate(-50%, -50%) scale(0.5) !important;
+}
+
+/* Keep images and videos fully visible */
+.project-coverflow-card img,
+.project-coverflow-card video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .project-coverflow-card {
+    width: min(68vw, 330px) !important;
+    height: min(58vh, 560px) !important;
+  }
+
+  .project-coverflow-card.prev-1 {
+    transform:
+      translate(-50%, -50%)
+      translateX(-105%)
+      rotateY(24deg)
+      scale(0.68) !important;
+  }
+
+  .project-coverflow-card.next-1 {
+    transform:
+      translate(-50%, -50%)
+      translateX(105%)
+      rotateY(-24deg)
+      scale(0.68) !important;
+  }
+}
+
+/* =========================================
+   COVERFLOW — BALANCED 5-SLIDE LAYOUT
+   1 active + 2 previews on each side
+========================================= */
+
+/* Keep the carousel centered */
+.project-gallery-coverflow {
+  overflow: hidden !important;
+  perspective: 1600px !important;
+  perspective-origin: center center !important;
+}
+
+.project-coverflow-stage {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: visible !important;
+}
+
+/* Shared card sizing */
+.project-coverflow-card {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+
+  width: clamp(220px, 27vw, 390px) !important;
+  height: min(68vh, 680px) !important;
+
+  margin: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+
+  border-radius: 4px !important;
+  overflow: hidden !important;
+
+  transform-style: preserve-3d !important;
+
+  transition:
+    transform 650ms cubic-bezier(.22, .75, .2, 1),
+    opacity 500ms ease,
+    filter 500ms ease !important;
+}
+
+/* Center slide */
+.project-coverflow-card.active {
+  z-index: 10 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+  pointer-events: auto !important;
+
+  transform:
+    translate(-50%, -50%)
+    translateZ(90px)
+    scale(1) !important;
+}
+
+/* First previews — close to the active slide */
+.project-coverflow-card.prev-1 {
+  z-index: 8 !important;
+  opacity: .72 !important;
+  visibility: visible !important;
+  filter: brightness(.72) !important;
+  pointer-events: auto !important;
+
+  transform:
+    translate(-50%, -50%)
+    translateX(-90%)
+    rotateY(28deg)
+    scale(.80) !important;
+}
+
+.project-coverflow-card.next-1 {
+  z-index: 8 !important;
+  opacity: .72 !important;
+  visibility: visible !important;
+  filter: brightness(.72) !important;
+  pointer-events: auto !important;
+
+  transform:
+    translate(-50%, -50%)
+    translateX(90%)
+    rotateY(-28deg)
+    scale(.80) !important;
+}
+
+/* Second previews — smaller, farther back, but still visible */
+.project-coverflow-card.prev-2 {
+  z-index: 5 !important;
+  opacity: .38 !important;
+  visibility: visible !important;
+  filter: brightness(.48) blur(.3px) !important;
+  pointer-events: auto !important;
+
+  transform:
+    translate(-50%, -50%)
+    translateX(-175%)
+    rotateY(38deg)
+    scale(.58) !important;
+}
+
+.project-coverflow-card.next-2 {
+  z-index: 5 !important;
+  opacity: .38 !important;
+  visibility: visible !important;
+  filter: brightness(.48) blur(.3px) !important;
+  pointer-events: auto !important;
+
+  transform:
+    translate(-50%, -50%)
+    translateX(175%)
+    rotateY(-38deg)
+    scale(.58) !important;
+}
+
+/* Keep media uncropped */
+.project-coverflow-card img,
+.project-coverflow-card video {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* Mobile: show the active slide and nearer previews */
+@media (max-width: 768px) {
+  .project-coverflow-card {
+    width: min(62vw, 300px) !important;
+    height: min(58vh, 540px) !important;
+  }
+
+  .project-coverflow-card.prev-1 {
+    opacity: .55 !important;
+    transform:
+      translate(-50%, -50%)
+      translateX(-90%)
+      rotateY(24deg)
+      scale(.70) !important;
+  }
+
+  .project-coverflow-card.next-1 {
+    opacity: .55 !important;
+    transform:
+      translate(-50%, -50%)
+      translateX(90%)
+      rotateY(-24deg)
+      scale(.70) !important;
+  }
+
+  .project-coverflow-card.prev-2,
+  .project-coverflow-card.next-2 {
+    opacity: .22 !important;
+    visibility: visible !important;
+    transform:
+      translate(-50%, -50%)
+      translateX(-155%)
+      rotateY(30deg)
+      scale(.48) !important;
+  }
+
+  .project-coverflow-card.next-2 {
+    transform:
+      translate(-50%, -50%)
+      translateX(155%)
+      rotateY(-30deg)
+      scale(.48) !important;
+  }
+}
+
+/* Make video controls clickable inside the coverflow */
+.project-coverflow-card video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Keep the video card from behaving like a button */
+.project-coverflow-card:has(video) {
+  cursor: default;
+  pointer-events: auto;
+}
+
+/* Keep image cards clickable */
+.project-coverflow-card:has(img) {
+  cursor: pointer;
+}
