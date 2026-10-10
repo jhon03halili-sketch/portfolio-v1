@@ -29,7 +29,7 @@ function Navbar() {
       return;
     }
 
-    // If on Projects or Contact, return to Home
+    // If on another page, return to Home
     // and tell Home which section to scroll to
     navigate("/", {
       state: {
@@ -40,7 +40,6 @@ function Navbar() {
 
   const goHome = () => {
     closeMenu();
-
     navigate("/");
   };
 
@@ -53,13 +52,13 @@ function Navbar() {
           to="/"
           className="navbar-logo"
           onClick={closeMenu}
+          aria-label="Go to homepage"
         >
           JC
         </Link>
 
-
         {/* Desktop Navigation */}
-        <nav className="navbar-links">
+        <nav className="navbar-links" aria-label="Main navigation">
 
           <button
             type="button"
@@ -99,33 +98,33 @@ function Navbar() {
 
         </nav>
 
-
         {/* Mobile Menu Button */}
         <button
+          type="button"
           className="navbar-toggle"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuOpen((prev) => !prev)}
           aria-label={
             menuOpen
               ? "Close menu"
               : "Open menu"
           }
           aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
         >
           {menuOpen ? (
-            <FaTimes />
+            <FaTimes aria-hidden="true" />
           ) : (
-            <FaBars />
+            <FaBars aria-hidden="true" />
           )}
         </button>
 
       </div>
 
-
       {/* Mobile Navigation */}
       <nav
-        className={`mobile-menu ${
-          menuOpen ? "open" : ""
-        }`}
+        id="mobile-navigation"
+        className={`mobile-menu ${menuOpen ? "open" : ""}`}
+        aria-label="Mobile navigation"
       >
 
         <button
@@ -137,27 +136,21 @@ function Navbar() {
 
         <button
           type="button"
-          onClick={() =>
-            goToSection("about")
-          }
+          onClick={() => goToSection("about")}
         >
           About
         </button>
 
         <button
           type="button"
-          onClick={() =>
-            goToSection("skills")
-          }
+          onClick={() => goToSection("skills")}
         >
           Skills
         </button>
 
         <button
           type="button"
-          onClick={() =>
-            goToSection("experience")
-          }
+          onClick={() => goToSection("experience")}
         >
           Experience
         </button>
@@ -177,7 +170,6 @@ function Navbar() {
         </Link>
 
       </nav>
-
     </header>
   );
 }

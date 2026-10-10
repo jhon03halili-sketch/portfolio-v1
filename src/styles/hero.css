@@ -260,12 +260,12 @@ font-size: clamp(
 
   color: rgba(230, 230, 250, 0.38);
 
-  filter: blur(4px);
+  filter: blur(2px);
   opacity: 0.65;
 
   transform: scale(1);
 
-  cursor: pointer;
+  cursor: default;;
   user-select: none;
 
   transition:
