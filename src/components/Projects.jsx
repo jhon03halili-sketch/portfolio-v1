@@ -625,10 +625,6 @@ additionalGallery: [
       {
         name: "Canva",
         icon: "/icons/canva1.png",
-      },
-      {
-        name: "Tiktok",
-        icon: "/icons/tiktok.png"
       }
     ],
 
@@ -1275,11 +1271,7 @@ const goToNext = () => {
   <button
     type="button"
     className="project-work-toggle"
-    onClick={() =>
-      setShowAdditionalWork(
-        !showAdditionalWork
-      )
-    }
+    onClick={() => setShowAdditionalWork(!showAdditionalWork)}
   >
     {showAdditionalWork
       ? "View Featured Work"
@@ -1295,6 +1287,17 @@ const goToNext = () => {
   </button>
 )}
 
+{/* Brand Book PDF link — Beyond Sea Cabo only */}
+{project.title === "Beyond Sea Cabo" && (
+  <a
+    href="/beyondsea/Beyond%20Sea%20-%20Brand%20Book.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="project-brand-book"
+  >
+    <span>VIEW BRAND BOOK</span>
+  </a>
+)}
 
             {/* =========================
                 PROJECT LINK
@@ -1311,8 +1314,19 @@ const goToNext = () => {
                 Visit Project
                 <FiArrowRight />
               </a>
-
             )}
+
+            {/* Brand Guidelines PDF — Lead From Within */}
+{project.title === "Lead From Within" && (
+  <a
+    href="/lfw/Lead from Within Brand Guidelines.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="project-brand-book"
+  >
+    <span>VIEW BRAND BOOK</span>
+  </a>
+)}
 
           </div>
 

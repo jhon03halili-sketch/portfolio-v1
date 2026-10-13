@@ -2389,3 +2389,59 @@ body.light-mode .project-gallery-modal-arrow {
 .project-coverflow-card:has(img) {
   cursor: pointer;
 }
+
+/* =========================================
+   BEYOND SEA — BRAND BOOK PDF LINK
+========================================= */
+
+.project-brand-book {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  width: fit-content;
+  margin-top: 18px;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+
+  color: #e6e6fa;
+  font-family: Poppins, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+/* Hover effect */
+.project-brand-book:hover {
+  color: #8a2be2;
+  gap: 13px;
+}
+
+.project-brand-book:hover span:last-child {
+  transform: translate(2px, -2px);
+}
+
+/* Keyboard accessibility */
+.project-brand-book:focus-visible {
+  outline: 2px solid #8a2be2;
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .project-brand-book {
+    margin-top: 16px;
+    font-size: 10px;
+  }
+}
