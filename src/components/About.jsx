@@ -1,9 +1,8 @@
+
 function About() {
   return (
     <section id="about" className="about-section">
-
       <div className="about-container">
-
         {/* Section label */}
         <div className="about-label">
           ABOUT ME
@@ -11,12 +10,9 @@ function About() {
 
         {/* Main content */}
         <div className="about-grid">
-
           {/* Left - Portrait */}
           <div className="about-photo">
-
             <div className="about-photo-frame">
-
               {/* Dark Mode Image */}
               <img
                 src="/images/about-dark.png"
@@ -27,17 +23,21 @@ function About() {
               {/* Light Mode Image */}
               <img
                 src="/images/about-light.png"
-                alt="Jhon Carlo Halili"
+                alt=""
+                aria-hidden="true"
                 className="about-photo-light"
               />
-
             </div>
-
           </div>
 
           {/* Right - About Content */}
           <div className="about-content">
+            {/* Greeting */}
+            <h2 className="about-greeting">
+              Hi There!
+            </h2>
 
+            {/* Introduction */}
             <p className="about-intro">
               I'm Jhon Carlo Halili, a creative and
               tech-focused professional who enjoys
@@ -60,23 +60,16 @@ function About() {
               creating work that is both functional and
               visually engaging.
             </p>
-
           </div>
-
         </div>
 
         {/* Focus areas */}
         <div className="about-focus">
-
           {/* Web Development */}
           <div className="focus-card">
-            <span className="focus-number">
-              01
-            </span>
+            <span className="focus-number">01</span>
 
-            <h3>
-              Web Development
-            </h3>
+            <h3>Web Development</h3>
 
             <p>
               Building responsive and interactive
@@ -87,13 +80,9 @@ function About() {
 
           {/* Social Media Management */}
           <div className="focus-card">
-            <span className="focus-number">
-              02
-            </span>
+            <span className="focus-number">02</span>
 
-            <h3>
-              Social Media Management
-            </h3>
+            <h3>Social Media Management</h3>
 
             <p>
               Creating visual content, managing social
@@ -104,13 +93,9 @@ function About() {
 
           {/* Digital Marketing */}
           <div className="focus-card">
-            <span className="focus-number">
-              03
-            </span>
+            <span className="focus-number">03</span>
 
-            <h3>
-              Digital Marketing
-            </h3>
+            <h3>Digital Marketing</h3>
 
             <p>
               Supporting brands through content, email
@@ -118,11 +103,8 @@ function About() {
               strategies.
             </p>
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 }

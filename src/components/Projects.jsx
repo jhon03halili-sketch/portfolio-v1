@@ -619,9 +619,17 @@ additionalGallery: [
         icon: "/icons/project-mailchimp.png",
       },
       {
-        name: "Web Design",
-        icon: "/icons/wordpress.png",
+        name: "Instagram",
+        icon: "/icons/ig.png",
       },
+      {
+        name: "Canva",
+        icon: "/icons/canva1.png",
+      },
+      {
+        name: "Tiktok",
+        icon: "/icons/tiktok.png"
+      }
     ],
 
     gallery: [

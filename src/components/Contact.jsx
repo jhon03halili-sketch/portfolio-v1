@@ -3,7 +3,7 @@ import {
   FaArrowRight,
   FaLinkedinIn,
   FaInstagram,
-  FaFacebookMessenger,
+  FaFacebook,
   FaEnvelope,
 } from "react-icons/fa";
 
@@ -29,7 +29,9 @@ function Contact() {
           <div className="contact-links">
             {/* Email */}
             <a
-              href="mailto:jhon03halili@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=jhon03halili@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="contact-link"
             >
               <span className="contact-link-icon">
@@ -69,20 +71,20 @@ function Contact() {
               />
             </a>
 
-            {/* Messenger */}
+            {/* Facebook */}
             <a
-              href="#"
+              href="https://www.facebook.com/sh1ftty"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-link"
             >
               <span className="contact-link-icon">
-                <FaFacebookMessenger aria-hidden="true" />
+                <FaFacebook aria-hidden="true" />
               </span>
 
               <span className="contact-link-content">
-                <small>MESSENGER</small>
-                <strong>Message Me</strong>
+                <small>FACEBOOK</small>
+                <strong>Jhon Carlo Halili</strong>
               </span>
 
               <FaArrowRight
