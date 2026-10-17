@@ -2445,3 +2445,19 @@ body.light-mode .project-gallery-modal-arrow {
     font-size: 10px;
   }
 }
+
+
+/* Left-align Aura Longevity text and technology icons */
+.aura-left-aligned {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.aura-left-aligned .project-slide-technologies {
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.aura-left-aligned .project-slide-technology {
+  margin-left: 0;
+}
