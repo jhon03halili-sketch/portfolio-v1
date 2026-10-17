@@ -1,15 +1,19 @@
 function SkillIcon({ name, alt }) {
+  const assetPath = (path) =>
+    `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+
   return (
     <span className="skill-icon">
       <img
-        src={`/icons/${name}.png`}
+        src={assetPath(`/icons/${name}.png`)}
         alt={alt}
         className="skill-icon-default"
       />
 
       <img
-        src={`/icons/${name}-hover.png`}
+        src={assetPath(`/icons/${name}-hover.png`)}
         alt=""
+        aria-hidden="true"
         className="skill-icon-hover"
       />
     </span>
