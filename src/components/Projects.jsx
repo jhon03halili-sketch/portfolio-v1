@@ -5,6 +5,11 @@ import {
   FiX,
 } from "react-icons/fi";
 
+const assetPath = (path) => {
+  if (!path) return "";
+  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+};
+
 const projects = [
   {
     number: "01",
@@ -1103,8 +1108,8 @@ const goToNext = () => {
           ?.toLowerCase()
           .endsWith(".mp4") ? (
           <video
-            src={gallery.images[0]}
-            poster={gallery.cover}
+  src={assetPath(gallery.images[0])}
+  poster={assetPath(gallery.cover)}
             autoPlay
             muted
             loop
@@ -1113,10 +1118,10 @@ const goToNext = () => {
             aria-label={gallery.title}
           />
         ) : (
-          <img
-            src={gallery.cover}
-            alt={gallery.title}
-          />
+<img
+  src={assetPath(gallery.cover)}
+  alt={gallery.title}
+/>
         )}
 
         <span className="project-gallery-number">
@@ -1168,9 +1173,9 @@ const goToNext = () => {
         {gallery.images?.[0]
           ?.toLowerCase()
           .endsWith(".mp4") ? (
-          <video
-            src={gallery.images[0]}
-            poster={gallery.cover}
+<video
+  src={assetPath(gallery.images[0])}
+  poster={assetPath(gallery.cover)}
             autoPlay
             muted
             loop
@@ -1179,10 +1184,10 @@ const goToNext = () => {
             aria-label={gallery.title}
           />
         ) : (
-          <img
-            src={gallery.cover}
-            alt={gallery.title}
-          />
+<img
+  src={assetPath(gallery.cover)}
+  alt={gallery.title}
+/>
         )}
 
         <span className="project-gallery-number">
@@ -1205,10 +1210,10 @@ const goToNext = () => {
 
               <div className="project-slide-image">
 
-                <img
-                  src={project.image}
-                  alt={project.title}
-                />
+<img
+  src={assetPath(project.image)}
+  alt={project.title}
+/>
 
               </div>
 
@@ -1255,10 +1260,10 @@ const goToNext = () => {
                     title={technology.name}
                   >
 
-                    <img
-                      src={technology.icon}
-                      alt={technology.name}
-                    />
+<img
+  src={assetPath(technology.icon)}
+  alt={technology.name}
+/>
 
                   </div>
 
@@ -1290,7 +1295,7 @@ const goToNext = () => {
 {/* Brand Book PDF link — Beyond Sea Cabo only */}
 {project.title === "Beyond Sea Cabo" && (
   <a
-    href="/beyondsea/Beyond%20Sea%20-%20Brand%20Book.pdf"
+    href={assetPath("/beyondsea/Beyond Sea - Brand Book.pdf")}
     target="_blank"
     rel="noopener noreferrer"
     className="project-brand-book"
@@ -1319,7 +1324,7 @@ const goToNext = () => {
             {/* Brand Guidelines PDF — Lead From Within */}
 {project.title === "Lead From Within" && (
   <a
-    href="/lfw/Lead from Within Brand Guidelines.pdf"
+    href={assetPath("/lfw/Lead from Within Brand Guidelines.pdf")}
     target="_blank"
     rel="noopener noreferrer"
     className="project-brand-book"
@@ -1420,7 +1425,7 @@ const goToNext = () => {
           aria-label={`${selectedGallery.title} slide ${index + 1}`}
         >
           <video
-            src={source}
+            src={assetPath(source)}
             controls
             playsInline
             preload="metadata"
@@ -1442,7 +1447,7 @@ const goToNext = () => {
         aria-current={offset === 0 ? "true" : undefined}
       >
         <img
-          src={source}
+          src={assetPath(source)}
           alt={`${selectedGallery.title} slide ${index + 1}`}
           draggable="false"
         />
