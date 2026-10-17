@@ -531,72 +531,6 @@ additionalGallery: [
       }
     ],
 
-additionalGallery: [
-  {
-    title: "SAMPLE 2",
-    cover: "/GP/2.png",
-    images: [
-      "/GP/2.png",
-    ],
-  },
-  {
-    title: "SAMPLE 3",
-    cover: "/GP/3.png",
-    images: [
-      "/GP/3.png",
-    ],
-  },
-  {
-    title: "SAMPLE 4",
-    cover: "/GP/4.png",
-    images: [
-      "/GP/4.png",
-    ],
-  },
-  {
-    title: "SAMPLE 5",
-    cover: "/GP/5.png",
-    images: [
-      "/GP/5.png",
-    ],
-  },
-  {
-    title: "SAMPLE 6",
-    cover: "/GP/6.png",
-    images: [
-      "/GP/6.png",
-    ],
-  },
-  {
-    title: "SAMPLE 7",
-    cover: "/GP/7.png",
-    images: [
-      "/GP/7.png",
-    ],
-  },
-  {
-    title: "SAMPLE 8",
-    cover: "/GP/8.png",
-    images: [
-      "/GP/8.png",
-    ],
-  },
-  {
-    title: "SAMPLE 9",
-    cover: "/GP/9.png",
-    images: [
-      "/GP/9.png",
-    ],
-  },
-  {
-    title: "SAMPLE 10",
-    cover: "/GP/10.png",
-    images: [
-      "/GP/10.png",
-    ],
-  },
-],
-
     reverse: true,
   },
 
@@ -1040,10 +974,6 @@ const goToNext = () => {
     project.title === "Beyond Sea Cabo"
       ? "beyond-sea-project"
       : ""
-  } ${
-    project.title === "Aura Longevity"
-      ? "aura-longevity-project"
-      : ""
   }`}
 >
 
@@ -1272,25 +1202,27 @@ const goToNext = () => {
 
             </div>
 
-            {project.additionalGallery && (
-  <button
-    type="button"
-    className="project-work-toggle"
-    onClick={() => setShowAdditionalWork(!showAdditionalWork)}
-  >
-    {showAdditionalWork
-      ? "View Featured Work"
-      : "View More Work"}
+            
+{project.additionalGallery &&
+  project.title !== "Aura Longevity" && (
+    <button
+      type="button"
+      className="project-work-toggle"
+      onClick={() => setShowAdditionalWork(!showAdditionalWork)}
+    >
+      {showAdditionalWork
+        ? "View Featured Work"
+        : "View More Work"}
 
-    <FiArrowRight
-      className={
-        showAdditionalWork
-          ? "project-work-toggle-icon flipped"
-          : "project-work-toggle-icon"
-      }
-    />
-  </button>
-)}
+      <FiArrowRight
+        className={
+          showAdditionalWork
+            ? "project-work-toggle-icon flipped"
+            : "project-work-toggle-icon"
+        }
+      />
+    </button>
+  )}
 
 {/* Brand Book PDF link — Beyond Sea Cabo only */}
 {project.title === "Beyond Sea Cabo" && (
