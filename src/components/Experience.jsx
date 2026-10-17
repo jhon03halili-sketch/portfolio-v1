@@ -185,12 +185,12 @@ function ExperienceContent({ experience }) {
         {experience.description}
       </p>
 
-      <div className="experience-logo">
-        <img
-          src={experience.logo}
-          alt={`${experience.company} logo`}
-        />
-      </div>
+<div className="experience-logo">
+  <img
+    src={`${import.meta.env.BASE_URL}${experience.logo.replace(/^\/+/, "")}`}
+    alt={`${experience.company} logo`}
+  />
+</div>
 
     </div>
   );
