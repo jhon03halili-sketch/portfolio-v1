@@ -1156,7 +1156,11 @@ const goToNext = () => {
               PROJECT INFORMATION
           ========================= */}
 
-          <div className="project-slide-content">
+          <div
+  className={`project-slide-content ${
+    project.title === "Aura Longevity" ? "aura-left-aligned" : ""
+  }`}
+>
 
             <span className="project-slide-number">
               {project.number}
