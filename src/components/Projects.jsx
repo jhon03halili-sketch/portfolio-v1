@@ -974,6 +974,10 @@ const goToNext = () => {
     project.title === "Beyond Sea Cabo"
       ? "beyond-sea-project"
       : ""
+  } ${
+    project.title === "Aura Longevity"
+      ? "aura-longevity-project"
+      : ""
   }`}
 >
 
