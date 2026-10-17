@@ -1,4 +1,7 @@
 
+const assetPath = (path) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+
 function About() {
   return (
     <section id="about" className="about-section">
@@ -15,14 +18,14 @@ function About() {
             <div className="about-photo-frame">
               {/* Dark Mode Image */}
               <img
-                src="/images/about-dark.png"
+                src={assetPath("/images/about-dark.png")}
                 alt="Jhon Carlo Halili"
                 className="about-photo-dark"
               />
 
               {/* Light Mode Image */}
               <img
-                src="/images/about-light.png"
+                src={assetPath("/images/about-light.png")}
                 alt=""
                 aria-hidden="true"
                 className="about-photo-light"
@@ -32,12 +35,10 @@ function About() {
 
           {/* Right - About Content */}
           <div className="about-content">
-            {/* Greeting */}
             <h2 className="about-greeting">
               Hi There!
             </h2>
 
-            {/* Introduction */}
             <p className="about-intro">
               I'm Jhon Carlo Halili, a creative and
               tech-focused professional who enjoys
@@ -65,12 +66,9 @@ function About() {
 
         {/* Focus areas */}
         <div className="about-focus">
-          {/* Web Development */}
           <div className="focus-card">
             <span className="focus-number">01</span>
-
             <h3>Web Development</h3>
-
             <p>
               Building responsive and interactive
               websites through personal projects,
@@ -78,12 +76,9 @@ function About() {
             </p>
           </div>
 
-          {/* Social Media Management */}
           <div className="focus-card">
             <span className="focus-number">02</span>
-
             <h3>Social Media Management</h3>
-
             <p>
               Creating visual content, managing social
               platforms, and helping brands communicate
@@ -91,12 +86,9 @@ function About() {
             </p>
           </div>
 
-          {/* Digital Marketing */}
           <div className="focus-card">
             <span className="focus-number">03</span>
-
             <h3>Digital Marketing</h3>
-
             <p>
               Supporting brands through content, email
               marketing, funnels, SEO, and other digital
