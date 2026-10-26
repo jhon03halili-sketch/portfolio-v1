@@ -69,10 +69,10 @@ function Hero({ darkMode, setDarkMode }) {
 
       {/* View CV */}
       <a
-        href="/jhon-carlo-halili-cv.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hero-cv"
+    href={assetPath("/images/halili - cv 2026.pdf")}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="CV"
       >
         View CV
       </a>
