@@ -6,6 +6,11 @@ import {
   FaSun,
 } from "react-icons/fa";
 
+const assetPath = (path) => {
+  if (!path) return "";
+  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+};
+
 function Hero({ darkMode, setDarkMode }) {
   const roles = [
     "Frontend Developer",
@@ -72,7 +77,7 @@ function Hero({ darkMode, setDarkMode }) {
     href={assetPath("/images/jc - cv (1).pdf")}
     target="_blank"
     rel="noopener noreferrer"
-    className="CV"
+    className="hero-cv"
       >
         View CV
       </a>
